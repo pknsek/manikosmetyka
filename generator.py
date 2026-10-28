@@ -625,7 +625,7 @@ def oferta():
                 'Pełna oferta salonu Manikosmetyka: depilacja laserowa, twarz, ciało, brwi, makijaż permanentny, wizaż.') + header('oferta')
     html += page_hero('Oferta', 'Pełna oferta salonu',
                       'Ceny dobieramy indywidualnie — aktualne znajdziesz przy rezerwacji online lub zapytaj telefonicznie.',
-                      'wnetrze-fotel', 'Strefa relaksu w salonie Manikosmetyka', '50% 60%')
+                      'twarz-swiece', 'Świece i profesjonalne kosmetyki w gabinecie', '50% 55%')
     nav = ''.join(f'<a href="#{k}">{t}</a>' for k, t, *_ in CATS)
     html += f'<nav class="cat-nav" aria-label="Kategorie"><div class="wrap">{nav}</div></nav>\n<section><div class="wrap">'
     for k, t, d, href, items in CATS:
