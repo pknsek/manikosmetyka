@@ -179,7 +179,7 @@ body.menu-open { overflow: hidden; }
 .hero-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 48px; font-family: var(--label); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: rgba(248, 244, 238, .85); }
 .hero-meta span + span::before { content: ""; display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: currentColor; margin-right: 28px; vertical-align: middle; opacity: .6; }
 
-.hero-home { background: #E4C0A0; color: var(--ink); align-items: center; }
+.hero-home { background: #C8CBCE; color: var(--ink); align-items: center; }
 .hero-home::after { display: none; }
 .hero-home .hero-bg { top: var(--header-h); height: calc(100% - var(--header-h)); object-position: 100% 0; }
 .hero-home .display { font-size: clamp(44px, 6.2vw, 92px); }
@@ -380,10 +380,10 @@ figure.ph figcaption { margin-top: 12px; font-family: var(--label); font-size: 1
 
 /* Home hero stacked on tablets, phones and portrait windows */
 @media (max-width: 900px), (max-aspect-ratio: 1/1) {
-  .hero-home { display: block; min-height: 0; }
+  .hero-home { display: block; min-height: 0; background: #E3E4E6; }
   .hero-home picture { display: block; position: relative; padding-top: var(--header-h); }
-  .hero-home .hero-bg { position: relative; inset: auto; top: 0; width: 100%; height: auto; aspect-ratio: 1000 / 1156; max-height: 88svh; object-fit: cover; object-position: 50% 0; -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 100%); mask-image: linear-gradient(180deg, #000 72%, transparent 100%); }
-  .hero-home .hero-in { padding-top: 0; margin-top: -72px; padding-bottom: 64px; }
+  .hero-home .hero-bg { position: relative; inset: auto; top: 0; width: 100%; height: auto; aspect-ratio: 1000 / 1156; max-height: 88svh; object-fit: cover; object-position: 50% 0; -webkit-mask-image: linear-gradient(180deg, #000 90%, transparent 100%); mask-image: linear-gradient(180deg, #000 90%, transparent 100%); }
+  .hero-home .hero-in { padding-top: 28px; margin-top: 0; padding-bottom: 64px; }
   .hero-home .display { margin-top: 14px; }
 }
 
