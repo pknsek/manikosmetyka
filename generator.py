@@ -208,7 +208,7 @@ def home():
     html += f'''
 <section class="hero hero-home">
   <picture>
-    <source media="(max-width: 640px)" srcset="img/hero-m.jpg">
+    <source media="(max-width: 900px), (max-aspect-ratio: 1/1)" srcset="img/hero-m.jpg">
     <img class="hero-bg" src="img/hero-wide.jpg" alt="Kobieta o naturalnej, promiennej cerze" fetchpriority="high">
   </picture>
   <div class="wrap hero-in">
