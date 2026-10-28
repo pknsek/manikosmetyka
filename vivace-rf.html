@@ -5,170 +5,106 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Vivace RF mikroigłowa — Manikosmetyka</title>
 <meta name="description" content="Vivace RF mikroigłowa — ujędrnienie, zmarszczki, blizny i rozstępy. Twarz i ciało. Manikosmetyka.">
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+<meta name="theme-color" content="#F8F4EE">
+<link rel="preload" href="fonts/hanken-grotesk-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="page">
-  <header class="site-header">
-  <div class="topbar">
-    <div class="wrap row" style="justify-content: space-between; gap: 8px 24px; min-height: 40px; padding-top: 8px; padding-bottom: 8px;">
-      <span>Pon–Pt 8:00–20:00</span>
-      <span class="hide-sm">ul. Ligonia 8, Czerwionka-Leszczyny</span>
-      <a href="tel:+48511483630">+48 511 483 630</a>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="header">
+  <div class="wrap header-in">
+    <nav class="nav-l" aria-label="Zabiegi"><a href="depilacja-laserowa.html">Depilacja laserowa</a><a href="zabiegi-na-twarz.html">Zabiegi na twarz</a><a href="vivace-rf.html" aria-current="page">Vivace RF</a></nav>
+    <a class="call" href="tel:+48511483630" aria-label="Zadzwoń: +48 511 483 630"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+    <a class="logo" href="index.html" aria-label="Manikosmetyka — strona główna"><b>MANIKOSMETYKA</b><i>salon kosmetyczny</i></a>
+    <nav class="nav-r" aria-label="Salon"><a href="oferta.html">Oferta</a><a href="o-nas.html">O nas</a><a href="bony-podarunkowe.html">Bony</a><a href="kontakt.html">Kontakt</a><a class="btn btn-dark" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a></nav>
+    <button class="burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Menu"><a href="index.html">Strona główna</a><a href="depilacja-laserowa.html">Depilacja laserowa</a><a href="zabiegi-na-twarz.html">Zabiegi na twarz</a><a href="vivace-rf.html" aria-current="page">Vivace RF</a><a href="oferta.html">Oferta</a><a href="o-nas.html">O nas</a><a href="bony-podarunkowe.html">Bony</a><a href="kontakt.html">Kontakt</a></nav>
+  <div class="menu-foot">
+    <a class="btn btn-dark" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a>
+    <a class="btn btn-line" href="tel:+48511483630">Zadzwoń · +48 511 483 630</a>
+    <p>ul. Ligonia 8, Czerwionka-Leszczyny · pon–pt 8:00–20:00</p>
+  </div>
+</div>
+<main id="tresc">
+<section class="hero page-hero on-photo">
+  <img class="hero-bg" src="img/szyja.jpg" alt="Rozświetlona, jędrna skóra szyi i twarzy" style="--pos: 50% 40%;" fetchpriority="high">
+  <div class="wrap hero-in">
+    <p class="crumbs"><a href="index.html">Strona główna</a> &nbsp;/&nbsp; Vivace RF</p>
+    <h1 class="h1" style="margin-top:22px">Vivace RF mikroigłowa</h1>
+    <p class="lead">Mikronakłuwanie połączone z falami radiowymi. Głęboka regeneracja i jędrność — na twarzy i na ciele.</p>
+    <div class="btns"><a class="btn btn-light" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a><a class="btn btn-ghost" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Bezpłatna konsultacja</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split" style="align-items:end">
+      <div class="rv"><p class="label">Zastosowanie</p><h2 class="h2" style="margin-top:18px">Jeden zabieg, wiele efektów</h2></div>
+      <p class="lead rv">Vivace działa w głębszych warstwach skóry, dlatego sprawdza się przy pierwszych oznakach starzenia, bliznach i rozstępach.</p>
+    </div>
+    <div class="grid-3" style="margin-top:clamp(56px,7vw,96px);row-gap:48px"><div class="feat rv"><h3 class="caps caps-md">Ujędrnienie</h3><p>Redukcja zmarszczek i poprawa napięcia skóry.</p></div><div class="feat rv"><h3 class="caps caps-md">Anti-aging</h3><p>Odświeżona skóra bez oznak zmęczenia.</p></div><div class="feat rv"><h3 class="caps caps-md">Blizny</h3><p>Wygładzenie blizn, także potrądzikowych.</p></div><div class="feat rv"><h3 class="caps caps-md">Rozstępy</h3><p>Poprawa struktury skóry na ciele.</p></div><div class="feat rv"><h3 class="caps caps-md">Pory</h3><p>Obkurczenie porów i wyrównanie struktury.</p></div><div class="feat rv"><h3 class="caps caps-md">Elastyczność</h3><p>Skóra gładka, jędrna i sprężysta.</p></div></div>
+  </div>
+</section>
+
+<section class="section bg-stone">
+  <div class="wrap split">
+    <div class="pair rv">
+      <img class="media r-34" src="img/skora.jpg" alt="Struktura skóry twarzy z bliska" loading="lazy">
+      <img class="media r-34" src="img/plecy.jpg" alt="Gładka skóra ciała" loading="lazy">
+    </div>
+    <div class="rv">
+      <p class="label">Obszary</p>
+      <h2 class="h2" style="margin-top:18px">Twarz i ciało</h2>
+      <p class="body" style="margin-top:20px">Zabieg wykonujemy na wybranej partii. Na konsultacji ustalimy obszar, liczbę zabiegów i przygotowanie skóry.</p>
+      <div class="grid-2" style="margin-top:36px">
+        <div><h3 class="caps caps-md" style="margin-bottom:12px">Twarz</h3><ul class="lines"><li>Twarz</li><li>Szyja</li><li>Dekolt</li><li>Szyja + dekolt</li></ul></div>
+        <div><h3 class="caps caps-md" style="margin-bottom:12px">Ciało</h3><ul class="lines"><li>Ramiona</li><li>Okolica nadkolanowa</li><li>Uda</li><li>Brzuch</li></ul></div>
+      </div>
     </div>
   </div>
-  <nav class="nav" aria-label="Menu główne">
-    <div class="wrap row" style="justify-content: space-between; gap: 24px; min-height: 92px;">
-      <a class="logo" href="index.html" aria-label="Manikosmetyka — strona główna"><b>MANIKOSMETYKA</b><i>salon kosmetyczny</i></a>
-      <div class="nav-links">
-          <a class="nav-link" href="depilacja-laserowa.html">Depilacja laserowa</a>
-          <a class="nav-link" href="zabiegi-na-twarz.html">Zabiegi na twarz</a>
-          <a class="nav-link is-active" href="vivace-rf.html" aria-current="page">Vivace RF</a>
-          <a class="nav-link" href="oferta.html">Oferta</a>
-          <a class="nav-link" href="o-nas.html">O nas</a>
-          <a class="nav-link" href="bony-podarunkowe.html">Bony</a>
-          <a class="nav-link" href="kontakt.html">Kontakt</a>
-      </div>
-      <a class="btn btn-wine nav-cta" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a>
-      <button class="burger" type="button" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg class="ic-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"></path></svg>
-        <svg class="ic-close" hidden width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
-      </button>
-    </div>
-    <div class="wrap mobile-menu" id="mobile-menu" hidden>
-        <a href="depilacja-laserowa.html">Depilacja laserowa</a>
-        <a href="zabiegi-na-twarz.html">Zabiegi na twarz</a>
-        <a href="vivace-rf.html">Vivace RF</a>
-        <a href="oferta.html">Oferta</a>
-        <a href="o-nas.html">O nas</a>
-        <a href="bony-podarunkowe.html">Bony</a>
-        <a href="kontakt.html">Kontakt</a>
-      <a class="btn btn-wine" style="margin-top: 20px; font-family: var(--sans); font-size: 13px; border-bottom: 0;" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a>
-    </div>
-  </nav>
-</header>
+</section>
 
-  <!-- HERO (ciemny) -->
-  <section class="bg-wine" style="padding: clamp(56px, 8vw, 120px) 0;">
-    <div class="wrap split">
-      <div class="stack" style="gap: 28px; flex: 1 1 540px;">
-        <p class="eyebrow"><a href="index.html" style="text-decoration: none;">Strona główna</a> · Vivace RF</p>
-        <h1 class="display">Vivace RF <em>mikroigłowa</em></h1>
-        <p class="lead" style="max-width: 560px;">Mikronakłuwanie połączone z falami radiowymi. Stymuluje głęboką regenerację, wspiera produkcję kolagenu i poprawia elastyczność skóry — na twarzy i na ciele.</p>
-        <div class="row" style="gap: 14px;">
-          <a class="btn btn-ivory" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów zabieg</a>
-          <a class="btn btn-line-light" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Bezpłatna konsultacja</a>
-        </div>
-      </div>
-      <img class="ph-img arch tone-wine" src="img/twarz-zblizenie.jpg" alt="Zabieg Vivace RF" style="flex: 1 1 380px; aspect-ratio: 4 / 5; max-height: 620px; background: #6A2834;">
-    </div>
-  </section>
+<section class="section-sm bg-dark">
+  <div class="wrap split" style="align-items:center">
+    <div class="rv"><p class="label">Aktualna promocja</p><h2 class="h2" style="margin-top:18px;font-size:clamp(30px,3.4vw,48px)">Vivace RF + zabieg przygotowujący w prezencie</h2></div>
+    <div class="rv"><p class="body">Radiofrekwencja mikroigłowa z antyoksydacją oraz zabieg przygotowujący skórę. Dwie wizyty w jednym pakiecie.</p><div class="btns" style="margin-top:28px"><a class="btn btn-light" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Zarezerwuj</a></div></div>
+  </div>
+</section>
 
-  <!-- ZASTOSOWANIE -->
-  <section class="section">
-    <div class="wrap stack" style="gap: 48px;">
-      <div class="split" style="align-items: flex-end;">
-        <div class="stack" style="gap: 18px;">
-          <p class="eyebrow">Zastosowanie</p>
-          <h2 class="h2">Jeden zabieg, <em>wiele efektów</em></h2>
-        </div>
-        <p class="lead">Vivace działa w głębszych warstwach skóry, dlatego sprawdza się zarówno przy pierwszych oznakach starzenia, jak i przy bliznach czy rozstępach.</p>
-      </div>
-      <div class="grid-3">
-        <div class="tile"><span class="svc-num">01</span><h3 class="h3">Ujędrnienie</h3><p class="body small">Redukcja zmarszczek i poprawa napięcia skóry.</p></div>
-        <div class="tile"><span class="svc-num">02</span><h3 class="h3">Anti-aging</h3><p class="body small">Odświeżona skóra bez widocznych oznak zmęczenia.</p></div>
-        <div class="tile"><span class="svc-num">03</span><h3 class="h3">Blizny</h3><p class="body small">Wygładzenie blizn, także potrądzikowych.</p></div>
-        <div class="tile"><span class="svc-num">04</span><h3 class="h3">Rozstępy</h3><p class="body small">Poprawa struktury skóry na ciele.</p></div>
-        <div class="tile"><span class="svc-num">05</span><h3 class="h3">Pory</h3><p class="body small">Obkurczenie rozszerzonych porów i wyrównanie struktury.</p></div>
-        <div class="tile"><span class="svc-num">06</span><h3 class="h3">Elastyczność</h3><p class="body small">Skóra gładka, jędrna i sprężysta.</p></div>
-      </div>
+<section class="section">
+  <div class="wrap">
+    <div class="head-row rv"><div><p class="label">Efekty</p><h2 class="h2">Przed i po serii</h2></div><a class="link" href="https://www.instagram.com/manikosmetyka/" target="_blank" rel="noopener">Więcej na Instagramie <span class="arr" aria-hidden="true">→</span></a></div>
+    <div class="grid-2">
+      <figure class="ph rv"><img class="media r-43" src="img/przed.jpg" alt="Skóra przed serią zabiegów" loading="lazy"><figcaption>Przed · zdjęcie poglądowe</figcaption></figure>
+      <figure class="ph rv"><img class="media r-43" src="img/po.jpg" alt="Skóra po serii zabiegów" loading="lazy"><figcaption>Po · zdjęcie poglądowe</figcaption></figure>
     </div>
-  </section>
-
-  <!-- OBSZARY -->
-  <section class="section bg-blush">
-    <div class="wrap split" style="align-items: flex-start;">
-      <div class="stack" style="gap: 22px; flex: 1 1 360px;">
-        <p class="eyebrow">Obszary</p>
-        <h2 class="h2">Twarz <em>i ciało</em></h2>
-        <p class="lead">Zabieg wykonujemy na wybranej partii. Na konsultacji ustalimy obszar, liczbę zabiegów i przygotowanie skóry.</p>
-      </div>
-      <div class="grid-2" style="flex: 1 1 560px; gap: 16px;">
-        <div class="tile"><p class="eyebrow">Twarz</p><ul class="svc-list"><li>Twarz</li><li>Szyja</li><li>Dekolt</li><li>Szyja + dekolt</li></ul></div>
-        <div class="tile"><p class="eyebrow">Ciało</p><ul class="svc-list"><li>Ramiona („pelikany”)</li><li>Okolica nadkolanowa</li><li>Uda</li><li>Brzuch</li></ul></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROMOCJA -->
-  <section class="section-sm">
-    <div class="wrap">
-      <div class="tile split" style="border-color: var(--gold); padding: clamp(28px, 4vw, 56px); gap: 32px;">
-        <div class="stack" style="gap: 14px;">
-          <p class="eyebrow">Aktualna promocja</p>
-          <h2 class="h3" style="font-size: clamp(30px, 3vw, 42px);">Jesienna promocja: Vivace RF <em>+ zabieg przygotowujący</em> w prezencie</h2>
-          <p class="body">Radiofrekwencja mikroigłowa z antyoksydacją oraz zabieg przygotowujący skórę. Dwie wizyty w jednym pakiecie.</p>
-        </div>
-        <div class="row" style="justify-content: flex-end; flex: 0 1 auto;">
-          <a class="btn btn-wine" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Zarezerwuj</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EFEKTY -->
-  <section class="section" style="padding-top: clamp(48px, 6vw, 80px);">
-    <div class="wrap stack" style="gap: 40px;">
-      <div class="stack" style="gap: 18px;">
-        <p class="eyebrow">Efekty</p>
-        <h2 class="h2">Metamorfozy <em>naszych klientek</em></h2>
-      </div>
-      <div class="grid-3">
-        <img class="ph-img round tone-deep" src="img/portret-jasny.jpg" alt="Efekt na twarzy" loading="lazy" style="aspect-ratio: 4 / 5;">
-        <img class="ph-img round tone-blush" src="img/cialo-zabieg.jpg" alt="Efekt na bliznach" loading="lazy" style="aspect-ratio: 4 / 5;">
-        <img class="ph-img round" src="img/plecy-skora.jpg" alt="Efekt na ciele" loading="lazy" style="aspect-ratio: 4 / 5;">
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section bg-porcelain" style="border-top: 1px solid var(--line);">
-    <div class="wrap split" style="align-items: flex-start;">
-      <div class="stack" style="gap: 18px; flex: 1 1 320px;">
-        <p class="eyebrow">Pytania</p>
-        <h2 class="h2">Zanim <em>przyjdziesz</em></h2>
-      </div>
-      <div class="faq stack" style="flex: 1 1 560px;">
-        <details open><summary>Ile zabiegów potrzebuję?</summary><p class="body">[Do uzupełnienia przez salon: zalecana liczba zabiegów w serii i odstępy.]</p></details>
-        <details><summary>Kiedy widać efekty?</summary><p class="body">[Do uzupełnienia przez salon.]</p></details>
-        <details><summary>Czy po zabiegu potrzebny jest czas na regenerację?</summary><p class="body">[Do uzupełnienia przez salon: jak wygląda skóra po zabiegu i zalecenia.]</p></details>
-        <details><summary>Czy konsultacja jest płatna?</summary><p class="body">Nie, konsultacja w gabinecie jest bezpłatna.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section bg-sand">
-    <div class="wrap stack" style="gap: 24px; align-items: center; text-align: center;">
-      <h2 class="h2">Daj skórze <em>nowy start</em></h2>
-      <p class="lead" style="max-width: 560px;">Zarezerwuj bezpłatną konsultację i sprawdź, czy Vivace RF jest dla Ciebie.</p>
-      <div class="row" style="gap: 14px; justify-content: center;">
-        <a class="btn btn-wine" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów konsultację</a>
-        <a class="btn btn-line" href="tel:+48511483630">Zadzwoń</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer bg-wine" style="font-family: var(--sans); width: 100%; padding: clamp(64px, 8vw, 104px) 0 32px;">
-  <div class="wrap stack" style="gap: 56px;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 40px 48px;">
-      <div class="stack" style="gap: 20px;">
-        <a class="logo" href="index.html" style="color: var(--ivory);"><b>MANIKOSMETYKA</b><i style="color: var(--gold-light);">salon kosmetyczny</i></a>
-        <p class="muted small" style="margin: 0; max-width: 280px;">Pomagamy odzyskać Twoje naturalne piękno. Twarz, ciało i dłonie — beauty szyte dla Ciebie.</p>
+  </div>
+</section>
+<section class="section bg-paper">
+  <div class="wrap acc-grid acc-faq">
+    <div class="rv"><p class="label">Pytania</p><h2 class="h2" style="margin-top:18px">Zanim przyjdziesz</h2></div>
+    <div class="acc rv"><details open><summary>Ile zabiegów potrzebuję?<span class="ico" aria-hidden="true"></span></summary><div class="acc-body"><p>[Do uzupełnienia przez salon: zalecana liczba zabiegów w serii i odstępy.]</p></div></details><details><summary>Kiedy widać efekty?<span class="ico" aria-hidden="true"></span></summary><div class="acc-body"><p>[Do uzupełnienia przez salon.]</p></div></details><details><summary>Czy po zabiegu potrzebna jest regeneracja?<span class="ico" aria-hidden="true"></span></summary><div class="acc-body"><p>[Do uzupełnienia przez salon: jak wygląda skóra po zabiegu i zalecenia.]</p></div></details><details><summary>Czy konsultacja jest płatna?<span class="ico" aria-hidden="true"></span></summary><div class="acc-body"><p>Nie, konsultacja w gabinecie jest bezpłatna.</p></div></details></div>
+  </div>
+</section>
+<section class="section bg-dark cta center">
+  <div class="wrap rv">
+    <p class="label">Zapraszamy</p>
+    <h2 class="h2">Daj skórze nowy start</h2>
+    <p class="lead">Zarezerwuj bezpłatną konsultację i sprawdź, czy Vivace RF jest dla Ciebie.</p>
+    <div class="btns"><a class="btn btn-light" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a><a class="btn btn-ghost" href="tel:+48511483630">Zadzwoń</a></div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="index.html"><b>MANIKOSMETYKA</b><i>salon kosmetyczny</i></a>
+        <p>Depilacja laserowa, zabiegi na twarz i Vivace RF w Czerwionce-Leszczynach. Zaczynamy od rozmowy.</p>
       </div>
       <div>
         <h4>Zabiegi</h4>
@@ -191,59 +127,24 @@
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li>ul. Ligonia 8<br>44-238 Czerwionka-Leszczyny</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ligonia+8+Czerwionka-Leszczyny" target="_blank" rel="noopener">ul. Ligonia 8<br>44-238 Czerwionka-Leszczyny</a></li>
           <li><a href="tel:+48511483630">+48 511 483 630</a></li>
           <li><a href="mailto:hukaneta@gmail.com">hukaneta@gmail.com</a></li>
           <li>Pon–Pt 8:00–20:00</li>
         </ul>
       </div>
     </div>
-    <hr class="rule">
-    <div class="row" style="justify-content: space-between; gap: 16px 32px; font-size: 13px; color: rgba(247, 241, 236, .7);">
-      <span>© 2026 Manikosmetyka · Stylizacja paznokci Aneta Huk · NIP [do uzupełnienia]</span>
-      <div class="row" style="gap: 24px;">
-        <a href="https://www.instagram.com/manikosmetyka/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/ManiKosmetyka/" target="_blank" rel="noopener">Facebook</a>
-        <a href="#">Polityka prywatności</a>
-      </div>
+    <div class="footer-big" aria-hidden="true">MANIKOSMETYKA</div>
+    <div class="footer-bottom">
+      <span>© 2026 Manikosmetyka · Aneta Huk · NIP [do uzupełnienia]</span>
+      <div><a href="https://www.instagram.com/manikosmetyka/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/ManiKosmetyka/" target="_blank" rel="noopener">Facebook</a><a href="#">Polityka prywatności</a></div>
     </div>
   </div>
 </footer>
+<div class="bookbar">
+  <a class="btn btn-dark" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a>
+  <a class="btn btn-line" href="tel:+48511483630" aria-label="Zadzwoń"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
 </div>
-<script>
-(function () {
-  var b = document.getElementById('burger'), m = document.getElementById('mobile-menu');
-  if (b && m) b.addEventListener('click', function () {
-    var open = m.hidden;
-    m.hidden = !open;
-    b.setAttribute('aria-expanded', open ? 'true' : 'false');
-    b.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu');
-    b.querySelector('.ic-open').hidden = open;
-    b.querySelector('.ic-close').hidden = !open;
-  });
-  var cfg = document.getElementById('bon-config');
-  if (cfg) {
-    var state = { type: 'amount', amount: '200 zł', treatment: 'Depilacja laserowa' };
-    var label = document.getElementById('bon-label');
-    var render = function () {
-      cfg.querySelectorAll('button[data-group]').forEach(function (btn) {
-        var on = state[btn.dataset.group] === btn.dataset.value;
-        btn.className = 'btn ' + (on ? 'btn-wine' : 'btn-line');
-        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-      });
-      document.getElementById('bon-amounts').hidden = state.type !== 'amount';
-      document.getElementById('bon-treatments').hidden = state.type !== 'treatment';
-      if (label) label.textContent = state.type === 'amount' ? state.amount : state.treatment;
-    };
-    cfg.addEventListener('click', function (e) {
-      var btn = e.target.closest('button[data-group]');
-      if (!btn) return;
-      state[btn.dataset.group] = btn.dataset.value;
-      render();
-    });
-    render();
-  }
-})();
-</script>
+<script src="main.js"></script>
 </body>
 </html>

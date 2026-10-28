@@ -5,112 +5,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kontakt — Manikosmetyka</title>
 <meta name="description" content="Kontakt: ul. Ligonia 8, 44-238 Czerwionka-Leszczyny, tel. +48 511 483 630. Pon–Pt 8:00–20:00.">
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css">
+<meta name="theme-color" content="#F8F4EE">
+<link rel="preload" href="fonts/hanken-grotesk-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="page">
-  <header class="site-header">
-  <div class="topbar">
-    <div class="wrap row" style="justify-content: space-between; gap: 8px 24px; min-height: 40px; padding-top: 8px; padding-bottom: 8px;">
-      <span>Pon–Pt 8:00–20:00</span>
-      <span class="hide-sm">ul. Ligonia 8, Czerwionka-Leszczyny</span>
-      <a href="tel:+48511483630">+48 511 483 630</a>
-    </div>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="header">
+  <div class="wrap header-in">
+    <nav class="nav-l" aria-label="Zabiegi"><a href="depilacja-laserowa.html">Depilacja laserowa</a><a href="zabiegi-na-twarz.html">Zabiegi na twarz</a><a href="vivace-rf.html">Vivace RF</a></nav>
+    <a class="call" href="tel:+48511483630" aria-label="Zadzwoń: +48 511 483 630"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+    <a class="logo" href="index.html" aria-label="Manikosmetyka — strona główna"><b>MANIKOSMETYKA</b><i>salon kosmetyczny</i></a>
+    <nav class="nav-r" aria-label="Salon"><a href="oferta.html">Oferta</a><a href="o-nas.html">O nas</a><a href="bony-podarunkowe.html">Bony</a><a href="kontakt.html" aria-current="page">Kontakt</a><a class="btn btn-dark" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a></nav>
+    <button class="burger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </div>
-  <nav class="nav" aria-label="Menu główne">
-    <div class="wrap row" style="justify-content: space-between; gap: 24px; min-height: 92px;">
-      <a class="logo" href="index.html" aria-label="Manikosmetyka — strona główna"><b>MANIKOSMETYKA</b><i>salon kosmetyczny</i></a>
-      <div class="nav-links">
-          <a class="nav-link" href="depilacja-laserowa.html">Depilacja laserowa</a>
-          <a class="nav-link" href="zabiegi-na-twarz.html">Zabiegi na twarz</a>
-          <a class="nav-link" href="vivace-rf.html">Vivace RF</a>
-          <a class="nav-link" href="oferta.html">Oferta</a>
-          <a class="nav-link" href="o-nas.html">O nas</a>
-          <a class="nav-link" href="bony-podarunkowe.html">Bony</a>
-          <a class="nav-link is-active" href="kontakt.html" aria-current="page">Kontakt</a>
-      </div>
-      <a class="btn btn-wine nav-cta" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a>
-      <button class="burger" type="button" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg class="ic-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"></path></svg>
-        <svg class="ic-close" hidden width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
-      </button>
-    </div>
-    <div class="wrap mobile-menu" id="mobile-menu" hidden>
-        <a href="depilacja-laserowa.html">Depilacja laserowa</a>
-        <a href="zabiegi-na-twarz.html">Zabiegi na twarz</a>
-        <a href="vivace-rf.html">Vivace RF</a>
-        <a href="oferta.html">Oferta</a>
-        <a href="o-nas.html">O nas</a>
-        <a href="bony-podarunkowe.html">Bony</a>
-        <a href="kontakt.html">Kontakt</a>
-      <a class="btn btn-wine" style="margin-top: 20px; font-family: var(--sans); font-size: 13px; border-bottom: 0;" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a>
-    </div>
-  </nav>
 </header>
+<div class="menu" id="menu" aria-hidden="true">
+  <nav aria-label="Menu"><a href="index.html">Strona główna</a><a href="depilacja-laserowa.html">Depilacja laserowa</a><a href="zabiegi-na-twarz.html">Zabiegi na twarz</a><a href="vivace-rf.html">Vivace RF</a><a href="oferta.html">Oferta</a><a href="o-nas.html">O nas</a><a href="bony-podarunkowe.html">Bony</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
+  <div class="menu-foot">
+    <a class="btn btn-dark" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a>
+    <a class="btn btn-line" href="tel:+48511483630">Zadzwoń · +48 511 483 630</a>
+    <p>ul. Ligonia 8, Czerwionka-Leszczyny · pon–pt 8:00–20:00</p>
+  </div>
+</div>
+<main id="tresc">
+<section class="hero page-hero on-photo">
+  <img class="hero-bg" src="img/gabinet.jpg" alt="Kosmetolożka w gabinecie zabiegowym" style="--pos: 50% 30%;" fetchpriority="high">
+  <div class="wrap hero-in">
+    <p class="crumbs"><a href="index.html">Strona główna</a> &nbsp;/&nbsp; Kontakt</p>
+    <h1 class="h1" style="margin-top:22px">Zapraszamy do salonu</h1>
+    <p class="lead">Najszybciej umówisz się online. Masz pytanie? Zadzwoń lub napisz — chętnie doradzimy.</p>
+    <div class="btns"><a class="btn btn-light" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę online</a><a class="btn btn-ghost" href="tel:+48511483630">Zadzwoń</a></div>
+  </div>
+</section>
 
-  <section style="padding: clamp(56px, 8vw, 112px) 0 clamp(72px, 9vw, 128px);">
-    <div class="wrap stack" style="gap: clamp(40px, 5vw, 72px);">
-      <div class="stack" style="gap: 24px; max-width: 760px;">
-        <p class="eyebrow"><a href="index.html" style="text-decoration: none;">Strona główna</a> · Kontakt</p>
-        <h1 class="display">Zapraszamy <em>do salonu</em></h1>
-        <p class="lead">Najszybciej umówisz się online. Masz pytanie? Zadzwoń lub napisz — chętnie doradzimy.</p>
-      </div>
-
-      <div class="split" style="align-items: stretch;">
-        <div class="stack" style="gap: 0; flex: 1 1 420px;">
-          <div class="stack" style="gap: 8px; padding: 26px 0; border-top: 1px solid var(--line);">
-            <p class="eyebrow">Adres</p>
-            <p class="h3" style="font-size: 28px;">ul. Ligonia 8<br>44-238 Czerwionka-Leszczyny</p>
-            <a class="link-arrow" style="align-self: flex-start; margin-top: 8px;" href="https://www.google.com/maps/search/?api=1&amp;query=Ligonia+8+Czerwionka-Leszczyny" target="_blank" rel="noopener">Wyznacz trasę <span aria-hidden="true">→</span></a>
-          </div>
-          <div class="stack" style="gap: 8px; padding: 26px 0; border-top: 1px solid var(--line);">
-            <p class="eyebrow">Telefon</p>
-            <a class="h3" style="font-size: 28px; text-decoration: none;" href="tel:+48511483630">+48 511 483 630</a>
-          </div>
-          <div class="stack" style="gap: 8px; padding: 26px 0; border-top: 1px solid var(--line);">
-            <p class="eyebrow">E-mail</p>
-            <a class="h3" style="font-size: 28px; text-decoration: none;" href="mailto:hukaneta@gmail.com">hukaneta@gmail.com</a>
-          </div>
-          <div class="stack" style="gap: 12px; padding: 26px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-            <p class="eyebrow">Godziny otwarcia</p>
-            <div class="stack" style="gap: 8px; font-size: 17px;">
-              <div class="row" style="justify-content: space-between; gap: 16px;"><span>Poniedziałek – piątek</span><span>8:00 – 20:00</span></div>
-              <div class="row" style="justify-content: space-between; gap: 16px;"><span>Sobota</span><span class="muted">[do uzupełnienia]</span></div>
-              <div class="row" style="justify-content: space-between; gap: 16px;"><span>Niedziela</span><span class="muted">nieczynne</span></div>
-            </div>
-          </div>
-          <div class="row" style="gap: 14px; padding-top: 30px;">
-            <a class="btn btn-wine" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę online</a>
-            <a class="btn btn-line" href="https://www.instagram.com/manikosmetyka/" target="_blank" rel="noopener">Instagram</a>
-            <a class="btn btn-line" href="https://www.facebook.com/ManiKosmetyka/" target="_blank" rel="noopener">Facebook</a>
-          </div>
-        </div>
-        <a class="ph round tone-deep" href="https://www.google.com/maps/search/?api=1&amp;query=Ligonia+8+Czerwionka-Leszczyny" target="_blank" rel="noopener" style="flex: 1 1 460px; min-height: 480px; text-decoration: none; align-items: center; justify-content: center; flex-direction: column; gap: 16px; border-radius: 24px;">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" style="color: var(--wine);" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
-          <span style="max-width: none; text-align: center;">[Mapa Google — osadzona po wdrożeniu]<br>Kliknij, aby otworzyć w Mapach</span>
-        </a>
+<section class="section">
+  <div class="wrap split" style="align-items:start">
+    <div class="rv">
+      <h2 class="h2">Manikosmetyka</h2>
+      <div class="info" style="margin-top:40px">
+        <div class="info-row"><span class="label">Adres</span><div><p>ul. Ligonia 8<br>44-238 Czerwionka-Leszczyny</p><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Ligonia+8+Czerwionka-Leszczyny" target="_blank" rel="noopener" style="margin-top:14px;font-size:12px">Wyznacz trasę <span class="arr" aria-hidden="true">→</span></a></div></div>
+        <div class="info-row"><span class="label">Telefon</span><a href="tel:+48511483630">+48 511 483 630</a></div>
+        <div class="info-row"><span class="label">E-mail</span><a href="mailto:hukaneta@gmail.com">hukaneta@gmail.com</a></div>
+        <div class="info-row"><span class="label">Godziny</span><div class="hours"><span>Poniedziałek – piątek</span><span>8:00 – 20:00</span><span>Sobota</span><span>[do uzupełnienia]</span><span>Niedziela</span><span>nieczynne</span></div></div>
+        <div class="info-row"><span class="label">Social media</span><p><a href="https://www.instagram.com/manikosmetyka/" target="_blank" rel="noopener">Instagram</a> &nbsp;·&nbsp; <a href="https://www.facebook.com/ManiKosmetyka/" target="_blank" rel="noopener">Facebook</a></p></div>
       </div>
     </div>
-  </section>
+    <a class="rv" href="https://www.google.com/maps/search/?api=1&amp;query=Ligonia+8+Czerwionka-Leszczyny" target="_blank" rel="noopener" style="display:block;position:relative;text-decoration:none">
+      <img class="media r-45" src="img/swiece.jpg" alt="Gabinet zabiegowy" loading="lazy" style="object-position:30% 50%">
+      <span class="btn btn-light" style="position:absolute;left:20px;bottom:20px">Otwórz w Mapach Google</span>
+    </a>
+  </div>
+</section>
 
-  <section class="section-sm bg-blush">
-    <div class="wrap grid-3">
-      <div class="stack" style="gap: 10px;"><span class="diamond"></span><h3 class="h3" style="font-size: 25px;">Parking</h3><p class="body small">Parking przy salonie. [Do potwierdzenia: czy bezpłatny]</p></div>
-      <div class="stack" style="gap: 10px;"><span class="diamond"></span><h3 class="h3" style="font-size: 25px;">Płatność kartą</h3><p class="body small">Akceptujemy karty płatnicze.</p></div>
-      <div class="stack" style="gap: 10px;"><span class="diamond"></span><h3 class="h3" style="font-size: 25px;">Odwołanie wizyty</h3><p class="body small">Prosimy o informację z wyprzedzeniem — szczegóły w regulaminie salonu.</p></div>
-    </div>
-  </section>
-
-  <footer class="footer bg-wine" style="font-family: var(--sans); width: 100%; padding: clamp(64px, 8vw, 104px) 0 32px;">
-  <div class="wrap stack" style="gap: 56px;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 40px 48px;">
-      <div class="stack" style="gap: 20px;">
-        <a class="logo" href="index.html" style="color: var(--ivory);"><b>MANIKOSMETYKA</b><i style="color: var(--gold-light);">salon kosmetyczny</i></a>
-        <p class="muted small" style="margin: 0; max-width: 280px;">Pomagamy odzyskać Twoje naturalne piękno. Twarz, ciało i dłonie — beauty szyte dla Ciebie.</p>
+<section class="section-sm bg-stone">
+  <div class="wrap grid-3">
+    <div class="feat rv"><h3 class="caps caps-md">Parking</h3><p>Parking przy salonie. [Do potwierdzenia: czy bezpłatny]</p></div>
+    <div class="feat rv"><h3 class="caps caps-md">Płatność kartą</h3><p>Akceptujemy karty płatnicze.</p></div>
+    <div class="feat rv"><h3 class="caps caps-md">Odwołanie wizyty</h3><p>Prosimy o informację z wyprzedzeniem — szczegóły w regulaminie salonu.</p></div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="index.html"><b>MANIKOSMETYKA</b><i>salon kosmetyczny</i></a>
+        <p>Depilacja laserowa, zabiegi na twarz i Vivace RF w Czerwionce-Leszczynach. Zaczynamy od rozmowy.</p>
       </div>
       <div>
         <h4>Zabiegi</h4>
@@ -133,59 +95,24 @@
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li>ul. Ligonia 8<br>44-238 Czerwionka-Leszczyny</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ligonia+8+Czerwionka-Leszczyny" target="_blank" rel="noopener">ul. Ligonia 8<br>44-238 Czerwionka-Leszczyny</a></li>
           <li><a href="tel:+48511483630">+48 511 483 630</a></li>
           <li><a href="mailto:hukaneta@gmail.com">hukaneta@gmail.com</a></li>
           <li>Pon–Pt 8:00–20:00</li>
         </ul>
       </div>
     </div>
-    <hr class="rule">
-    <div class="row" style="justify-content: space-between; gap: 16px 32px; font-size: 13px; color: rgba(247, 241, 236, .7);">
-      <span>© 2026 Manikosmetyka · Stylizacja paznokci Aneta Huk · NIP [do uzupełnienia]</span>
-      <div class="row" style="gap: 24px;">
-        <a href="https://www.instagram.com/manikosmetyka/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/ManiKosmetyka/" target="_blank" rel="noopener">Facebook</a>
-        <a href="#">Polityka prywatności</a>
-      </div>
+    <div class="footer-big" aria-hidden="true">MANIKOSMETYKA</div>
+    <div class="footer-bottom">
+      <span>© 2026 Manikosmetyka · Aneta Huk · NIP [do uzupełnienia]</span>
+      <div><a href="https://www.instagram.com/manikosmetyka/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/ManiKosmetyka/" target="_blank" rel="noopener">Facebook</a><a href="#">Polityka prywatności</a></div>
     </div>
   </div>
 </footer>
+<div class="bookbar">
+  <a class="btn btn-dark" href="https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny" target="_blank" rel="noopener">Umów wizytę</a>
+  <a class="btn btn-line" href="tel:+48511483630" aria-label="Zadzwoń"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
 </div>
-<script>
-(function () {
-  var b = document.getElementById('burger'), m = document.getElementById('mobile-menu');
-  if (b && m) b.addEventListener('click', function () {
-    var open = m.hidden;
-    m.hidden = !open;
-    b.setAttribute('aria-expanded', open ? 'true' : 'false');
-    b.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu');
-    b.querySelector('.ic-open').hidden = open;
-    b.querySelector('.ic-close').hidden = !open;
-  });
-  var cfg = document.getElementById('bon-config');
-  if (cfg) {
-    var state = { type: 'amount', amount: '200 zł', treatment: 'Depilacja laserowa' };
-    var label = document.getElementById('bon-label');
-    var render = function () {
-      cfg.querySelectorAll('button[data-group]').forEach(function (btn) {
-        var on = state[btn.dataset.group] === btn.dataset.value;
-        btn.className = 'btn ' + (on ? 'btn-wine' : 'btn-line');
-        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-      });
-      document.getElementById('bon-amounts').hidden = state.type !== 'amount';
-      document.getElementById('bon-treatments').hidden = state.type !== 'treatment';
-      if (label) label.textContent = state.type === 'amount' ? state.amount : state.treatment;
-    };
-    cfg.addEventListener('click', function (e) {
-      var btn = e.target.closest('button[data-group]');
-      if (!btn) return;
-      state[btn.dataset.group] = btn.dataset.value;
-      render();
-    });
-    render();
-  }
-})();
-</script>
+<script src="main.js"></script>
 </body>
 </html>
