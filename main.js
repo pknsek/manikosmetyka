@@ -92,6 +92,49 @@
     });
   }
 
+  // Before / after slider
+  d.querySelectorAll('[data-ba]').forEach(function (ba) {
+    var range = ba.querySelector('.ba-range');
+    if (!range) return;
+    function set(v) { ba.style.setProperty('--ba', v + '%'); range.value = v; }
+    function fromX(x) { var r = ba.getBoundingClientRect(); set(Math.max(0, Math.min(100, Math.round((x - r.left) / r.width * 1000) / 10))); }
+    range.addEventListener('input', function () { ba.classList.remove('is-hint'); set(range.value); });
+    range.addEventListener('keydown', function () { ba.classList.add('is-kbd'); });
+    range.addEventListener('blur', function () { ba.classList.remove('is-kbd'); });
+    // Drag with mouse, finger or pen; vertical swipes still scroll the page (touch-action: pan-y)
+    var dragging = false, sx = 0, sy = 0, touch = false;
+    ba.addEventListener('pointerdown', function (e) {
+      dragging = true; touch = e.pointerType !== 'mouse'; sx = e.clientX; sy = e.clientY;
+      ba.classList.remove('is-hint', 'is-kbd'); ba.classList.add('is-drag');
+      if (!touch) fromX(e.clientX); // a finger only moves the slider once it travels sideways
+    });
+    ba.addEventListener('pointermove', function (e) {
+      if (!dragging && e.pointerType !== 'mouse') return;
+      if (dragging && touch && Math.abs(e.clientX - sx) < Math.abs(e.clientY - sy)) return;
+      ba.classList.remove('is-hint'); fromX(e.clientX);
+    });
+    ['pointerup', 'pointercancel'].forEach(function (ev) {
+      ba.addEventListener(ev, function (e) {
+        if (ev === 'pointerup' && dragging && touch && Math.abs(e.clientX - sx) < 6 && Math.abs(e.clientY - sy) < 6) fromX(e.clientX); // tap jumps there
+        dragging = false; ba.classList.remove('is-drag');
+        if (ev === 'pointerup') range.focus({ preventScroll: true });
+      });
+    });
+    // One gentle sweep when it first comes into view, so it's obvious it moves
+    if (!reduce && 'IntersectionObserver' in window) {
+      var seen = new IntersectionObserver(function (en) {
+        if (!en[0].isIntersecting) return;
+        seen.disconnect();
+        ba.classList.add('is-hint');
+        setTimeout(function () { if (ba.classList.contains('is-hint')) set(72); }, 500);
+        setTimeout(function () { if (ba.classList.contains('is-hint')) set(30); }, 1500);
+        setTimeout(function () { if (ba.classList.contains('is-hint')) set(50); }, 2500);
+        setTimeout(function () { ba.classList.remove('is-hint'); }, 3700);
+      }, { threshold: 0.5 });
+      seen.observe(ba);
+    }
+  });
+
   // Voucher configurator
   var cfg = d.querySelector('[data-voucher]');
   if (cfg) {

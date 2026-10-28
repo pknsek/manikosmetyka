@@ -39,7 +39,7 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
 - `index.html`, `depilacja-laserowa.html`, `zabiegi-na-twarz.html`, `vivace-rf.html`, `oferta.html`, `o-nas.html`, `bony-podarunkowe.html`, `kontakt.html` — **generowane**, nie edytuj ręcznie.
 - `generator.py` — źródło wszystkich stron (wspólny `head`, `header`, `footer`, `page_hero`, `cta`, `faq` + funkcja na każdą stronę). Treści i menu zmienia się tutaj.
 - `style.css` — cały wygląd. `main.js` — nagłówek przy przewijaniu, menu mobilne, pasek rezerwacji, reveal, podgląd zdjęć w akordeonie, konfigurator bonu.
-- `img/` — zdjęcia (JPG, max 1600 px), nazwy opisowe (`laser-*`, `twarz-*`, `wnetrze-*` itd.). `hero-wide.jpg` (2400×1250, desktop) i `hero-m.jpg` (1000×1156, mobile) to hero strony głównej. `vivace-przed/po.jpg` to prawdziwy efekt klientki wycięty z kolażu (bez znaku wodnego).
+- `img/` — zdjęcia (JPG, max 1600 px), nazwy opisowe (`laser-*`, `twarz-*`, `wnetrze-*` itd.). `hero-wide.jpg` (2400×1250, desktop) i `hero-m.jpg` (1000×1156, mobile) to hero strony głównej. `vivace-przed/po.jpg` to prawdziwy efekt klientki wycięty z kolażu (bez znaku wodnego) i **nałożony na siebie** (zdjęcie „przed” obrócone ~7° i przesunięte, żeby usta, fałd i żuchwa się pokrywały) — używane w suwaku przed/po (`.ba`, `data-ba` w `main.js`) na stronie Vivace. Nowe pary do suwaka muszą być tak samo wyrównane i mieć identyczny kadr.
 - `v1/` — poprzednia wersja (zostawiona do porównania).
 - `.nojekyll` — wymagane dla Pages.
 

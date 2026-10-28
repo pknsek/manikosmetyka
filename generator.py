@@ -580,10 +580,17 @@ def vivace():
 <section class="section">
   <div class="wrap">
     <div class="head-row rv"><div><p class="label">Efekty</p><h2 class="h2">Przed i po serii</h2></div><a class="link" href="{IG}" {EXT}>Więcej na Instagramie <span class="arr" aria-hidden="true">→</span></a></div>
-    <div class="grid-2">
-      <figure class="ph rv"><img class="media r-34" src="img/vivace-przed.jpg" alt="Skóra klientki przed serią zabiegów" loading="lazy"><figcaption>Przed</figcaption></figure>
-      <figure class="ph rv"><img class="media r-34" src="img/vivace-po.jpg" alt="Skóra klientki po serii zabiegów" loading="lazy"><figcaption>Po</figcaption></figure>
+    <figure class="ba-wrap rv">
+    <div class="ba" data-ba style="--ba: 50%">
+      <img class="ba-img" src="img/vivace-po.jpg" alt="Skóra klientki po serii zabiegów — przebarwienia wyraźnie rozjaśnione" loading="lazy" width="1050" height="1400">
+      <div class="ba-before" aria-hidden="true"><img class="ba-img" src="img/vivace-przed.jpg" alt="" loading="lazy" width="1050" height="1400"></div>
+      <span class="ba-tag ba-tag-l" aria-hidden="true">Przed</span>
+      <span class="ba-tag ba-tag-r" aria-hidden="true">Po</span>
+      <span class="ba-handle" aria-hidden="true"><span class="ba-knob"></span></span>
+      <input class="ba-range" type="range" min="0" max="100" value="50" step="1" aria-label="Porównanie przed i po — przesuń, aby zobaczyć efekt">
     </div>
+    <figcaption>Ta sama klientka przed i po serii zabiegów · przesuń, aby porównać</figcaption>
+    </figure>
   </div>
 </section>
 '''
