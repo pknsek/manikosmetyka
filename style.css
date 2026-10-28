@@ -1,15 +1,15 @@
 /* Manikosmetyka — v2 (inspiracja: ROE, KW Beauty, Nirelle) */
 :root {
-  --cream: #F8F4EE;
-  --paper: #FCFAF7;
-  --stone: #EEE6DC;
-  --taupe: #B9AA9B;
-  --taupe-ink: #7D6E61;
-  --espresso: #2E2925;
-  --espresso-2: #3A332E;
-  --mocha: #4E3F37;
-  --ink: #2A2420;
-  --muted: #6E645C;
+  --cream: #F5F1EE;
+  --paper: #FBF9F7;
+  --stone: #ECE2DD;
+  --taupe: #BBA79F;
+  --taupe-ink: #7F6962;
+  --espresso: #2E2826;
+  --espresso-2: #3A3230;
+  --mocha: #5A4540;
+  --ink: #2A2422;
+  --muted: #6F625E;
   --line: rgba(46, 41, 37, .16);
   --line-light: rgba(248, 244, 238, .22);
   --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;

@@ -172,24 +172,24 @@ def write(name, html):
 
 # =================================================================== HOME
 SERVICES = [
-    ('Depilacja laserowa', 'Laser Primelase · pakiety', 'plecy', 'Gładka skóra pleców',
+    ('Depilacja laserowa', 'Laser Primelase · pakiety', 'laser-plecy', 'Depilacja laserowa pleców laserem Primelase',
      '<p>Trwałe pozbycie się niechcianego owłosienia laserem Primelase. Pojedyncze partie i pakiety 6 zabiegów, możliwa płatność w ratach.</p>',
      'depilacja-laserowa.html'),
-    ('Vivace RF', 'Radiofrekwencja mikroigłowa', 'szyja', 'Rozświetlona skóra szyi',
+    ('Vivace RF', 'Radiofrekwencja mikroigłowa', 'twarz-mikronakluwanie', 'Skóra twarzy po zabiegu mikroigłowym',
      '<p>Mikronakłuwanie połączone z falami radiowymi: ujędrnienie, zmarszczki, blizny, rozstępy i pory — na twarz i ciało.</p>',
      'vivace-rf.html'),
-    ('Zabiegi na twarz', 'Mezoterapia · PDRN · Kobido', 'zabieg-maska', 'Zabieg pielęgnacyjny na twarz',
+    ('Zabiegi na twarz', 'Mezoterapia · PDRN · Kobido', 'twarz-oczyszczanie', 'Zabieg pielęgnacyjny na twarz w gabinecie',
      '<p>Zabiegi regenerujące, odmładzające i nawilżające — zawsze dobrane po konsultacji.</p><ul><li>Mezoterapia mikroigłowa</li><li>PDRN</li><li>Masaż Kobido</li><li>Glass skin</li></ul>',
      'zabiegi-na-twarz.html'),
-    ('Zabiegi na ciało', 'Endermologia · Vivace RF', 'kamienie', 'Zabieg relaksacyjny na ciało',
+    ('Zabiegi na ciało', 'Endermologia · Vivace RF', 'cialo-cryo', 'Kosmetyk do zabiegów na ciało',
      '<p>Modelowanie i ujędrnianie sylwetki.</p><ul><li>Endermologia Primelle</li><li>Vivace RF na ciało</li><li>Rozstępy i blizny</li></ul>', 'oferta.html#cialo'),
-    ('Medycyna estetyczna', 'Lipoliza · skóra głowy', 'skora', 'Zbliżenie skóry twarzy',
+    ('Medycyna estetyczna', 'Lipoliza · skóra głowy', 'twarz-maska', 'Zabieg na twarz w gabinecie',
      '<p>Zabiegi iniekcyjne wykonywane po kwalifikacji.</p><ul><li>Lipoliza iniekcyjna</li><li>Mezoterapia skóry głowy Dr Cyj Hair Filler</li></ul>', 'oferta.html#estetyczna'),
-    ('Brwi i rzęsy', 'Laminacja · henna', 'oko', 'Rzęsy i oko z bliska',
+    ('Brwi i rzęsy', 'Laminacja · henna', 'brwi-produkty', 'Kosmetyki do stylizacji brwi',
      '<p>Oprawa oka, która wygląda naturalnie.</p><ul><li>Laminacja brwi</li><li>Henna pudrowa i żelowa</li><li>Henna rzęs</li><li>Regulacja woskiem</li></ul>', 'oferta.html#brwi'),
-    ('Makijaż permanentny', 'Brwi metodą pudrową', 'portret', 'Portret kobiety z naturalnymi brwiami',
+    ('Makijaż permanentny', 'Brwi metodą pudrową', 'twarz-serum', 'Kosmetolożka z serum podczas zabiegu',
      '<p>Brwi metodą pudrową z wizytą kontrolną oraz korekty wcześniejszych pigmentacji.</p>', 'oferta.html#pmu'),
-    ('Wizaż i dłonie', 'Makijaż · manicure · pedicure', 'dlonie', 'Dłonie z naturalnym manicure',
+    ('Wizaż i dłonie', 'Makijaż · manicure · pedicure', 'dlonie-lakiery', 'Lakiery hybrydowe w salonie',
      '<p>Makijaż okolicznościowy i ślubny, lekcje makijażu, manicure i pedicure.</p>', 'oferta.html#wizaz'),
 ]
 
@@ -225,10 +225,10 @@ def home():
 <section class="collage bg-dark">
  <div class="collage-stage">
   <div class="collage-imgs">
-    <img class="collage-img c1" src="img/hero.jpg" alt="" loading="lazy">
-    <img class="collage-img c2" src="img/maska.jpg" alt="" loading="lazy">
-    <img class="collage-img c3" src="img/swiece.jpg" alt="" loading="lazy">
-    <img class="collage-img c4" src="img/oko.jpg" alt="" loading="lazy">
+    <img class="collage-img c1" src="img/twarz-masaz.jpg" alt="" loading="lazy">
+    <img class="collage-img c2" src="img/twarz-glowica.jpg" alt="" loading="lazy">
+    <img class="collage-img c3" src="img/wnetrze-fotel.jpg" alt="" loading="lazy">
+    <img class="collage-img c4" src="img/laser-okulary-tacka.jpg" alt="" loading="lazy">
   </div>
   <div class="wrap">
     <div class="collage-text rv">
@@ -256,19 +256,19 @@ def home():
     </div>
     <div class="grid-3">
       <a class="card rv" href="depilacja-laserowa.html">
-        <div class="card-media"><img src="img/plecy.jpg" alt="Gładka skóra po depilacji laserowej" loading="lazy"></div>
+        <div class="card-media"><img src="img/laser-nogi.jpg" alt="Depilacja laserowa nóg laserem Primelase" loading="lazy"></div>
         <h3 class="caps caps-lg">Depilacja laserowa</h3>
         <p>Laser Primelase — bez golenia, podrażnień i pośpiechu. Pakiety i raty.</p>
         <span class="btn btn-dark">Poznaj zabieg</span>
       </a>
       <a class="card rv" href="zabiegi-na-twarz.html">
-        <div class="card-media"><img src="img/zabieg-maska.jpg" alt="Zabieg pielęgnacyjny na twarz" loading="lazy" style="object-position: 50% 35%"></div>
+        <div class="card-media"><img src="img/twarz-glowica-2.jpg" alt="Zabieg na twarz w gabinecie Manikosmetyka" loading="lazy"></div>
         <h3 class="caps caps-lg">Zabiegi na twarz</h3>
         <p>Mezoterapia mikroigłowa, PDRN i pielęgnacja dobrana po konsultacji.</p>
         <span class="btn btn-dark">Poznaj zabiegi</span>
       </a>
       <a class="card rv" href="vivace-rf.html">
-        <div class="card-media"><img src="img/szyja.jpg" alt="Rozświetlona, jędrna skóra szyi" loading="lazy"></div>
+        <div class="card-media"><img src="img/twarz-maska.jpg" alt="Skóra twarzy po zabiegu mikroigłowym" loading="lazy"></div>
         <h3 class="caps caps-lg">Vivace RF</h3>
         <p>Radiofrekwencja mikroigłowa: ujędrnienie, zmarszczki, blizny i rozstępy.</p>
         <span class="btn btn-dark">Poznaj zabieg</span>
@@ -279,7 +279,7 @@ def home():
 
 <section class="section bg-stone" id="zabiegi">
   <div class="wrap acc-grid">
-    <div class="acc-media"><img src="img/plecy.jpg" alt="Gładka skóra pleców" loading="lazy"></div>
+    <div class="acc-media"><img src="img/laser-plecy.jpg" alt="Depilacja laserowa pleców laserem Primelase" loading="lazy"></div>
     <div>
       <div class="rv" style="margin-bottom: clamp(32px, 4vw, 56px)">
         <p class="label">Oferta</p>
@@ -293,7 +293,7 @@ def home():
 
 <section class="section">
   <div class="wrap split">
-    <img class="portrait rv" src="img/aneta.jpg" alt="Aneta Huk — właścicielka salonu" loading="lazy">
+    <img class="portrait rv" src="img/aneta.jpg" alt="Aneta Huk — właścicielka salonu" style="object-position: 50% 20%" loading="lazy">
     <div class="rv" style="--gap: 26px">
       <p class="label">Poznaj właścicielkę</p>
       <h2 class="h2" style="margin-top:18px">Aneta Huk</h2>
@@ -310,7 +310,7 @@ def home():
 </section>
 
 <section class="band section">
-  <img src="img/kamienie.jpg" alt="" loading="lazy">
+  <img src="img/wnetrze-kacik.jpg" alt="" loading="lazy">
   <div class="wrap notes">
     <div class="rv">
       <p class="label">Booksy · 5,0 / 734 opinie</p>
@@ -334,8 +334,8 @@ def home():
       <div class="btns" style="margin-top:36px"><a class="btn btn-dark" href="bony-podarunkowe.html">Wybierz bon</a></div>
     </div>
     <div class="pair rv">
-      <img class="media r-34" src="img/swiece.jpg" alt="Wnętrze gabinetu przy świecach" loading="lazy" style="object-position: 30% 50%">
-      <img class="media r-34" src="img/dlonie.jpg" alt="Zadbane dłonie" loading="lazy">
+      <img class="media r-34" src="img/wnetrze-kawa.jpg" alt="Kawa z logo Manikosmetyki w strefie relaksu" loading="lazy">
+      <img class="media r-34" src="img/wnetrze-lilie.jpg" alt="Lilie i kawa w salonie" loading="lazy">
     </div>
   </div>
 </section>
@@ -348,12 +348,12 @@ def home():
     </div>
   </div>
   <div class="ig rv">
-    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 1"><img src="img/hero.jpg" alt="" loading="lazy"></a>
-    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 2"><img src="img/oko.jpg" alt="" loading="lazy"></a>
-    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 3"><img src="img/szyja.jpg" alt="" loading="lazy"></a>
-    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 4"><img src="img/zabieg-twarz.jpg" alt="" loading="lazy"></a>
-    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 5"><img src="img/dlonie.jpg" alt="" loading="lazy"></a>
-    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 6"><img src="img/maska.jpg" alt="" loading="lazy"></a>
+    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 1"><img src="img/zabieg-twarz-dlonie.jpg" alt="" loading="lazy"></a>
+    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 2"><img src="img/kwiaty-produkty.jpg" alt="" loading="lazy"></a>
+    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 3"><img src="img/laser-mezczyzna.jpg" alt="" loading="lazy"></a>
+    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 4"><img src="img/wnetrze-wazon.jpg" alt="" loading="lazy"></a>
+    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 5"><img src="img/twarz-pca.jpg" alt="" loading="lazy"></a>
+    <a href="{IG}" {EXT} aria-label="Instagram — zdjęcie 6"><img src="img/kawa-magazyn.jpg" alt="" loading="lazy"></a>
   </div>
 </section>
 
@@ -369,7 +369,7 @@ def home():
       </div>
       <div class="btns" style="margin-top:40px"><a class="btn btn-dark" href="{BOOKSY}" {EXT}>Umów wizytę</a><a class="btn btn-line" href="kontakt.html">Jak dojechać</a></div>
     </div>
-    <img class="media r-45 rv" src="img/gabinet.jpg" alt="Gabinet zabiegowy Manikosmetyka" loading="lazy">
+    <img class="media r-45 rv" src="img/gabinet-zabiegowy.jpg" alt="Gabinet zabiegowy Manikosmetyka" loading="lazy">
   </div>
 </section>
 '''
@@ -383,7 +383,7 @@ def depilacja():
                 'Depilacja laserowa Primelase w Czerwionce-Leszczynach. Pojedyncze zabiegi i pakiety, bezpłatna konsultacja.') + header('depilacja')
     html += page_hero('Depilacja laserowa', 'Depilacja laserowa Primelase',
                       'Gładka skóra przez cały sezon — bez golenia, bez podrażnień, bez pośpiechu.',
-                      'plecy', 'Gładka skóra pleców po depilacji laserowej', '50% 30%')
+                      'laser-plecy', 'Depilacja laserowa pleców laserem Primelase', '50% 18%')
     html += f'''
 <section class="section">
   <div class="wrap">
@@ -402,7 +402,7 @@ def depilacja():
 
 <section class="section bg-stone">
   <div class="wrap split">
-    <img class="media r-45 rv" src="img/szyja.jpg" alt="Gładka, rozświetlona skóra" loading="lazy">
+    <img class="media r-45 rv" src="img/laser-pacha.jpg" alt="Depilacja laserowa pach" loading="lazy">
     <div class="rv">
       <p class="label">Obszary zabiegowe</p>
       <h2 class="h2" style="margin-top:18px">Wybierz partię ciała</h2>
@@ -460,14 +460,14 @@ def twarz():
                 'Zabiegi na twarz w Czerwionce-Leszczynach: Vivace RF, mezoterapia mikroigłowa, PDRN, masaż Kobido.') + header('twarz')
     html += page_hero('Zabiegi na twarz', 'Skóra, która wygląda na wypoczętą',
                       'Zabiegi regenerujące, odmładzające i nawilżające — zawsze dobrane po konsultacji.',
-                      'zabieg-twarz', 'Zabieg pielęgnacyjny na twarz w gabinecie', '70% 40%', '72% 50%')
+                      'twarz-oczyszczanie', 'Zabieg pielęgnacyjny na twarz w gabinecie', '50% 68%', '55% 60%')
     mq = ''.join(f'<span>{t} ·</span>' for t in ['zmarszczki', 'utrata jędrności', 'rozszerzone pory', 'blizny', 'szara skóra', 'przesuszenie']) * 2
     html += f'''<div class="marquee" aria-label="Z czym przychodzicie najczęściej: zmarszczki, utrata jędrności, rozszerzone pory, blizny, szara skóra, przesuszenie"><div class="marquee-track" aria-hidden="true">{mq}</div></div>
 
 <section class="section">
   <div class="wrap" style="display:grid;gap:clamp(80px,10vw,150px)">
     <article class="split">
-      <img class="media r-45 rv" src="img/szyja.jpg" alt="Efekt Vivace RF — jędrna skóra" loading="lazy">
+      <img class="media r-45 rv" src="img/twarz-maska.jpg" alt="Skóra twarzy po zabiegu mikroigłowym" loading="lazy">
       <div class="rv">
         <p class="label">Specjalizacja</p>
         <h2 class="h2" style="margin-top:18px">Vivace RF mikroigłowa</h2>
@@ -483,10 +483,10 @@ def twarz():
         <p class="body" style="margin-top:22px">Substancje odżywcze trafiają w głąb skóry dzięki cienkim igłom urządzenia (dermapen). Skóra staje się odżywiona, nawilżona i ujędrniona. Najlepsze efekty daje seria 4–8 zabiegów co 2–3 tygodnie.</p>
         <ul class="lines" style="margin-top:28px"><li><span>Konsultacja i dobór preparatów</span></li><li><span>Oczyszczenie skóry, w razie potrzeby znieczulenie</span></li><li><span>Mikronakłucia z substancjami aktywnymi</span></li></ul>
       </div>
-      <img class="media r-45 rv" src="img/zabieg-urzadzenie.jpg" alt="Mezoterapia mikroigłowa urządzeniem" loading="lazy">
+      <img class="media r-45 rv" src="img/twarz-mikronakluwanie.jpg" alt="Skóra po mezoterapii mikroigłowej" loading="lazy">
     </article>
     <article class="split">
-      <img class="media r-45 rv" src="img/maska.jpg" alt="Zabieg regenerujący na twarz" loading="lazy">
+      <img class="media r-45 rv" src="img/twarz-serum.jpg" alt="Serum nakładane podczas zabiegu regenerującego" loading="lazy">
       <div class="rv">
         <p class="label">Regeneracja</p>
         <h2 class="h2" style="margin-top:18px">PDRN</h2>
@@ -536,7 +536,7 @@ def vivace():
                 'Vivace RF mikroigłowa — ujędrnienie, zmarszczki, blizny i rozstępy. Twarz i ciało. Manikosmetyka.') + header('vivace')
     html += page_hero('Vivace RF', 'Vivace RF mikroigłowa',
                       'Mikronakłuwanie połączone z falami radiowymi. Głęboka regeneracja i jędrność — na twarzy i na ciele.',
-                      'szyja', 'Rozświetlona, jędrna skóra szyi i twarzy', '50% 40%')
+                      'zabieg-twarz-dlonie', 'Zabieg na twarz w gabinecie Manikosmetyka', '50% 40%')
     items = [('Ujędrnienie', 'Redukcja zmarszczek i poprawa napięcia skóry.'), ('Anti-aging', 'Odświeżona skóra bez oznak zmęczenia.'),
              ('Blizny', 'Wygładzenie blizn, także potrądzikowych.'), ('Rozstępy', 'Poprawa struktury skóry na ciele.'),
              ('Pory', 'Obkurczenie porów i wyrównanie struktury.'), ('Elastyczność', 'Skóra gładka, jędrna i sprężysta.')]
@@ -555,8 +555,8 @@ def vivace():
 <section class="section bg-stone">
   <div class="wrap split">
     <div class="pair rv">
-      <img class="media r-34" src="img/skora.jpg" alt="Struktura skóry twarzy z bliska" loading="lazy">
-      <img class="media r-34" src="img/plecy.jpg" alt="Gładka skóra ciała" loading="lazy">
+      <img class="media r-34" src="img/twarz-glowica-2.jpg" alt="Zabieg na twarz" loading="lazy">
+      <img class="media r-34" src="img/cialo-cryo.jpg" alt="Kosmetyk do zabiegów na ciało" loading="lazy">
     </div>
     <div class="rv">
       <p class="label">Obszary</p>
@@ -581,8 +581,8 @@ def vivace():
   <div class="wrap">
     <div class="head-row rv"><div><p class="label">Efekty</p><h2 class="h2">Przed i po serii</h2></div><a class="link" href="{IG}" {EXT}>Więcej na Instagramie <span class="arr" aria-hidden="true">→</span></a></div>
     <div class="grid-2">
-      <figure class="ph rv"><img class="media r-43" src="img/przed.jpg" alt="Skóra przed serią zabiegów" loading="lazy"><figcaption>Przed · zdjęcie poglądowe</figcaption></figure>
-      <figure class="ph rv"><img class="media r-43" src="img/po.jpg" alt="Skóra po serii zabiegów" loading="lazy"><figcaption>Po · zdjęcie poglądowe</figcaption></figure>
+      <figure class="ph rv"><img class="media r-34" src="img/vivace-przed.jpg" alt="Skóra klientki przed serią zabiegów" loading="lazy"><figcaption>Przed</figcaption></figure>
+      <figure class="ph rv"><img class="media r-34" src="img/vivace-po.jpg" alt="Skóra klientki po serii zabiegów" loading="lazy"><figcaption>Po</figcaption></figure>
     </div>
   </div>
 </section>
@@ -625,7 +625,7 @@ def oferta():
                 'Pełna oferta salonu Manikosmetyka: depilacja laserowa, twarz, ciało, brwi, makijaż permanentny, wizaż.') + header('oferta')
     html += page_hero('Oferta', 'Pełna oferta salonu',
                       'Ceny dobieramy indywidualnie — aktualne znajdziesz przy rezerwacji online lub zapytaj telefonicznie.',
-                      'swiece', 'Gabinet zabiegowy przy świecach', '40% 50%')
+                      'wnetrze-fotel', 'Strefa relaksu w salonie Manikosmetyka', '50% 60%')
     nav = ''.join(f'<a href="#{k}">{t}</a>' for k, t, *_ in CATS)
     html += f'<nav class="cat-nav" aria-label="Kategorie"><div class="wrap">{nav}</div></nav>\n<section><div class="wrap">'
     for k, t, d, href, items in CATS:
@@ -645,7 +645,7 @@ def onas():
     html = head('O nas — Manikosmetyka', 'Poznaj salon Manikosmetyka i nasz zespół. Czerwionka-Leszczyny, ul. Ligonia 8.') + header('onas')
     html += page_hero('O nas', 'Piękno z profesjonalizmem',
                       'Salon w Czerwionce-Leszczynach, w którym każda wizyta ma być chwilą tylko dla Ciebie.',
-                      'salon', 'Wnętrze salonu Manikosmetyka', '50% 50%')
+                      'wnetrze-kacik', 'Wnętrze salonu Manikosmetyka', '50% 55%')
     html += f'''
 <section class="section">
   <div class="wrap">
@@ -667,13 +667,13 @@ def onas():
     <div class="head-row rv"><div><p class="label">Zespół</p><h2 class="h2">Poznaj nasze dziewczyny</h2></div></div>
     <div class="grid-2" style="gap:clamp(40px,5vw,80px)">
       <article class="rv">
-        <img class="portrait" src="img/aneta.jpg" alt="Aneta Huk" loading="lazy">
+        <img class="portrait" src="img/aneta-o-nas.jpg" alt="Aneta Huk" style="object-position: 50% 20%" loading="lazy">
         <p class="label" style="margin-top:28px">Właścicielka</p>
         <h3 class="caps caps-lg" style="margin-top:12px">Aneta Huk</h3>
         <p class="body" style="margin-top:14px">[Krótki opis: doświadczenie, specjalizacje, ukończone szkolenia i to, co Aneta kocha w swojej pracy.]</p>
       </article>
       <article class="rv">
-        <img class="portrait" src="img/kamila.jpg" alt="Kamila" loading="lazy">
+        <img class="portrait" src="img/kamila.jpg" alt="Kamila" style="object-position: 50% 15%" loading="lazy">
         <p class="label" style="margin-top:28px">[Specjalizacja]</p>
         <h3 class="caps caps-lg" style="margin-top:12px">Kamila [Nazwisko]</h3>
         <p class="body" style="margin-top:14px">[Krótki opis: specjalizacje i doświadczenie.]</p>
@@ -694,10 +694,10 @@ def onas():
   <div class="wrap">
     <div class="head-row rv"><div><p class="label">Gabinet</p><h2 class="h2">Zajrzyj do środka</h2></div></div>
     <div class="grid-4" style="gap:12px">
-      <img class="media r-34 rv" src="img/swiece.jpg" alt="Gabinet przy świecach" loading="lazy">
-      <img class="media r-34 rv" src="img/zabieg-twarz.jpg" alt="Zabieg na twarz" loading="lazy">
-      <img class="media r-34 rv" src="img/gabinet.jpg" alt="Gabinet zabiegowy" loading="lazy">
-      <img class="media r-34 rv" src="img/kamienie.jpg" alt="Zabieg na ciało" loading="lazy">
+      <img class="media r-34 rv" src="img/wnetrze-polki.jpg" alt="Półki z kosmetykami w salonie" loading="lazy">
+      <img class="media r-34 rv" src="img/gabinet-zabiegowy.jpg" alt="Gabinet zabiegowy" loading="lazy">
+      <img class="media r-34 rv" src="img/wnetrze-lilie.jpg" alt="Kawa i lilie w strefie relaksu" loading="lazy">
+      <img class="media r-34 rv" src="img/wnetrze-wazon.jpg" alt="Detal wnętrza salonu" loading="lazy">
     </div>
   </div>
 </section>
@@ -712,7 +712,7 @@ def bony():
     html = head('Bony podarunkowe — Manikosmetyka', 'Bony podarunkowe Manikosmetyka — na kwotę lub wybrany zabieg.') + header('bony')
     html += page_hero('Bony podarunkowe', 'Podaruj chwilę dla siebie',
                       'Bon do Manikosmetyki to prezent, który zawsze trafia. Wybierz kwotę albo konkretny zabieg.',
-                      'kamienie', 'Relaksujący zabieg z gorącymi kamieniami', '50% 50%',
+                      'kwiaty-lustro', 'Kwiaty i kosmetyki w salonie', '50% 45%',
                       btns=f'<a class="btn btn-light" href="#bon">Skomponuj bon</a>')
     am = ''.join(f'<button class="btn btn-line" type="button" data-pick="amount" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['100 zł', '200 zł', '300 zł', '500 zł'])
     tr = ''.join(f'<button class="btn btn-line" type="button" data-pick="treatment" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['Depilacja laserowa', 'Vivace RF', 'Mezoterapia', 'Laminacja brwi'])
@@ -761,7 +761,7 @@ def kontakt():
     html = head('Kontakt — Manikosmetyka', 'Kontakt: ul. Ligonia 8, 44-238 Czerwionka-Leszczyny, tel. +48 511 483 630. Pon–Pt 8:00–20:00.') + header('kontakt')
     html += page_hero('Kontakt', 'Zapraszamy do salonu',
                       'Najszybciej umówisz się online. Masz pytanie? Zadzwoń lub napisz — chętnie doradzimy.',
-                      'gabinet', 'Kosmetolożka w gabinecie zabiegowym', '50% 30%',
+                      'wizytowka', 'Wizytówka Manikosmetyka na półce w salonie', '50% 50%',
                       btns=f'<a class="btn btn-light" href="{BOOKSY}" {EXT}>Umów wizytę online</a><a class="btn btn-ghost" href="tel:{TEL}">Zadzwoń</a>')
     html += f'''
 <section class="section">
@@ -777,7 +777,7 @@ def kontakt():
       </div>
     </div>
     <a class="rv" href="{MAPS}" {EXT} style="display:block;position:relative;text-decoration:none">
-      <img class="media r-45" src="img/swiece.jpg" alt="Gabinet zabiegowy" loading="lazy" style="object-position:30% 50%">
+      <img class="media r-45" src="img/wnetrze-kawa.jpg" alt="Strefa relaksu w salonie" loading="lazy">
       <span class="btn btn-light" style="position:absolute;left:20px;bottom:20px">Otwórz w Mapach Google</span>
     </a>
   </div>

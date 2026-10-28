@@ -18,7 +18,8 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
 - Zespół: **Aneta Huk (właścicielka)** i **Kamila** (nazwisko do uzupełnienia); później mogą dojść kolejne osoby.
 - **Nie zbieramy maili** (brak newslettera / formularzy zapisu).
 - **Bony podarunkowe** — w przyszłości zakup online; na razie konfigurator + „Kup online — wkrótce”.
-- Zdjęcia są **tymczasowe** (stockowe z szablonów z GitHuba) — do podmiany na prawdziwe zdjęcia salonu.
+- Zdjęcia są **prawdziwe**, z Google Drive salonu (sesja salonu, zabiegów, Aneta i Kamila). Oryginały zostają na Drive, w repo tylko wersje max 1600 px. Hero strony głównej: Aneta (desktop wersja pozioma, telefon pion).
+- Zespół: Aneta (`aneta.jpg` — uśmiech, strona główna; `aneta-o-nas.jpg` — O nas), Kamila (`kamila.jpg`).
 - Dane kontaktowe: tel. +48 511 483 630, e-mail hukaneta@gmail.com, pon–pt 8:00–20:00, FB: facebook.com/ManiKosmetyka.
 
 ## Historia designu (żeby nie wracać do odrzuconych kierunków)
@@ -27,7 +28,7 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
 - **v2 (aktualna, katalog główny)** — inspiracja: roemedicalaesthetics.com, kwbeauty.pl, nirellecosmetics.com. Patryk: „na tej bazie będziemy pracować”.
 
 ## Design system v2 (`style.css`, zmienne w `:root`)
-- Kolory: `--cream #F8F4EE` (tło), `--paper #FCFAF7`, `--stone #EEE6DC`, `--taupe #B9AA9B`, `--taupe-ink #7D6E61`, `--espresso #2E2925` (ciemne sekcje, stopka), `--mocha #4E3F37` (przyciski), `--ink #2A2420`, `--muted #6E645C`. Hero strony głównej ma tło brzoskwiniowe `#E4C0A0` dopasowane do zdjęcia.
+- Kolory (dopasowane do wnętrza salonu: jasne szarości, ecru, przygaszony róż): `--cream #F5F1EE` (tło), `--paper #FBF9F7`, `--stone #ECE2DD`, `--taupe #BBA79F`, `--taupe-ink #7F6962`, `--espresso #2E2826` (ciemne sekcje, stopka), `--mocha #5A4540` (przyciski), `--ink #2A2422`, `--muted #6F625E`. Hero strony głównej ma szare tło dopasowane do zdjęć Anety: `#C8CBCE` (desktop), `#E3E4E6` (telefon).
 - Fonty (hostowane lokalnie w `fonts/`, `fonts.css`): **Hanken Grotesk** 300 — nagłówki; **Jost** — etykiety/nawigacja, WIELKIE LITERY z szerokim rozstrzeleniem; **Newsreader** 300 — leady i cytaty.
 - Przyciski kwadratowe (bez zaokrągleń), uppercase, tracking .24em. Easing `cubic-bezier(.23,1,.32,1)`.
 - Wzorce: pełnoekranowe hero ze zdjęciem; przewijany pasek (marquee); ciemna sekcja-kolaż; karty specjalizacji; akordeon zabiegów (na desktopie zmienia zdjęcie obok); sekcja „opinie klientek” na przyciemnionym zdjęciu; pasek Instagrama; duży napis MANIKOSMETYKA w stopce.
@@ -38,7 +39,7 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
 - `index.html`, `depilacja-laserowa.html`, `zabiegi-na-twarz.html`, `vivace-rf.html`, `oferta.html`, `o-nas.html`, `bony-podarunkowe.html`, `kontakt.html` — **generowane**, nie edytuj ręcznie.
 - `generator.py` — źródło wszystkich stron (wspólny `head`, `header`, `footer`, `page_hero`, `cta`, `faq` + funkcja na każdą stronę). Treści i menu zmienia się tutaj.
 - `style.css` — cały wygląd. `main.js` — nagłówek przy przewijaniu, menu mobilne, pasek rezerwacji, reveal, podgląd zdjęć w akordeonie, konfigurator bonu.
-- `img/` — zdjęcia (JPG, max 1600 px). `hero-wide.jpg` (desktop) i `hero-m.jpg` (mobile) to hero strony głównej; `hero-wide` to portret z cyfrowo poszerzonym tłem po lewej.
+- `img/` — zdjęcia (JPG, max 1600 px), nazwy opisowe (`laser-*`, `twarz-*`, `wnetrze-*` itd.). `hero-wide.jpg` (2400×1250, desktop) i `hero-m.jpg` (1000×1156, mobile) to hero strony głównej. `vivace-przed/po.jpg` to prawdziwy efekt klientki wycięty z kolażu (bez znaku wodnego).
 - `v1/` — poprzednia wersja (zostawiona do porównania).
 - `.nojekyll` — wymagane dla Pages.
 
@@ -61,7 +62,7 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
 - Opis Anety, nazwisko i specjalizacja Kamili, liczba lat doświadczenia.
 - Ważność i zasady bonów, kwoty bonów.
 - Dłuższa prawdziwa opinia klientki (np. o laserze/Vivace).
-- **Prawdziwe zdjęcia** salonu, zespołu i zabiegów — największy wpływ na jakość strony. Zdjęcia „przed/po” na stronie Vivace są poglądowe.
+- Zdjęcia samego zabiegu Vivace RF (urządzenie, głowica) — na razie brak, na stronie Vivace są zdjęcia ogólne zabiegów na twarz. Brak zdjęć do makijażu permanentnego, stóp i przekłuwania uszu.
 
 ## Pomysły na później
 - Zakup bonów online (płatności).
