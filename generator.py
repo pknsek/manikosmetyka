@@ -103,7 +103,7 @@ def footer():
         </ul>
       </div>
     </div>
-    <div class="footer-big" aria-hidden="true">MANIKOSMETYKA</div>
+    <div class="footer-big" aria-hidden="true"><span>MANIKOSMETYKA</span></div>
     <div class="footer-bottom">
       <span>© 2026 Manikosmetyka · Aneta Huk · NIP [do uzupełnienia]</span>
       <div><a href="{IG}" {EXT}>Instagram</a><a href="{FB}" {EXT}>Facebook</a><a href="#">Polityka prywatności</a></div>
