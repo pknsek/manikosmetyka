@@ -38,6 +38,45 @@
     els.forEach(function (el) { io.observe(el); });
   } else { els.forEach(function (el) { el.classList.add('in'); }); }
 
+  // Accordion: smooth open/close (height + content fade)
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var EASE = 'cubic-bezier(.23, 1, .32, 1)';
+  d.querySelectorAll('.acc details').forEach(function (det) {
+    var sum = det.querySelector('summary'), body = det.querySelector('.acc-body');
+    if (!sum || !body || !det.animate || reduce) return;
+    var anim = null;
+    function finish(open) {
+      det.open = open;
+      det.classList.remove('is-closing', 'is-animating');
+      det.style.height = det.style.overflow = '';
+      body.getAnimations().forEach(function (a) { a.cancel(); });
+      anim = null;
+    }
+    sum.addEventListener('click', function (e) {
+      e.preventDefault();
+      var start = det.offsetHeight + 'px';
+      if (anim) { anim.onfinish = null; anim.cancel(); }
+      body.getAnimations().forEach(function (a) { a.cancel(); });
+      det.classList.add('is-animating');
+      det.style.overflow = 'hidden';
+      var closing = det.open && !det.classList.contains('is-closing');
+      if (closing) {
+        det.classList.add('is-closing');
+        anim = det.animate({ height: [start, sum.offsetHeight + 'px'] }, { duration: 420, easing: EASE });
+        body.animate({ opacity: [1, 0], transform: ['none', 'translateY(-6px)'] }, { duration: 260, easing: EASE, fill: 'forwards' });
+        anim.onfinish = function () { finish(false); };
+      } else {
+        det.classList.remove('is-closing');
+        det.style.height = start;
+        det.open = true;
+        var end = (sum.offsetHeight + body.offsetHeight) + 'px';
+        anim = det.animate({ height: [start, end] }, { duration: 520, easing: EASE });
+        body.animate({ opacity: [0, 1], transform: ['translateY(-8px)', 'none'] }, { duration: 520, delay: 60, easing: EASE, fill: 'backwards' });
+        anim.onfinish = function () { finish(true); };
+      }
+    });
+  });
+
   // Accordion: preview image on desktop
   var prev = d.querySelector('.acc-media img');
   if (prev) {

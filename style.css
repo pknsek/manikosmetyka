@@ -252,7 +252,9 @@ body.light-top .header:not(.is-solid) .btn-dark { background: var(--mocha); colo
 .ico { flex: 0 0 auto; width: 40px; height: 40px; border: 1px solid currentColor; border-radius: 50%; position: relative; transition: transform .35s var(--ease), background-color .25s var(--ease); }
 .ico::before, .ico::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1px; background: currentColor; transform: translate(-50%, -50%); }
 .ico::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .35s var(--ease); }
-details[open] > summary .ico::after { transform: translate(-50%, -50%) rotate(0deg); }
+details[open]:not(.is-closing) > summary .ico::after { transform: translate(-50%, -50%) rotate(0deg); }
+.acc .ico { transition: transform .5s var(--ease), background-color .25s var(--ease); }
+details[open]:not(.is-closing) > summary .ico { transform: rotate(180deg); }
 .acc summary:hover .ico { background: rgba(46, 41, 37, .06); }
 .acc-body { padding: 0 0 32px; max-width: 620px; }
 .acc-body p { margin: 0; color: var(--muted); }
