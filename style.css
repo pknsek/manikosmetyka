@@ -177,7 +177,10 @@ body.menu-open { overflow: hidden; }
 .hero .lead { margin-top: 28px; max-width: 520px; color: var(--cream); }
 .hero .btns { margin-top: 40px; }
 .hero-meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 48px; font-family: var(--label); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: rgba(248, 244, 238, .85); }
-.hero-meta span + span::before { content: ""; display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: currentColor; margin-right: 28px; vertical-align: middle; opacity: .6; }
+/* Dot separators live in the gap left of each item; the one starting a row is clipped, so wrapping never leaves a stray dot */
+.hero-meta { column-gap: 28px; row-gap: 12px; overflow: hidden; }
+.hero-meta span { position: relative; white-space: nowrap; }
+.hero-meta span::before { content: ""; position: absolute; left: -16px; top: 50%; width: 4px; height: 4px; margin-top: -2px; border-radius: 50%; background: currentColor; opacity: .6; }
 
 .hero-home { background: #C8CBCE; color: var(--ink); align-items: center; }
 .hero-home::after { display: none; }
@@ -433,7 +436,7 @@ figure.ph figcaption { margin-top: 12px; font-family: var(--label); font-size: 1
   .hero .lead { font-size: 19px; margin-top: 20px; }
   .hero .btns { margin-top: 30px; }
   .hero-meta { margin-top: 32px; gap: 10px 18px; font-size: 10px; }
-  .hero-meta span + span::before { margin-right: 18px; }
+  .hero-meta span::before { left: -11px; }
   .btns { flex-direction: column; align-items: stretch; }
   .btns .btn { width: 100%; }
   .center .btns { align-items: stretch; }
