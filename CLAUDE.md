@@ -15,7 +15,7 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
   `https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny`
 - **Bez cen** na stronie (ceny są płynne).
 - Nacisk na: **depilację laserową, zabiegi na twarz, radiofrekwencję mikroigłową, makijaż permanentny brwi**. Paznokcie nie są w centrum, ale jest podstrona Szkolenia (tylko stylizacja paznokci, instruktorka Aneta / NC Company; bez szkoleń z wizażu).
-- **Nazewnictwo (względy prawne — reklama wyrobów medycznych):** na stronie NIE używamy nazw „Vivace” ani „Primelase” w opisach i nagłówkach. Piszemy „radiofrekwencja mikroigłowa” i „depilacja laserowa (laser diodowy)”. „Vivace” i „Primelase” wolno tylko na liście usług w Ofercie (`oferta.html`). Nie dodajemy cennika ani cen. Ryzykowne pozycje do ewentualnej weryfikacji z prawnikiem: lipoliza iniekcyjna, mezoterapia skóry głowy Dr Cyj, PDRN, mezoterapia igłowa.
+- **Nazewnictwo (względy prawne — reklama wyrobów medycznych):** na stronie NIE używamy nazw „Vivace” ani „Primelase” w opisach i nagłówkach. Piszemy „radiofrekwencja mikroigłowa” i „depilacja laserowa (laser diodowy)”. „Vivace” i „Primelase” wolno tylko na liście usług w Ofercie (`oferta.html`). Nie dodajemy cennika ani cen. Ryzykowne pozycje do ewentualnej weryfikacji z prawnikiem: lipoliza iniekcyjna, mezoterapia skóry głowy Dr Cyj, mezoterapia igłowa.
 - Zespół: **Aneta Huk (właścicielka)**, **Kamila** (linergistka), **Paulina** (stylistka paznokci). Opisy są wpisane w `onas()`.
 - **Nie zbieramy maili** (brak newslettera / formularzy zapisu).
 - **Bony podarunkowe** — w przyszłości zakup online; na razie konfigurator + „Kup online — wkrótce”.
@@ -59,7 +59,6 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
 
 ## Do uzupełnienia przez salon (w treści oznaczone `[...]`)
 - Godziny w sobotę, pełna lista partii do depilacji laserowej.
-- Opisy PDRN i masażu Kobido (PDRN/Kobido nie ma na Booksy — do potwierdzenia, czy zostają).
 - Odpowiedzi w FAQ radiofrekwencji (seria, efekty, regeneracja).
 - Kwoty bonów, dłuższa opinia klientki.
 - Zdjęcia zabiegu radiofrekwencji (głowica) — na razie brak. Zdjęcia do makijażu permanentnego, stóp i przekłuwania uszu — brak.

@@ -180,8 +180,8 @@ SERVICES = [
     ('Radiofrekwencja mikroigłowa', 'Twarz i ciało', 'twarz-mikronakluwanie', 'Skóra twarzy po zabiegu mikroigłowym',
      '<p>Mikronakłuwanie połączone z falami radiowymi: ujędrnienie, zmarszczki, blizny, rozstępy i pory — na twarz i ciało.</p>',
      'radiofrekwencja-mikroiglowa.html'),
-    ('Zabiegi na twarz', 'Mezoterapia · PDRN · Kobido', 'twarz-oczyszczanie', 'Zabieg pielęgnacyjny na twarz w gabinecie',
-     '<p>Zabiegi regenerujące, odmładzające i nawilżające — zawsze dobrane po konsultacji.</p><ul><li>Mezoterapia mikroigłowa</li><li>PDRN</li><li>Masaż Kobido</li><li>Glass skin</li></ul>',
+    ('Zabiegi na twarz', 'Mezoterapia · Glass skin', 'twarz-oczyszczanie', 'Zabieg pielęgnacyjny na twarz w gabinecie',
+     '<p>Zabiegi regenerujące, odmładzające i nawilżające — zawsze dobrane po konsultacji.</p><ul><li>Mezoterapia mikroigłowa</li><li>Glass skin</li></ul>',
      'zabiegi-na-twarz.html'),
     ('Zabiegi na ciało', 'Endermologia · radiofrekwencja mikroigłowa', 'cialo-cryo', 'Kosmetyk do zabiegów na ciało',
      '<p>Modelowanie i ujędrnianie sylwetki.</p><ul><li>Endermologia Primelle</li><li>Radiofrekwencja mikroigłowa na ciało</li><li>Rozstępy i blizny</li></ul>', 'oferta.html#cialo'),
@@ -203,7 +203,7 @@ def home():
           <summary><span>{name}<small>{sub}</small></span><span class="ico" aria-hidden="true"></span></summary>
           <div class="acc-body">{body}<a class="link" href="{href}">Szczegóły <span class="arr" aria-hidden="true">→</span></a></div>
         </details>'''
-    marquee_items = ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia mikroigłowa', 'PDRN', 'Bezpłatna konsultacja']
+    marquee_items = ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia mikroigłowa', 'Bezpłatna konsultacja']
     mq = ''.join(f'<span>{t} ·</span>' for t in marquee_items) * 2
     html = head('Manikosmetyka — salon kosmetyczny w Czerwionce-Leszczynach',
                 'Salon kosmetyczny w Czerwionce-Leszczynach: depilacja laserowa, zabiegi na twarz, radiofrekwencja mikroigłowa. Bezpłatna konsultacja.').replace('<body>', '<body class="light-top">') + header('home')
@@ -530,15 +530,6 @@ def twarz():
       </div>
       <img class="media r-45 rv" src="img/twarz-mikronakluwanie.jpg" alt="Skóra po mezoterapii mikroigłowej" loading="lazy">
     </article>
-    <article class="split">
-      <img class="media r-45 rv" src="img/twarz-serum.jpg" alt="Serum nakładane podczas zabiegu regenerującego" loading="lazy">
-      <div class="rv">
-        <p class="label">Regeneracja</p>
-        <h2 class="h2" style="margin-top:18px">PDRN</h2>
-        <p class="body" style="margin-top:22px">Zabieg, o którym mówi się w każdym gabinecie. [Do uzupełnienia przez salon: krótki opis działania, wskazania i liczba zabiegów w serii.]</p>
-        <a class="link" href="{BOOKSY}" {EXT} style="margin-top:32px">Zapytaj o zabieg <span class="arr" aria-hidden="true">→</span></a>
-      </div>
-    </article>
   </div>
 </section>
 
@@ -692,7 +683,7 @@ CATS = [
     ('depilacja', 'Depilacja laserowa', 'Laser diodowy Primelase. Pojedyncze zabiegi i pakiety.', 'depilacja-laserowa.html',
      [('Pojedyncza partia ciała', 'damska i męska'), ('Pakiet 4 partie', ''), ('Bikini płytkie / głębokie', ''), ('Bikini męskie', ''), ('Broda', ''), ('Pakiety 6 zabiegów', 'zapytaj o aktualną promocję')]),
     ('twarz', 'Pielęgnacja twarzy', 'Zabiegi dobierane po konsultacji.', 'zabiegi-na-twarz.html',
-     [('Vivace — radiofrekwencja mikroigłowa: twarz, szyja, dekolt', ''), ('Mezoterapia mikroigłowa (dermapen)', ''), ('Oczyszczanie wodorowe', 'HydroRevive, HydroGlow, HydroLux'), ('Mikrodermabrazja', ''), ('Peelingi kwasowe i złuszczające', ''), ('Zabiegi PCA Skin', ''), ('Rytuał Glass skin', ''), ('PDRN', ''), ('Masaż Kobido', ''), ('Konsultacja z zabiegiem', ''), ('Konsultacja w gabinecie', 'bezpłatna')]),
+     [('Vivace — radiofrekwencja mikroigłowa: twarz, szyja, dekolt', ''), ('Mezoterapia mikroigłowa (dermapen)', ''), ('Oczyszczanie wodorowe', 'HydroRevive, HydroGlow, HydroLux'), ('Mikrodermabrazja', ''), ('Peelingi kwasowe i złuszczające', ''), ('Zabiegi PCA Skin', ''), ('Rytuał Glass skin', ''), ('Konsultacja z zabiegiem', ''), ('Konsultacja w gabinecie', 'bezpłatna')]),
     ('cialo', 'Zabiegi na ciało', '', 'radiofrekwencja-mikroiglowa.html',
      [('Vivace — radiofrekwencja mikroigłowa: ramiona, okolica nadkolanowa, uda, brzuch', ''), ('Endermologia Primelle', 'masaż próżniowy, drenaż'), ('Vivace — radiofrekwencja mikroigłowa: rozstępy i blizny', '')]),
     ('estetyczna', 'Medycyna estetyczna', '', '',
