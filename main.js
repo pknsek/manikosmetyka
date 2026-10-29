@@ -27,7 +27,7 @@
   if (burger) burger.addEventListener('click', function () { setMenu(!b.classList.contains('menu-open')); });
   d.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
   if (menu) menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
-  window.addEventListener('resize', function () { if (window.innerWidth > 1180) setMenu(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 1439) setMenu(false); });
 
   // Reveal on scroll
   var els = d.querySelectorAll('.rv');

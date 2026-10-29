@@ -15,9 +15,10 @@ PHONE_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-w
 
 NAV_L = [('depilacja', 'depilacja-laserowa.html', 'Depilacja laserowa'),
          ('twarz', 'zabiegi-na-twarz.html', 'Zabiegi na twarz'),
-         ('vivace', 'vivace-rf.html', 'Vivace RF')]
+         ('rf', 'radiofrekwencja-mikroiglowa.html', 'Radiofrekwencja')]
 NAV_R = [('oferta', 'oferta.html', 'Oferta'),
          ('onas', 'o-nas.html', 'O nas'),
+         ('szkolenia', 'szkolenia.html', 'Szkolenia'),
          ('bony', 'bony-podarunkowe.html', 'Bony'),
          ('kontakt', 'kontakt.html', 'Kontakt')]
 
@@ -73,14 +74,14 @@ def footer():
     <div class="footer-top">
       <div>
         <a class="logo" href="index.html"><b>MANIKOSMETYKA</b><i>salon kosmetyczny</i></a>
-        <p>Depilacja laserowa, zabiegi na twarz i Vivace RF w Czerwionce-Leszczynach. Zaczynamy od rozmowy.</p>
+        <p>Depilacja laserowa, zabiegi na twarz i radiofrekwencja mikroigłowa w Czerwionce-Leszczynach. Zaczynamy od rozmowy.</p>
       </div>
       <div>
         <h4>Zabiegi</h4>
         <ul>
           <li><a href="depilacja-laserowa.html">Depilacja laserowa</a></li>
           <li><a href="zabiegi-na-twarz.html">Zabiegi na twarz</a></li>
-          <li><a href="vivace-rf.html">Vivace RF</a></li>
+          <li><a href="radiofrekwencja-mikroiglowa.html">Radiofrekwencja mikroigłowa</a></li>
           <li><a href="oferta.html">Pełna oferta</a></li>
         </ul>
       </div>
@@ -88,6 +89,7 @@ def footer():
         <h4>Salon</h4>
         <ul>
           <li><a href="o-nas.html">O nas</a></li>
+          <li><a href="szkolenia.html">Szkolenia</a></li>
           <li><a href="bony-podarunkowe.html">Bony podarunkowe</a></li>
           <li><a href="kontakt.html">Kontakt i dojazd</a></li>
           <li><a href="{BOOKSY}" {EXT}>Rezerwacja online</a></li>
@@ -105,7 +107,7 @@ def footer():
     </div>
     <div class="footer-big" aria-hidden="true"><span>MANIKOSMETYKA</span></div>
     <div class="footer-bottom">
-      <span>© 2026 Manikosmetyka · Aneta Huk · NIP [do uzupełnienia]</span>
+      <span>© 2026 Manikosmetyka · Aneta Huk · NIP 6423090410</span>
       <div><a href="{IG}" {EXT}>Instagram</a><a href="{FB}" {EXT}>Facebook</a><a href="#">Polityka prywatności</a></div>
     </div>
   </div>
@@ -172,17 +174,17 @@ def write(name, html):
 
 # =================================================================== HOME
 SERVICES = [
-    ('Depilacja laserowa', 'Laser Primelase · pakiety', 'laser-plecy', 'Depilacja laserowa pleców laserem Primelase',
-     '<p>Trwałe pozbycie się niechcianego owłosienia laserem Primelase. Pojedyncze partie i pakiety 6 zabiegów, możliwa płatność w ratach.</p>',
+    ('Depilacja laserowa', 'Laser diodowy · pakiety', 'laser-plecy', 'Depilacja laserowa pleców',
+     '<p>Trwałe pozbycie się niechcianego owłosienia laserem diodowym. Pojedyncze partie i pakiety 6 zabiegów, możliwa płatność w ratach.</p>',
      'depilacja-laserowa.html'),
-    ('Vivace RF', 'Radiofrekwencja mikroigłowa', 'twarz-mikronakluwanie', 'Skóra twarzy po zabiegu mikroigłowym',
+    ('Radiofrekwencja mikroigłowa', 'Twarz i ciało', 'twarz-mikronakluwanie', 'Skóra twarzy po zabiegu mikroigłowym',
      '<p>Mikronakłuwanie połączone z falami radiowymi: ujędrnienie, zmarszczki, blizny, rozstępy i pory — na twarz i ciało.</p>',
-     'vivace-rf.html'),
+     'radiofrekwencja-mikroiglowa.html'),
     ('Zabiegi na twarz', 'Mezoterapia · PDRN · Kobido', 'twarz-oczyszczanie', 'Zabieg pielęgnacyjny na twarz w gabinecie',
      '<p>Zabiegi regenerujące, odmładzające i nawilżające — zawsze dobrane po konsultacji.</p><ul><li>Mezoterapia mikroigłowa</li><li>PDRN</li><li>Masaż Kobido</li><li>Glass skin</li></ul>',
      'zabiegi-na-twarz.html'),
-    ('Zabiegi na ciało', 'Endermologia · Vivace RF', 'cialo-cryo', 'Kosmetyk do zabiegów na ciało',
-     '<p>Modelowanie i ujędrnianie sylwetki.</p><ul><li>Endermologia Primelle</li><li>Vivace RF na ciało</li><li>Rozstępy i blizny</li></ul>', 'oferta.html#cialo'),
+    ('Zabiegi na ciało', 'Endermologia · radiofrekwencja mikroigłowa', 'cialo-cryo', 'Kosmetyk do zabiegów na ciało',
+     '<p>Modelowanie i ujędrnianie sylwetki.</p><ul><li>Endermologia Primelle</li><li>Radiofrekwencja mikroigłowa na ciało</li><li>Rozstępy i blizny</li></ul>', 'oferta.html#cialo'),
     ('Medycyna estetyczna', 'Lipoliza · skóra głowy', 'twarz-maska', 'Zabieg na twarz w gabinecie',
      '<p>Zabiegi iniekcyjne wykonywane po kwalifikacji.</p><ul><li>Lipoliza iniekcyjna</li><li>Mezoterapia skóry głowy Dr Cyj Hair Filler</li></ul>', 'oferta.html#estetyczna'),
     ('Brwi i rzęsy', 'Laminacja · henna', 'brwi-produkty', 'Kosmetyki do stylizacji brwi',
@@ -190,7 +192,7 @@ SERVICES = [
     ('Makijaż permanentny', 'Brwi metodą pudrową', 'twarz-serum', 'Kosmetolożka z serum podczas zabiegu',
      '<p>Brwi metodą pudrową z wizytą kontrolną oraz korekty wcześniejszych pigmentacji.</p>', 'oferta.html#pmu'),
     ('Wizaż i dłonie', 'Makijaż · manicure · pedicure', 'dlonie-lakiery', 'Lakiery hybrydowe w salonie',
-     '<p>Makijaż okolicznościowy i ślubny, lekcje makijażu, manicure i pedicure.</p>', 'oferta.html#wizaz'),
+     '<p>Makijaż okolicznościowy i ślubny z możliwością dojazdu, manicure i pedicure.</p>', 'oferta.html#wizaz'),
 ]
 
 
@@ -201,10 +203,10 @@ def home():
           <summary><span>{name}<small>{sub}</small></span><span class="ico" aria-hidden="true"></span></summary>
           <div class="acc-body">{body}<a class="link" href="{href}">Szczegóły <span class="arr" aria-hidden="true">→</span></a></div>
         </details>'''
-    marquee_items = ['Depilacja laserowa', 'Vivace RF', 'Mezoterapia mikroigłowa', 'PDRN', 'Bezpłatna konsultacja']
+    marquee_items = ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia mikroigłowa', 'PDRN', 'Bezpłatna konsultacja']
     mq = ''.join(f'<span>{t} ·</span>' for t in marquee_items) * 2
     html = head('Manikosmetyka — salon kosmetyczny w Czerwionce-Leszczynach',
-                'Salon kosmetyczny w Czerwionce-Leszczynach: depilacja laserowa Primelase, zabiegi na twarz, Vivace RF. Bezpłatna konsultacja.').replace('<body>', '<body class="light-top">') + header('home')
+                'Salon kosmetyczny w Czerwionce-Leszczynach: depilacja laserowa, zabiegi na twarz, radiofrekwencja mikroigłowa. Bezpłatna konsultacja.').replace('<body>', '<body class="light-top">') + header('home')
     html += f'''
 <section class="hero hero-home">
   <picture>
@@ -214,7 +216,7 @@ def home():
   <div class="wrap hero-in">
     <p class="label">Salon kosmetyczny <span class="hide-m">· Czerwionka-Leszczyny</span></p>
     <h1 class="display">Naturalne piękno, bez&nbsp;pośpiechu</h1>
-    <p class="lead">Depilacja laserowa, zabiegi na twarz i Vivace RF w Czerwionce-Leszczynach. Każdy zabieg zaczynamy od bezpłatnej konsultacji.</p>
+    <p class="lead">Depilacja laserowa, zabiegi na twarz i radiofrekwencja mikroigłowa w Czerwionce-Leszczynach. Każdy zabieg zaczynamy od bezpłatnej konsultacji.</p>
     <div class="btns"><a class="btn btn-dark" href="{BOOKSY}" {EXT}>Umów wizytę</a><a class="btn btn-line" href="#zabiegi">Poznaj zabiegi</a></div>
     <div class="hero-meta"><span>★ 5,0 na Booksy</span><span>734 opinie</span><span>Konsultacja gratis</span></div>
   </div>
@@ -254,23 +256,29 @@ def home():
       <div><p class="label">Specjalizacje</p><h2 class="h2">W tym jesteśmy najmocniejsze</h2></div>
       <a class="link" href="oferta.html">Cała oferta <span class="arr" aria-hidden="true">→</span></a>
     </div>
-    <div class="grid-3">
+    <div class="grid-4 cards-4">
       <a class="card rv" href="depilacja-laserowa.html">
-        <div class="card-media"><img src="img/laser-nogi.jpg" alt="Depilacja laserowa nóg laserem Primelase" loading="lazy"></div>
+        <div class="card-media"><img src="img/laser-nogi.jpg" alt="Depilacja laserowa nóg" loading="lazy"></div>
         <h3 class="caps caps-lg">Depilacja laserowa</h3>
-        <p>Laser Primelase — bez golenia, podrażnień i pośpiechu. Pakiety i raty.</p>
+        <p>Laser diodowy — bez golenia, podrażnień i pośpiechu. Pakiety i raty.</p>
         <span class="btn btn-dark">Poznaj zabieg</span>
       </a>
       <a class="card rv" href="zabiegi-na-twarz.html">
         <div class="card-media"><img src="img/twarz-glowica-2.jpg" alt="Zabieg na twarz w gabinecie Manikosmetyka" loading="lazy"></div>
         <h3 class="caps caps-lg">Zabiegi na twarz</h3>
-        <p>Mezoterapia mikroigłowa, PDRN i pielęgnacja dobrana po konsultacji.</p>
+        <p>Oczyszczanie, peelingi, mezoterapia i pielęgnacja dobrana po konsultacji.</p>
         <span class="btn btn-dark">Poznaj zabiegi</span>
       </a>
-      <a class="card rv" href="vivace-rf.html">
+      <a class="card rv" href="radiofrekwencja-mikroiglowa.html">
         <div class="card-media"><img src="img/twarz-maska.jpg" alt="Skóra twarzy po zabiegu mikroigłowym" loading="lazy"></div>
-        <h3 class="caps caps-lg">Vivace RF</h3>
-        <p>Radiofrekwencja mikroigłowa: ujędrnienie, zmarszczki, blizny i rozstępy.</p>
+        <h3 class="caps caps-lg">Radiofrekwencja mikroigłowa</h3>
+        <p>Ujędrnienie, zmarszczki, blizny i rozstępy — na twarz i ciało.</p>
+        <span class="btn btn-dark">Poznaj zabieg</span>
+      </a>
+      <a class="card rv" href="oferta.html#pmu">
+        <div class="card-media"><img src="img/brwi-produkty.jpg" alt="Kosmetyki do stylizacji brwi" loading="lazy"></div>
+        <h3 class="caps caps-lg">Makijaż permanentny brwi</h3>
+        <p>Metoda pudrowa: naturalny, delikatny efekt na 1–2 lata, z wizytą kontrolną.</p>
         <span class="btn btn-dark">Poznaj zabieg</span>
       </a>
     </div>
@@ -279,7 +287,7 @@ def home():
 
 <section class="section bg-stone" id="zabiegi">
   <div class="wrap acc-grid">
-    <div class="acc-media"><img src="img/laser-plecy.jpg" alt="Depilacja laserowa pleców laserem Primelase" loading="lazy"></div>
+    <div class="acc-media"><img src="img/laser-plecy.jpg" alt="Depilacja laserowa pleców" loading="lazy"></div>
     <div>
       <div class="rv" style="margin-bottom: clamp(32px, 4vw, 56px)">
         <p class="label">Oferta</p>
@@ -298,11 +306,11 @@ def home():
       <p class="label">Poznaj właścicielkę</p>
       <h2 class="h2" style="margin-top:18px">Aneta Huk</h2>
       <p class="lead" style="margin-top:26px">Manikosmetyka to miejsce, w którym piękno spotyka się z profesjonalizmem — i z czasem tylko dla Ciebie.</p>
-      <p class="body" style="margin-top:20px">Z pasją dbamy o każdy detal: od pierwszej konsultacji po efekt, z którego jesteś dumna. Pracujemy na sprawdzonych kosmetykach i nowoczesnych technologiach, w przytulnej atmosferze. [Krótki opis Anety: doświadczenie, szkolenia — do uzupełnienia.]</p>
+      <p class="body" style="margin-top:20px">Z pasją i profesjonalizmem wykonuje zabiegi na twarz i ciało, dbając o każdy detal. Od ponad 20 lat zajmuje się również stylizacją paznokci i jest instruktorką NC Company. W swojej pracy stawia na jakość, precyzję i indywidualne podejście.</p>
       <div class="stats" style="margin-top:40px">
         <div class="stat"><b>5,0</b><span>ocena Booksy</span></div>
         <div class="stat"><b>734</b><span>opinie</span></div>
-        <div class="stat"><b>[X]</b><span>lat doświadczenia</span></div>
+        <div class="stat"><b>20+</b><span>lat w stylizacji paznokci</span></div>
       </div>
       <a class="link" href="o-nas.html" style="margin-top:36px">Poznaj zespół <span class="arr" aria-hidden="true">→</span></a>
     </div>
@@ -335,7 +343,7 @@ def home():
     </div>
     <div class="pair rv">
       <img class="media r-34" src="img/wnetrze-kawa.jpg" alt="Kawa z logo Manikosmetyki w strefie relaksu" loading="lazy">
-      <img class="media r-34" src="img/wnetrze-lilie.jpg" alt="Lilie i kawa w salonie" loading="lazy">
+      <img class="media r-34" src="img/bon-podarunkowy.jpg" alt="Bon podarunkowy Manikosmetyki w eleganckiej kopercie" loading="lazy">
     </div>
   </div>
 </section>
@@ -379,17 +387,17 @@ def home():
 
 # =================================================================== DEPILACJA
 def depilacja():
-    html = head('Depilacja laserowa Primelase — Manikosmetyka',
-                'Depilacja laserowa Primelase w Czerwionce-Leszczynach. Pojedyncze zabiegi i pakiety, bezpłatna konsultacja.') + header('depilacja')
-    html += page_hero('Depilacja laserowa', 'Depilacja laserowa Primelase',
+    html = head('Depilacja laserowa — Manikosmetyka',
+                'Depilacja laserowa w Czerwionce-Leszczynach. Pojedyncze zabiegi i pakiety, bezpłatna konsultacja.') + header('depilacja')
+    html += page_hero('Depilacja laserowa', 'Depilacja laserowa',
                       'Gładka skóra przez cały sezon — bez golenia, bez podrażnień, bez pośpiechu.',
-                      'laser-plecy', 'Depilacja laserowa pleców laserem Primelase', '50% 18%')
+                      'laser-plecy', 'Depilacja laserowa pleców', '50% 18%')
     html += f'''
 <section class="section">
   <div class="wrap">
     <div class="split" style="align-items:start">
       <div class="rv"><p class="label">Dlaczego laser</p><h2 class="h2" style="margin-top:18px">Koniec z maszynką i&nbsp;wrastającymi włoskami</h2></div>
-      <p class="lead rv">Laser Primelase działa na mieszek włosowy, dlatego efekt budujesz serią zabiegów — a potem po prostu cieszysz się gładką skórą. Na konsultacji dobierzemy parametry do Twojej skóry i włosa.</p>
+      <p class="lead rv">Laser diodowy działa na mieszek włosowy, dlatego efekt budujesz serią zabiegów — a potem po prostu cieszysz się gładką skórą. Na konsultacji dobierzemy parametry do Twojej skóry i włosa.</p>
     </div>
     <div class="grid-4" style="margin-top: clamp(56px, 7vw, 96px)">
       <div class="feat rv"><h3 class="caps caps-md">Bez golenia</h3><p>Zapomnij o maszynce i codziennym pośpiechu.</p></div>
@@ -438,15 +446,15 @@ def depilacja():
     <div class="steps rv" style="margin-top:56px"><div class="grid-4">{steps([
         ('Konsultacja', 'Rozmowa, ocena skóry i włosa, kwalifikacja do zabiegu.'),
         ('Przygotowanie', 'Dostaniesz jasne zalecenia, jak przygotować się do wizyty.'),
-        ('Zabieg', 'Szybki zabieg laserem Primelase w komfortowych warunkach.'),
+        ('Zabieg', 'Szybki zabieg laserem diodowym w komfortowych warunkach.'),
         ('Pielęgnacja', 'Zalecenia po zabiegu i plan kolejnych wizyt w serii.')])}</div></div>
   </div>
 </section>
 '''
     html += faq('Najczęściej pytacie', [
         ('Ile zabiegów potrzebuję?', 'To zależy od partii, rodzaju włosa i skóry. Najczęściej pracujemy w serii — dlatego pakiety obejmują 6 zabiegów. Dokładny plan ustalimy na konsultacji.'),
-        ('Jak przygotować się do zabiegu?', 'Wszystkie zalecenia przekażemy na konsultacji, dopasowane do Twojej skóry i partii. [Do uzupełnienia przez salon.]'),
-        ('Czy depilacja laserowa boli?', '[Do uzupełnienia przez salon — opis odczuć podczas zabiegu laserem Primelase.]'),
+        ('Jak przygotować się do depilacji laserowej?', 'Najpóźniej dzień przed zabiegiem należy dokładnie ogolić maszynką obszar poddawany depilacji, najlepiej na zero. Im gładsza skóra, tym większy komfort podczas zabiegu. Skóra powinna być czysta, sucha, bez balsamów i innych kosmetyków.'),
+        ('Czy depilacja laserowa boli?', 'Zabieg jest odczuwalny, ale zazwyczaj nie jest bolesny. Dzięki chłodzącej głowicy i pracy na żelu dyskomfort jest znacznie mniejszy. Odczucia są indywidualne, jednak większość osób dobrze toleruje zabieg.'),
         ('Czy mogę rozłożyć płatność na raty?', 'Tak, przy pakietach możliwa jest płatność w ratach. Zapytaj o szczegóły przy rezerwacji.'),
         ('Czy konsultacja jest płatna?', 'Nie, konsultacja w gabinecie jest bezpłatna.')])
     html += cta('Gotowa na lato bez maszynki?', 'Zarezerwuj konsultację i zacznij serię, zanim zrobi się ciepło.')
@@ -455,9 +463,46 @@ def depilacja():
 
 
 # =================================================================== TWARZ
+FACE_GROUPS = [
+    ('Oczyszczanie i nawilżanie', 'Zabiegi na każdy dzień i na „reset” skóry.', [
+        ('HydroRevive', 'Oczyszczanie wodorowe w 8 etapach (ok. 1 h 15 min): peeling kawitacyjny, sonoforeza z ampułką i maska.'),
+        ('HydroGlow', 'Oczyszczanie wodorowe w 6 etapach (ok. 1 h): szybki blask i nawilżenie.'),
+        ('HydroLux', 'Oczyszczanie wodorowe w 9 etapach (ok. 1 h 30 min) z falą radiową (RF), sonoforezą i maską.'),
+        ('Oczyszczanie z peelingiem kawitacyjnym', 'Dokładne oczyszczenie skóry twarzy i delikatne złuszczenie.'),
+        ('Rytuał Glass skin', 'Oczyszczanie, peeling, tonizacja, intensywne nawilżenie i filtr UV: efekt gładkiej, rozświetlonej skóry.'),
+        ('Podstawowy zabieg pielęgnacyjny', 'Peeling, ampułka i maska dobrane do potrzeb skóry.'),
+        ('Rytuał piękna ESTHEMAX', 'Rozbudowany rytuał pielęgnacyjny (ok. 1 h 30 min).')]),
+    ('Złuszczanie i odnowa', 'Peelingi i mikrodermabrazja dla wyrównania struktury skóry.', [
+        ('Mikrodermabrazja', 'Mechaniczne złuszczanie naskórka: twarz, szyja i dekolt, także z maseczką.'),
+        ('Peelingi kwasowe', 'Złuszczanie kwasami dobranymi do rodzaju skóry.'),
+        ('BioRePeel Cl3', 'Profesjonalny zabieg peelingujący.'),
+        ('PRX-T33', 'Profesjonalny zabieg peelingujący.'),
+        ('Reti Peel', 'Peeling z retinolem.'),
+        ('PQ-AGE Evolution', 'Profesjonalny zabieg odmładzający.')]),
+    ('Zabiegi autorskie i z retinolem', 'Bardziej wymagająca pielęgnacja, dobierana na konsultacji.', [
+        ('Autorski zabieg terapeutyczny', 'Zabieg dopasowany do potrzeb Twojej skóry (ok. 1 h 30 min).'),
+        ('Autorski zabieg z retinolem i mezoterapią', 'Połączenie retinolu z mezoterapią mikroigłową.'),
+        ('Zabieg z retinolem i czynnikami wzrostu', 'Pielęgnacja z retinolem i czynnikami wzrostu (ok. 45 min).'),
+        ('Zabieg Geneo', 'Zabieg dotleniający i odświeżający skórę.')]),
+    ('PCA Skin', 'Profesjonalna pielęgnacja marki PCA Skin.', [
+        ('PCA Oxygenating, stopnie I, II i III', 'Trzy stopnie intensywności zabiegu, dobierane do kondycji skóry.'),
+        ('Zabieg terapeutyczny kwasami PCA', 'Pielęgnacja kwasami PCA.'),
+        ('PCAskin Trądzik', 'Procedura dla cery z niedoskonałościami.'),
+        ('PCAskin Cera naczynkowa', 'Delikatna procedura dla skóry wrażliwej i naczynkowej.')]),
+]
+
+
+def face_list():
+    out = ''
+    for t, d, items in FACE_GROUPS:
+        li = ''.join(f'<li><span>{a}</span><small>{b}</small></li>' for a, b in items)
+        out += f'<div class="cat"><div class="rv"><h3 class="h2" style="font-size:clamp(26px,2.8vw,38px)">{t}</h3><p class="body">{d}</p></div><ul class="lines rv">{li}</ul></div>'
+    return out
+
+
 def twarz():
     html = head('Zabiegi na twarz — Manikosmetyka',
-                'Zabiegi na twarz w Czerwionce-Leszczynach: Vivace RF, mezoterapia mikroigłowa, PDRN, masaż Kobido.') + header('twarz')
+                'Zabiegi na twarz w Czerwionce-Leszczynach: radiofrekwencja mikroigłowa, mezoterapia, oczyszczanie wodorowe, peelingi, PCA Skin.') + header('twarz')
     html += page_hero('Zabiegi na twarz', 'Skóra, która wygląda na wypoczętą',
                       'Zabiegi regenerujące, odmładzające i nawilżające — zawsze dobrane po konsultacji.',
                       'twarz-oczyszczanie', 'Zabieg pielęgnacyjny na twarz w gabinecie', '50% 68%', '55% 60%')
@@ -470,10 +515,10 @@ def twarz():
       <img class="media r-45 rv" src="img/twarz-maska.jpg" alt="Skóra twarzy po zabiegu mikroigłowym" loading="lazy">
       <div class="rv">
         <p class="label">Specjalizacja</p>
-        <h2 class="h2" style="margin-top:18px">Vivace RF mikroigłowa</h2>
+        <h2 class="h2" style="margin-top:18px">Radiofrekwencja mikroigłowa</h2>
         <p class="body" style="margin-top:22px">Połączenie mikronakłuwania z falami radiowymi stymuluje głęboką regenerację skóry i produkcję kolagenu. Efekt to gładka, jędrna i odświeżona skóra.</p>
         <ul class="tags" style="margin-top:26px"><li>anti-aging</li><li>zmarszczki</li><li>blizny</li><li>pory</li></ul>
-        <a class="link" href="vivace-rf.html" style="margin-top:32px">Więcej o Vivace RF <span class="arr" aria-hidden="true">→</span></a>
+        <a class="link" href="radiofrekwencja-mikroiglowa.html" style="margin-top:32px">Więcej o radiofrekwencji mikroigłowej <span class="arr" aria-hidden="true">→</span></a>
       </div>
     </article>
     <article class="split">
@@ -499,15 +544,8 @@ def twarz():
 
 <section class="section bg-stone">
   <div class="wrap">
-    <div class="head-row rv"><div><p class="label">Również w ofercie</p><h2 class="h2">Dopełnienie pielęgnacji</h2></div><a class="link" href="oferta.html">Cała oferta <span class="arr" aria-hidden="true">→</span></a></div>
-    <div class="grid-3" style="row-gap:48px">
-      <div class="feat rv"><h3 class="caps caps-md">Masaż Kobido</h3><p>Japoński masaż twarzy, który relaksuje i poprawia napięcie skóry. [Opis do uzupełnienia]</p></div>
-      <div class="feat rv"><h3 class="caps caps-md">Glass skin</h3><p>Zabieg na efekt tafli — rozświetlona, nawilżona skóra. [Opis do uzupełnienia]</p></div>
-      <div class="feat rv"><h3 class="caps caps-md">Mezoterapia skóry głowy</h3><p>Dr Cyj Hair Filler przy nadmiernym wypadaniu i osłabieniu włosów.</p></div>
-      <div class="feat rv"><h3 class="caps caps-md">Depilacja woskiem twarzy</h3><p>Brwi, wąsik lub cała twarz — precyzyjnie i szybko.</p></div>
-      <div class="feat rv"><h3 class="caps caps-md">Konsultacja z zabiegiem</h3><p>Ocena skóry i pierwszy zabieg dobrany na miejscu.</p></div>
-      <div class="feat rv"><h3 class="caps caps-md">Bezpłatna konsultacja</h3><p>Rozmowa i plan pielęgnacji bez zobowiązań.</p></div>
-    </div>
+    <div class="head-row rv"><div><p class="label">Wszystkie zabiegi</p><h2 class="h2">Zabiegi na twarz w naszej ofercie</h2></div><a class="link" href="{BOOKSY}" {EXT}>Rezerwacja online <span class="arr" aria-hidden="true">→</span></a></div>
+    {face_list()}
   </div>
 </section>
 
@@ -525,16 +563,16 @@ def twarz():
   </div>
 </section>
 '''
-    html += cta('Nie wiesz, który zabieg wybrać?', 'Umów się na bezpłatną konsultację — dobierzemy zabieg do Twojej skóry.', light=True)
+    html += cta('Nie wiesz, jaki zabieg na twarz wybrać?', 'Umów się na konsultację połączoną z zabiegiem. Podczas wizyty ocenimy stan i potrzeby Twojej skóry, porozmawiamy o Twoich oczekiwaniach i wspólnie dobierzemy odpowiedni zabieg, który wykonamy podczas tej samej wizyty. Nie musisz martwić się wyborem — zajmiemy się tym na miejscu!', light=True)
     html += footer()
     write('zabiegi-na-twarz.html', html)
 
 
-# =================================================================== VIVACE
-def vivace():
-    html = head('Vivace RF mikroigłowa — Manikosmetyka',
-                'Vivace RF mikroigłowa — ujędrnienie, zmarszczki, blizny i rozstępy. Twarz i ciało. Manikosmetyka.') + header('vivace')
-    html += page_hero('Vivace RF', 'Vivace RF mikroigłowa',
+# =================================================================== RADIOFREKWENCJA
+def rf():
+    html = head('Radiofrekwencja mikroigłowa — Manikosmetyka',
+                'Radiofrekwencja mikroigłowa — ujędrnienie, zmarszczki, blizny i rozstępy. Twarz i ciało. Manikosmetyka.') + header('rf')
+    html += page_hero('Radiofrekwencja mikroigłowa', 'Radiofrekwencja mikroigłowa',
                       'Mikronakłuwanie połączone z falami radiowymi. Głęboka regeneracja i jędrność — na twarzy i na ciele.',
                       'zabieg-twarz-dlonie', 'Zabieg na twarz w gabinecie Manikosmetyka', '50% 40%')
     items = [('Ujędrnienie', 'Redukcja zmarszczek i poprawa napięcia skóry.'), ('Anti-aging', 'Odświeżona skóra bez oznak zmęczenia.'),
@@ -546,33 +584,15 @@ def vivace():
   <div class="wrap">
     <div class="split" style="align-items:end">
       <div class="rv"><p class="label">Zastosowanie</p><h2 class="h2" style="margin-top:18px">Jeden zabieg, wiele efektów</h2></div>
-      <p class="lead rv">Vivace działa w głębszych warstwach skóry, dlatego sprawdza się przy pierwszych oznakach starzenia, bliznach i rozstępach.</p>
+      <p class="lead rv">Radiofrekwencja mikroigłowa działa w głębszych warstwach skóry, dlatego sprawdza się przy pierwszych oznakach starzenia, bliznach i rozstępach.</p>
     </div>
     <div class="grid-3" style="margin-top:clamp(56px,7vw,96px);row-gap:48px">{feats}</div>
   </div>
 </section>
 
-<section class="section bg-stone">
-  <div class="wrap split">
-    <div class="pair rv">
-      <img class="media r-34" src="img/twarz-glowica-2.jpg" alt="Zabieg na twarz" loading="lazy">
-      <img class="media r-34" src="img/cialo-cryo.jpg" alt="Kosmetyk do zabiegów na ciało" loading="lazy">
-    </div>
-    <div class="rv">
-      <p class="label">Obszary</p>
-      <h2 class="h2" style="margin-top:18px">Twarz i ciało</h2>
-      <p class="body" style="margin-top:20px">Zabieg wykonujemy na wybranej partii. Na konsultacji ustalimy obszar, liczbę zabiegów i przygotowanie skóry.</p>
-      <div class="grid-2" style="margin-top:36px">
-        <div><h3 class="caps caps-md" style="margin-bottom:12px">Twarz</h3><ul class="lines"><li>Twarz</li><li>Szyja</li><li>Dekolt</li><li>Szyja + dekolt</li></ul></div>
-        <div><h3 class="caps caps-md" style="margin-bottom:12px">Ciało</h3><ul class="lines"><li>Ramiona</li><li>Okolica nadkolanowa</li><li>Uda</li><li>Brzuch</li></ul></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section-sm bg-dark">
   <div class="wrap split" style="align-items:center">
-    <div class="rv"><p class="label">Aktualna promocja</p><h2 class="h2" style="margin-top:18px;font-size:clamp(30px,3.4vw,48px)">Vivace RF + zabieg przygotowujący w prezencie</h2></div>
+    <div class="rv"><p class="label">Aktualna promocja</p><h2 class="h2" style="margin-top:18px;font-size:clamp(30px,3.4vw,48px)">Radiofrekwencja mikroigłowa + zabieg przygotowujący w prezencie</h2></div>
     <div class="rv"><p class="body">Radiofrekwencja mikroigłowa z antyoksydacją oraz zabieg przygotowujący skórę. Dwie wizyty w jednym pakiecie.</p><div class="btns" style="margin-top:28px"><a class="btn btn-light" href="{BOOKSY}" {EXT}>Zarezerwuj</a></div></div>
   </div>
 </section>
@@ -599,29 +619,94 @@ def vivace():
         ('Kiedy widać efekty?', '[Do uzupełnienia przez salon.]'),
         ('Czy po zabiegu potrzebna jest regeneracja?', '[Do uzupełnienia przez salon: jak wygląda skóra po zabiegu i zalecenia.]'),
         ('Czy konsultacja jest płatna?', 'Nie, konsultacja w gabinecie jest bezpłatna.')])
-    html += cta('Daj skórze nowy start', 'Zarezerwuj bezpłatną konsultację i sprawdź, czy Vivace RF jest dla Ciebie.')
+    html += cta('Daj skórze nowy start', 'Zarezerwuj bezpłatną konsultację i sprawdź, czy radiofrekwencja mikroigłowa jest dla Ciebie.')
     html += footer()
-    write('vivace-rf.html', html)
+    write('radiofrekwencja-mikroiglowa.html', html)
+
+
+
+# =================================================================== SZKOLENIA
+def szkolenia():
+    html = head('Szkolenia ze stylizacji paznokci — Manikosmetyka',
+                'Szkolenia ze stylizacji paznokci w Czerwionce-Leszczynach: kurs podstawowy, doszkolenia, zdobienia. Instruktorka NC Company.') + header('szkolenia')
+    html += page_hero('Szkolenia', 'Szkolenia ze stylizacji paznokci',
+                      'Naucz się stylizacji od instruktorki NC Company, która paznokcie robi od ponad 20 lat.',
+                      'wnetrze-fotel', 'Wnętrze salonu Manikosmetyka', '50% 50%',
+                      btns=f'<a class="btn btn-light" href="tel:{TEL}">Zadzwoń i zapytaj o termin</a><a class="btn btn-ghost" href="mailto:hukaneta@gmail.com">Napisz</a>')
+    html += f'''
+<section class="section">
+  <div class="wrap split">
+    <img class="portrait rv" src="img/aneta-o-nas.jpg" alt="Aneta Huk, instruktorka NC Company" style="object-position: 50% 20%" loading="lazy">
+    <div class="rv">
+      <p class="label">Instruktorka</p>
+      <h2 class="h2" style="margin-top:18px">Aneta Huk</h2>
+      <p class="lead" style="margin-top:26px">Instruktorka NC Company. Stylizacją paznokci zajmuje się od ponad 20 lat.</p>
+      <p class="body" style="margin-top:20px">Na szkoleniach pokazuje to, co sprawdza się w codziennej pracy w salonie: poprawną technikę, higienę i sposoby na trwały, estetyczny efekt. Uczymy w małych grupach lub indywidualnie, z naciskiem na praktykę.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-stone">
+  <div class="wrap">
+    <div class="head-row rv"><div><p class="label">Oferta szkoleń</p><h2 class="h2">Wybierz swój poziom</h2></div></div>
+    <div class="grid-2" style="row-gap:48px">
+      <div class="feat rv"><h3 class="caps caps-md">Szkolenie podstawowe (basic)</h3><p>Dla osób zaczynających od zera: przygotowanie płytki, kształtowanie, opracowanie skórek, manicure hybrydowy oraz zasady higieny pracy.</p></div>
+      <div class="feat rv"><h3 class="caps caps-md">Doszkolenie</h3><p>Dla osób, które już stylizują: poprawa techniki, trwałość stylizacji, praca na naturalnych paznokciach i najczęstsze błędy.</p></div>
+      <div class="feat rv"><h3 class="caps caps-md">Zdobienia i trendy</h3><p>French, zdobienia, kolorystyka i aktualne trendy: jak tworzyć stylizacje, które klientki chcą powtarzać.</p></div>
+      <div class="feat rv"><h3 class="caps caps-md">Szkolenie indywidualne</h3><p>Zakres i tempo dobrane do Ciebie: wybierasz temat, a my pracujemy tylko nad tym, czego potrzebujesz.</p></div>
+    </div>
+    <p class="note rv" style="margin-top:32px">Dokładny program, czas trwania i terminy ustalamy indywidualnie.</p>
+  </div>
+</section>
+
+<section class="section bg-dark">
+  <div class="wrap">
+    <div class="rv" style="max-width:720px"><p class="label">Jak wygląda szkolenie</p><h2 class="h2" style="margin-top:18px">Teoria krótko, praktyka długo</h2></div>
+    <div class="steps rv" style="margin-top:56px"><div class="grid-4">{steps([
+        ('Rozmowa', 'Poznajemy Twój poziom i cel szkolenia.'),
+        ('Pokaz', 'Instruktorka pokazuje technikę krok po kroku.'),
+        ('Praktyka', 'Pracujesz samodzielnie, a my poprawiamy na bieżąco.'),
+        ('Wskazówki', 'Dostajesz zalecenia, jak rozwijać się dalej.')])}</div></div>
+  </div>
+</section>
+'''
+    html += faq('Zanim się zapiszesz', [
+        ('Czy muszę mieć doświadczenie?', 'Nie. Szkolenie podstawowe (basic) jest dla osób zaczynających od zera.'),
+        ('Jak zapisać się na szkolenie?', 'Zadzwoń pod numer ' + TEL_H + ' lub napisz na hukaneta@gmail.com. Uzgodnimy zakres i termin.'),
+        ('Czy można szkolić się indywidualnie?', 'Tak, szkolenie indywidualne to osobna opcja. Zakres i tempo dopasowujemy do Ciebie.')])
+    html += f'''<section class="section bg-dark cta center">
+  <div class="wrap rv">
+    <p class="label">Zapraszamy</p>
+    <h2 class="h2">Chcesz zacząć naukę?</h2>
+    <p class="lead">Zadzwoń lub napisz, a dobierzemy szkolenie do Twojego poziomu.</p>
+    <div class="btns"><a class="btn btn-light" href="tel:{TEL}">Zadzwoń</a><a class="btn btn-ghost" href="mailto:hukaneta@gmail.com">Napisz e-mail</a></div>
+  </div>
+</section>
+'''
+    html += footer()
+    write('szkolenia.html', html)
 
 
 # =================================================================== OFERTA
 CATS = [
-    ('depilacja', 'Depilacja laserowa', 'Laser Primelase. Pojedyncze zabiegi i pakiety.', 'depilacja-laserowa.html',
+    ('depilacja', 'Depilacja laserowa', 'Laser diodowy Primelase. Pojedyncze zabiegi i pakiety.', 'depilacja-laserowa.html',
      [('Pojedyncza partia ciała', 'damska i męska'), ('Pakiet 4 partie', ''), ('Bikini płytkie / głębokie', ''), ('Bikini męskie', ''), ('Broda', ''), ('Pakiety 6 zabiegów', 'zapytaj o aktualną promocję')]),
     ('twarz', 'Pielęgnacja twarzy', 'Zabiegi dobierane po konsultacji.', 'zabiegi-na-twarz.html',
-     [('Vivace RF mikroigłowa — twarz, szyja, dekolt', ''), ('Mezoterapia mikroigłowa (dermapen)', ''), ('PDRN', ''), ('Masaż Kobido', ''), ('Glass skin', ''), ('Konsultacja z zabiegiem', ''), ('Konsultacja w gabinecie', 'bezpłatna')]),
-    ('cialo', 'Zabiegi na ciało', '', 'vivace-rf.html',
-     [('Vivace RF — ramiona, okolica nadkolanowa, uda, brzuch', ''), ('Endermologia Primelle', 'masaż próżniowy, drenaż'), ('Vivace RF — rozstępy i blizny', '')]),
+     [('Vivace — radiofrekwencja mikroigłowa: twarz, szyja, dekolt', ''), ('Mezoterapia mikroigłowa (dermapen)', ''), ('Oczyszczanie wodorowe', 'HydroRevive, HydroGlow, HydroLux'), ('Mikrodermabrazja', ''), ('Peelingi kwasowe i złuszczające', ''), ('Zabiegi PCA Skin', ''), ('Rytuał Glass skin', ''), ('PDRN', ''), ('Masaż Kobido', ''), ('Konsultacja z zabiegiem', ''), ('Konsultacja w gabinecie', 'bezpłatna')]),
+    ('cialo', 'Zabiegi na ciało', '', 'radiofrekwencja-mikroiglowa.html',
+     [('Vivace — radiofrekwencja mikroigłowa: ramiona, okolica nadkolanowa, uda, brzuch', ''), ('Endermologia Primelle', 'masaż próżniowy, drenaż'), ('Vivace — radiofrekwencja mikroigłowa: rozstępy i blizny', '')]),
     ('estetyczna', 'Medycyna estetyczna', '', '',
      [('Lipoliza iniekcyjna', 'seria 3–6 zabiegów'), ('Mezoterapia skóry głowy Dr Cyj Hair Filler', '')]),
     ('brwi', 'Brwi i rzęsy', '', '',
      [('Laminacja brwi', 'efekt 4–6 tygodni'), ('Henna pudrowa brwi', ''), ('Henna żelowa brwi z regulacją', ''), ('Henna rzęs', ''), ('Henna rzęs i brwi z regulacją', ''), ('Depilacja woskiem — brwi, wąsik, nos, cała twarz', '')]),
     ('pmu', 'Makijaż permanentny', '', '',
      [('Brwi metodą pudrową', 'z wizytą kontrolną po 6 tygodniach'), ('Korekta makijażu permanentnego', '')]),
-    ('wizaz', 'Wizaż i szkolenia', '', '',
-     [('Makijaż dzienny, wieczorowy, okolicznościowy', ''), ('Makijaż ślubny i próbny', 'możliwy dojazd'), ('Prywatna lekcja makijażu', 'ok. 3 godziny')]),
+    ('wizaz', 'Wizaż', '', '',
+     [('Makijaż dzienny i wieczorowy', ''), ('Makijaż okolicznościowy', 'studniówka, sesje zdjęciowe, gala · możliwy dojazd'), ('Makijaż ślubny i próbny', 'możliwy dojazd')]),
     ('dlonie', 'Dłonie i stopy', '', '',
      [('Manicure hybrydowy / żelowy', ''), ('Manicure japoński', 'wzmacniająco-odżywczy'), ('French i stylizacje z inspiracji', ''), ('Pedicure pododyskiem', ''), ('Hybryda / żel na stopy', '')]),
+    ('szkolenia', 'Szkolenia', 'Szkolenia ze stylizacji paznokci prowadzi Aneta, instruktorka NC Company.', 'szkolenia.html',
+     [('Szkolenie podstawowe (basic)', 'stylizacja paznokci od podstaw'), ('Doszkolenie', 'dla osób, które już stylizują'), ('Zdobienia i trendy', ''), ('Szkolenie indywidualne', 'zakres dobrany do Ciebie')]),
     ('uszy', 'Przekłuwanie uszu', '', '',
      [('Przekłuwanie płatków uszu systemem Studex', 'kolczyki hipoalergiczne w cenie'), ('Przekłuwanie dzieci metodą duo', '')]),
 ]
@@ -629,7 +714,7 @@ CATS = [
 
 def oferta():
     html = head('Oferta — Manikosmetyka',
-                'Pełna oferta salonu Manikosmetyka: depilacja laserowa, twarz, ciało, brwi, makijaż permanentny, wizaż.') + header('oferta')
+                'Pełna oferta salonu Manikosmetyka: depilacja laserowa, twarz, ciało, brwi, makijaż permanentny, wizaż, szkolenia ze stylizacji paznokci.') + header('oferta')
     html += page_hero('Oferta', 'Pełna oferta salonu',
                       'Ceny dobieramy indywidualnie — aktualne znajdziesz przy rezerwacji online lub zapytaj telefonicznie.',
                       'twarz-swiece', 'Świece i profesjonalne kosmetyki w gabinecie', '50% 55%')
@@ -664,7 +749,7 @@ def onas():
       <div class="feat rv"><h3 class="caps caps-md">Konsultacje gratis</h3><p>Zanim cokolwiek zrobimy, rozmawiamy.</p></div>
       <div class="feat rv"><h3 class="caps caps-md">Sterylność</h3><p>Sterylizowane narzędzia i jednorazowe akcesoria.</p></div>
       <div class="feat rv"><h3 class="caps caps-md">Sprawdzone marki</h3><p>Profesjonalne kosmetyki i nowoczesny sprzęt.</p></div>
-      <div class="feat rv"><h3 class="caps caps-md">Komfort</h3><p>Parking przy salonie i płatność kartą.</p></div>
+      <div class="feat rv"><h3 class="caps caps-md">Komfort</h3><p>Bezpłatny parking przy salonie i płatność kartą.</p></div>
     </div>
   </div>
 </section>
@@ -672,18 +757,24 @@ def onas():
 <section class="section bg-stone">
   <div class="wrap">
     <div class="head-row rv"><div><p class="label">Zespół</p><h2 class="h2">Poznaj nasze dziewczyny</h2></div></div>
-    <div class="grid-2" style="gap:clamp(40px,5vw,80px)">
+    <div class="grid-3" style="gap:clamp(40px,5vw,72px)">
       <article class="rv">
         <img class="portrait" src="img/aneta-o-nas.jpg" alt="Aneta Huk" style="object-position: 50% 20%" loading="lazy">
         <p class="label" style="margin-top:28px">Właścicielka</p>
         <h3 class="caps caps-lg" style="margin-top:12px">Aneta Huk</h3>
-        <p class="body" style="margin-top:14px">[Krótki opis: doświadczenie, specjalizacje, ukończone szkolenia i to, co Aneta kocha w swojej pracy.]</p>
+        <p class="body" style="margin-top:14px">Z pasją i profesjonalizmem wykonuje zabiegi na twarz i ciało, dbając o każdy detal. Od ponad 20 lat zajmuje się również stylizacją paznokci i jest instruktorką NC Company. W swojej pracy stawia na jakość, precyzję i indywidualne podejście.</p>
       </article>
       <article class="rv">
-        <img class="portrait" src="img/kamila.jpg" alt="Kamila" style="object-position: 50% 15%" loading="lazy">
-        <p class="label" style="margin-top:28px">[Specjalizacja]</p>
-        <h3 class="caps caps-lg" style="margin-top:12px">Kamila [Nazwisko]</h3>
-        <p class="body" style="margin-top:14px">[Krótki opis: specjalizacje i doświadczenie.]</p>
+        <img class="portrait" src="img/kamila.jpg" alt="Kamila, linergistka" style="object-position: 50% 15%" loading="lazy">
+        <p class="label" style="margin-top:28px">Linergistka</p>
+        <h3 class="caps caps-lg" style="margin-top:12px">Kamila</h3>
+        <p class="body" style="margin-top:14px">Jej pasją jest sztuka podkreślania naturalnego piękna. Szczególną uwagę poświęca harmonii twarzy, idealnie dobranej oprawie brwi i subtelnym detalom, które wydobywają urodę. W swojej pracy łączy wyczucie estetyki, precyzję i zamiłowanie do makijażu.</p>
+      </article>
+      <article class="rv">
+        <img class="portrait" src="img/paulina.jpg" alt="Paulina, stylistka paznokci" style="object-position: 50% 22%" loading="lazy">
+        <p class="label" style="margin-top:28px">Stylistka paznokci</p>
+        <h3 class="caps caps-lg" style="margin-top:12px">Paulina</h3>
+        <p class="body" style="margin-top:14px">Z pasją tworzy stylizacje, które podkreślają indywidualny styl każdej klientki. Dba o estetykę, staranne wykończenie i piękny efekt, zarówno w klasycznych, jak i bardziej wyrazistych stylizacjach.</p>
       </article>
     </div>
   </div>
@@ -693,7 +784,7 @@ def onas():
   <div class="wrap"><div class="stats rv" style="border:0;padding:0">
     <div class="stat"><b>5,0</b><span>ocena Booksy</span></div>
     <div class="stat"><b>734</b><span>opinie klientek</span></div>
-    <div class="stat"><b>[X]</b><span>lat doświadczenia</span></div>
+    <div class="stat"><b>20+</b><span>lat w stylizacji paznokci</span></div>
   </div></div>
 </section>
 
@@ -722,7 +813,7 @@ def bony():
                       'kwiaty-lustro', 'Kwiaty i kosmetyki w salonie', '50% 45%',
                       btns=f'<a class="btn btn-light" href="#bon">Skomponuj bon</a>')
     am = ''.join(f'<button class="btn btn-line" type="button" data-pick="amount" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['100 zł', '200 zł', '300 zł', '500 zł'])
-    tr = ''.join(f'<button class="btn btn-line" type="button" data-pick="treatment" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['Depilacja laserowa', 'Vivace RF', 'Mezoterapia', 'Laminacja brwi'])
+    tr = ''.join(f'<button class="btn btn-line" type="button" data-pick="treatment" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia', 'Laminacja brwi'])
     html += f'''
 <section class="section" id="bon" style="scroll-margin-top:var(--header-h)">
   <div class="wrap split">
@@ -745,6 +836,17 @@ def bony():
   </div>
 </section>
 
+<section class="section bg-stone">
+  <div class="wrap split">
+    <img class="media r-34 rv" src="img/bon-podarunkowy.jpg" alt="Bon podarunkowy Manikosmetyki w eleganckiej kopercie" loading="lazy" style="max-width:460px">
+    <div class="rv">
+      <p class="label">Bon w salonie</p>
+      <h2 class="h2" style="margin-top:18px">Elegancki bon w kopercie</h2>
+      <ul class="lines" style="margin-top:32px"><li><span>Ważność</span><small>pół roku od zakupu</small></li><li><span>Wykorzystanie</span><small>na jeden lub kilka zabiegów</small></li><li><span>Odbiór</span><small>w salonie, ul. Ligonia 8</small></li></ul>
+    </div>
+  </div>
+</section>
+
 <section class="section bg-dark">
   <div class="wrap">
     <div class="rv"><p class="label">Jak to działa</p><h2 class="h2" style="margin-top:18px">Prezent w trzech krokach</h2></div>
@@ -756,8 +858,8 @@ def bony():
 </section>
 '''
     html += faq('Warto wiedzieć', [
-        ('Jak długo bon jest ważny?', '[Do uzupełnienia przez salon: okres ważności bonu.]'),
-        ('Czy bon można wykorzystać na kilka zabiegów?', '[Do uzupełnienia przez salon.]'),
+        ('Jak długo bon jest ważny?', 'Bon jest ważny pół roku od daty zakupu.'),
+        ('Czy bon można wykorzystać na kilka zabiegów?', 'Tak, wartość bonu można wykorzystać na kilka zabiegów.'),
         ('Jak umówić wizytę z bonem?', 'Wystarczy zarezerwować termin online lub telefonicznie i pokazać bon w salonie.')])
     html += footer()
     write('bony-podarunkowe.html', html)
@@ -792,7 +894,7 @@ def kontakt():
 
 <section class="section-sm bg-stone">
   <div class="wrap grid-3">
-    <div class="feat rv"><h3 class="caps caps-md">Parking</h3><p>Parking przy salonie. [Do potwierdzenia: czy bezpłatny]</p></div>
+    <div class="feat rv"><h3 class="caps caps-md">Parking</h3><p>Parking przy salonie jest bezpłatny.</p></div>
     <div class="feat rv"><h3 class="caps caps-md">Płatność kartą</h3><p>Akceptujemy karty płatnicze.</p></div>
     <div class="feat rv"><h3 class="caps caps-md">Odwołanie wizyty</h3><p>Prosimy o informację z wyprzedzeniem — szczegóły w regulaminie salonu.</p></div>
   </div>
@@ -804,6 +906,6 @@ def kontakt():
 
 if __name__ == '__main__':
     os.makedirs(OUT, exist_ok=True)
-    for fn in (home, depilacja, twarz, vivace, oferta, onas, bony, kontakt):
+    for fn in (home, depilacja, twarz, rf, szkolenia, oferta, onas, bony, kontakt):
         fn()
     print('ok', OUT)

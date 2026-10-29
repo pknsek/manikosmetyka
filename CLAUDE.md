@@ -14,12 +14,14 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
 - Przyciski „Umów wizytę” prowadzą do **Booksy** (docelowo Booksy zostanie usunięte):
   `https://booksy.com/pl-pl/106175_manikosmetyka_salon-kosmetyczny_12856_czerwionka-leszczyny`
 - **Bez cen** na stronie (ceny są płynne).
-- Nacisk na: **depilację laserową (Primelase), zabiegi na twarz, Vivace RF**. Paznokcie nie są w centrum.
-- Zespół: **Aneta Huk (właścicielka)** i **Kamila** (nazwisko do uzupełnienia); później mogą dojść kolejne osoby.
+- Nacisk na: **depilację laserową, zabiegi na twarz, radiofrekwencję mikroigłową, makijaż permanentny brwi**. Paznokcie nie są w centrum, ale jest podstrona Szkolenia (tylko stylizacja paznokci, instruktorka Aneta / NC Company; bez szkoleń z wizażu).
+- **Nazewnictwo (względy prawne — reklama wyrobów medycznych):** na stronie NIE używamy nazw „Vivace” ani „Primelase” w opisach i nagłówkach. Piszemy „radiofrekwencja mikroigłowa” i „depilacja laserowa (laser diodowy)”. „Vivace” i „Primelase” wolno tylko na liście usług w Ofercie (`oferta.html`). Nie dodajemy cennika ani cen. Ryzykowne pozycje do ewentualnej weryfikacji z prawnikiem: lipoliza iniekcyjna, mezoterapia skóry głowy Dr Cyj, PDRN, mezoterapia igłowa.
+- Zespół: **Aneta Huk (właścicielka)**, **Kamila** (linergistka), **Paulina** (stylistka paznokci). Opisy są wpisane w `onas()`.
 - **Nie zbieramy maili** (brak newslettera / formularzy zapisu).
 - **Bony podarunkowe** — w przyszłości zakup online; na razie konfigurator + „Kup online — wkrótce”.
 - Zdjęcia są **prawdziwe**, z Google Drive salonu (sesja salonu, zabiegów, Aneta i Kamila). Oryginały zostają na Drive, w repo tylko wersje max 1600 px. Hero strony głównej: Aneta (desktop wersja pozioma, telefon pion).
 - Zespół: Aneta (`aneta.jpg` — uśmiech, strona główna; `aneta-o-nas.jpg` — O nas), Kamila (`kamila.jpg`).
+- NIP salonu: 6423090410. Parking przy salonie jest bezpłatny. Bon: ważny pół roku, można go wykorzystać na kilka zabiegów; zdjęcie z bonem `img/bon-podarunkowy.jpg`.
 - Dane kontaktowe: tel. +48 511 483 630, e-mail hukaneta@gmail.com, pon–pt 8:00–20:00, FB: facebook.com/ManiKosmetyka.
 
 ## Historia designu (żeby nie wracać do odrzuconych kierunków)
@@ -36,7 +38,7 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
 - Mobile: burger → menu pełnoekranowe; ikona telefonu w nagłówku; stały dolny pasek „Umów wizytę” + telefon (pojawia się po przewinięciu); przyciski na pełną szerokość. Hero strony głównej na telefonach/tabletach/wąskich oknach (≤900px lub proporcja ≤1:1) układa się pionowo: zdjęcie u góry, tekst pod spodem.
 
 ## Struktura plików
-- `index.html`, `depilacja-laserowa.html`, `zabiegi-na-twarz.html`, `vivace-rf.html`, `oferta.html`, `o-nas.html`, `bony-podarunkowe.html`, `kontakt.html` — **generowane**, nie edytuj ręcznie.
+- `index.html`, `depilacja-laserowa.html`, `zabiegi-na-twarz.html`, `radiofrekwencja-mikroiglowa.html`, `szkolenia.html`, `oferta.html`, `o-nas.html`, `bony-podarunkowe.html`, `kontakt.html` — **generowane**, nie edytuj ręcznie.
 - `generator.py` — źródło wszystkich stron (wspólny `head`, `header`, `footer`, `page_hero`, `cta`, `faq` + funkcja na każdą stronę). Treści i menu zmienia się tutaj.
 - `style.css` — cały wygląd. `main.js` — nagłówek przy przewijaniu, menu mobilne, pasek rezerwacji, reveal, podgląd zdjęć w akordeonie, konfigurator bonu.
 - `img/` — zdjęcia (JPG, max 1600 px), nazwy opisowe (`laser-*`, `twarz-*`, `wnetrze-*` itd.). `hero-wide.jpg` (2400×1250, desktop) i `hero-m.jpg` (1000×1156, mobile) to hero strony głównej. `vivace-przed/po.jpg` to prawdziwy efekt klientki wycięty z kolażu (bez znaku wodnego) i **nałożony na siebie** (zdjęcie „przed” obrócone ~7° i przesunięte, żeby usta, fałd i żuchwa się pokrywały) — używane w suwaku przed/po (`.ba`, `data-ba` w `main.js`) na stronie Vivace. Nowe pary do suwaka muszą być tak samo wyrównane i mieć identyczny kadr.
@@ -56,13 +58,12 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
 - Strony do inspiracji ogląda się wbudowaną przeglądarką Patryka (emulacja 1440×900 i 390×844) albo Firecrawlem (markdown + branding).
 
 ## Do uzupełnienia przez salon (w treści oznaczone `[...]`)
-- NIP, godziny w sobotę, info o parkingu.
-- Pełna lista partii do depilacji laserowej.
-- Opisy: PDRN, masaż Kobido, Glass skin; odpowiedzi w FAQ (ból przy laserze, przygotowanie, Vivace — seria/efekty/regeneracja).
-- Opis Anety, nazwisko i specjalizacja Kamili, liczba lat doświadczenia.
-- Ważność i zasady bonów, kwoty bonów.
-- Dłuższa prawdziwa opinia klientki (np. o laserze/Vivace).
-- Zdjęcia samego zabiegu Vivace RF (urządzenie, głowica) — na razie brak, na stronie Vivace są zdjęcia ogólne zabiegów na twarz. Brak zdjęć do makijażu permanentnego, stóp i przekłuwania uszu.
+- Godziny w sobotę, pełna lista partii do depilacji laserowej.
+- Opisy PDRN i masażu Kobido (PDRN/Kobido nie ma na Booksy — do potwierdzenia, czy zostają).
+- Odpowiedzi w FAQ radiofrekwencji (seria, efekty, regeneracja).
+- Kwoty bonów, dłuższa opinia klientki.
+- Zdjęcia zabiegu radiofrekwencji (głowica) — na razie brak. Zdjęcia do makijażu permanentnego, stóp i przekłuwania uszu — brak.
+- Program, czas i terminy szkoleń (treść szkoleń na stronie jest wstępna).
 
 ## Pomysły na później
 - Zakup bonów online (płatności).

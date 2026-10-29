@@ -128,11 +128,11 @@ button { font: inherit; color: inherit; }
   transition: background-color .35s var(--ease), color .35s var(--ease), box-shadow .35s var(--ease);
 }
 .header.is-solid, body.menu-open .header { background: var(--cream); color: var(--ink); box-shadow: 0 1px 0 var(--line); }
-.header-in { height: var(--header-h); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; }
-.nav-l, .nav-r { display: flex; align-items: center; gap: clamp(18px, 2vw, 32px); }
+.header-in { height: var(--header-h); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: clamp(14px, 1.6vw, 24px); }
+.nav-l, .nav-r { display: flex; align-items: center; gap: clamp(16px, 1.4vw, 26px); }
 .nav-r { justify-content: flex-end; }
 .nav-l a, .nav-r a:not(.btn) {
-  font-family: var(--label); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; text-decoration: none;
+  font-family: var(--label); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; text-decoration: none;
   padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color .25s var(--ease); white-space: nowrap;
 }
 .nav-l a:hover, .nav-r a:not(.btn):hover, .nav-l a[aria-current], .nav-r a[aria-current] { border-bottom-color: currentColor; }
@@ -426,7 +426,7 @@ figure.ph figcaption { margin-top: 12px; font-family: var(--label); font-size: 1
 }
 
 /* ======================= Responsive ======================= */
-@media (max-width: 1180px) {
+@media (max-width: 1439px) {
   .nav-l, .nav-r a:not(.btn) { display: none; }
   .header-in { grid-template-columns: 48px 1fr 48px; }
   .logo { grid-column: 2; }
@@ -498,3 +498,8 @@ figure.ph figcaption { margin-top: 12px; font-family: var(--label); font-size: 1
   body.menu-open .bookbar { transform: translateY(110%); }
   .footer { padding-bottom: 96px; }
 }
+
+/* 4 specialisation cards on home */
+.cards-4 { gap: clamp(20px, 2.2vw, 32px); }
+.cards-4 .caps-lg { font-size: clamp(17px, 1.55vw, 22px); }
+@media (min-width: 901px) and (max-width: 1180px) { .cards-4 { grid-template-columns: 1fr 1fr; } }
