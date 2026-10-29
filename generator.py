@@ -327,7 +327,7 @@ def home():
     <div class="quotes rv">
       <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„Piękne brwi jak zawsze.”</blockquote><figcaption>Marta · laminacja brwi</figcaption></figure>
       <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„Wszystko super!”</blockquote><figcaption>Natalia · manicure</figcaption></figure>
-      <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„[Miejsce na dłuższą opinię — najlepiej o depilacji laserowej lub Vivace.]”</blockquote><figcaption>[Imię] · [zabieg]</figcaption></figure>
+      <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„[Miejsce na dłuższą opinię — najlepiej o depilacji laserowej lub radiofrekwencji mikroigłowej.]”</blockquote><figcaption>[Imię] · [zabieg]</figcaption></figure>
       <div><a class="btn btn-ghost" href="{BOOKSY}" {EXT}>Wszystkie opinie</a></div>
     </div>
   </div>
@@ -593,8 +593,8 @@ def rf():
     <div class="head-row rv"><div><p class="label">Efekty</p><h2 class="h2">Przed i po serii</h2></div><a class="link" href="{IG}" {EXT}>Więcej na Instagramie <span class="arr" aria-hidden="true">→</span></a></div>
     <figure class="ba-wrap rv">
     <div class="ba" data-ba style="--ba: 50%">
-      <img class="ba-img" src="img/vivace-po.jpg" alt="Skóra klientki po serii zabiegów — przebarwienia wyraźnie rozjaśnione" loading="lazy" width="1050" height="1400">
-      <div class="ba-before" aria-hidden="true"><img class="ba-img" src="img/vivace-przed.jpg" alt="" loading="lazy" width="1050" height="1400"></div>
+      <img class="ba-img" src="img/rf-po.jpg" alt="Skóra klientki po serii zabiegów — przebarwienia wyraźnie rozjaśnione" loading="lazy" width="1050" height="1400">
+      <div class="ba-before" aria-hidden="true"><img class="ba-img" src="img/rf-przed.jpg" alt="" loading="lazy" width="1050" height="1400"></div>
       <span class="ba-tag ba-tag-l" aria-hidden="true">Przed</span>
       <span class="ba-tag ba-tag-r" aria-hidden="true">Po</span>
       <span class="ba-handle" aria-hidden="true"><span class="ba-knob"></span></span>
