@@ -233,7 +233,7 @@ def home():
     <img class="collage-img c1" src="img/twarz-esthemax.jpg" alt="" loading="lazy">
     <img class="collage-img c2" src="img/twarz-glowica-nowa.jpg" alt="" loading="lazy">
     <img class="collage-img c3" src="img/dlonie-paznokcie.jpg" alt="" loading="lazy">
-    <img class="collage-img c4" src="img/laser-okulary.jpg" alt="" loading="lazy">
+    <img class="collage-img c4" src="img/laser-okulary-tacka.jpg" alt="" loading="lazy">
   </div>
   <div class="wrap">
     <div class="collage-text rv">
@@ -396,7 +396,7 @@ def depilacja():
                 'Depilacja laserowa w Czerwionce-Leszczynach. Pojedyncze zabiegi i pakiety, konsultacja przy zabiegu.') + header('depilacja')
     html += page_hero('Depilacja laserowa', 'Depilacja laserowa',
                       'Gładka skóra przez cały sezon — bez golenia, bez podrażnień, bez pośpiechu.',
-                      'laser-okulary', 'Okulary ochronne do depilacji laserowej', '50% 45%')
+                      'laser-okulary-tacka', 'Okulary ochronne do depilacji laserowej', '50% 45%')
     html += f'''
 <section class="section">
   <div class="wrap">
