@@ -815,7 +815,7 @@ def bony():
                       'Bon do Manikosmetyki to prezent, który zawsze trafia. Wybierz kwotę albo konkretny zabieg.',
                       'bon-wizytowka', 'Wizytówka Manikosmetyki na pufie w salonie', '50% 45%',
                       btns=f'<a class="btn btn-light" href="#bon">Skomponuj bon</a>')
-    am = ''.join(f'<button class="btn btn-line" type="button" data-pick="amount" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['100 zł', '200 zł', '300 zł', '500 zł', '1000 zł'])
+    _unused = ''.join(f'<button class="btn btn-line" type="button" data-pick="amount" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['100 zł', '200 zł', '300 zł', '500 zł', '1000 zł'])
     tr = ''.join(f'<button class="btn btn-line" type="button" data-pick="treatment" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia', 'Laminacja brwi'])
     html += f'''
 <section class="section" id="bon" style="scroll-margin-top:var(--header-h)">
@@ -829,7 +829,7 @@ def bony():
     </div>
     <div class="cfg rv" data-voucher>
       <div><p class="label" style="margin-bottom:14px">1. Rodzaj bonu</p><div class="btns"><button class="btn btn-line" type="button" data-pick="type" data-val="amount" aria-pressed="true">Kwota</button><button class="btn btn-line" type="button" data-pick="type" data-val="treatment" aria-pressed="false">Zabieg</button></div></div>
-      <div data-group="amount"><p class="label" style="margin-bottom:14px">2. Kwota</p><div class="btns">{am}</div><p class="note" style="margin-top:12px">Dowolna kwota od 100 zł, bez górnego limitu — także 1000 czy 2000 zł.</p></div>
+      <div data-group="amount"><p class="label" style="margin-bottom:14px">2. Kwota</p><div class="amount-slider"><output class="amount-out" data-amount-out>200 zł</output><input type="range" min="100" max="2000" step="50" value="200" data-amount-range aria-label="Kwota bonu w złotych"><div class="amount-scale"><span>100 zł</span><span>2000 zł</span></div></div><p class="note" style="margin-top:12px">Bon na kwotę od 100 do 2000 zł. Potrzebujesz wyższej kwoty? Skontaktuj się z nami — ustalimy to indywidualnie.</p></div>
       <div data-group="treatment" hidden><p class="label" style="margin-bottom:14px">2. Zabieg</p><div class="btns">{tr}</div></div>
       <div style="border-top:1px solid var(--line);padding-top:28px">
         <div class="btns"><span class="btn btn-dark" role="link" aria-disabled="true">Kup online — wkrótce</span><a class="btn btn-line" href="tel:{TEL}">Zamów telefonicznie</a></div>

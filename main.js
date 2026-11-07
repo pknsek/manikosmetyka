@@ -149,12 +149,21 @@
       cfg.querySelector('[data-group="treatment"]').hidden = groups.type !== 'treatment';
       if (val) val.textContent = groups.type === 'amount' ? groups.amount : groups.treatment;
     }
+    var rng = cfg.querySelector('[data-amount-range]'), out = cfg.querySelector('[data-amount-out]');
+    function paintRange() {
+      var pct = (rng.value - rng.min) / (rng.max - rng.min) * 100;
+      rng.style.setProperty('--fill', pct + '%');
+      out.textContent = rng.value + ' zł';
+      groups.amount = rng.value + ' zł';
+    }
+    if (rng) rng.addEventListener('input', function () { paintRange(); render(); });
     cfg.addEventListener('click', function (e) {
       var btn = e.target.closest('[data-pick]');
       if (!btn) return;
       groups[btn.getAttribute('data-pick')] = btn.getAttribute('data-val');
       render();
     });
+    if (rng) paintRange();
     render();
   }
 })();
