@@ -177,7 +177,7 @@ def write(name, html):
 
 # =================================================================== HOME
 SERVICES = [
-    ('Depilacja laserowa', 'Laser diodowy · pakiety', 'laser-plecy', 'Depilacja laserowa pleców',
+    ('Depilacja laserowa', 'Laser diodowy · pakiety', 'laser-pacha-nowe', 'Depilacja laserowa pach laserem diodowym',
      '<p>Trwałe pozbycie się niechcianego owłosienia laserem diodowym. Pojedyncze partie i pakiety 6 zabiegów, możliwa płatność w ratach.</p>',
      'depilacja-laserowa.html'),
     ('Radiofrekwencja mikroigłowa', 'Twarz i ciało', 'twarz-mikronakluwanie', 'Skóra twarzy po zabiegu mikroigłowym',
@@ -186,13 +186,13 @@ SERVICES = [
     ('Zabiegi na twarz', 'Mezoterapia · Glass skin', 'twarz-oczyszczanie', 'Zabieg pielęgnacyjny na twarz w gabinecie',
      '<p>Zabiegi regenerujące, odmładzające i nawilżające — zawsze dobrane po konsultacji.</p><ul><li>Mezoterapia mikroigłowa</li><li>Glass skin</li></ul>',
      'zabiegi-na-twarz.html'),
-    ('Zabiegi na ciało', 'Endermologia · radiofrekwencja mikroigłowa', 'cialo-cryo', 'Kosmetyk do zabiegów na ciało',
+    ('Zabiegi na ciało', 'Endermologia · radiofrekwencja mikroigłowa', 'cialo-endermologia', 'Kosmetolożka podczas zabiegu endermologii',
      '<p>Modelowanie i ujędrnianie sylwetki.</p><ul><li>Endermologia Primelle</li><li>Radiofrekwencja mikroigłowa na ciało</li><li>Rozstępy i blizny</li></ul>', 'oferta.html#cialo'),
     ('Medycyna estetyczna', 'Lipoliza · skóra głowy', 'twarz-maska', 'Zabieg na twarz w gabinecie',
      '<p>Zabiegi iniekcyjne wykonywane po kwalifikacji.</p><ul><li>Lipoliza iniekcyjna</li><li>Mezoterapia skóry głowy Dr Cyj Hair Filler</li></ul>', 'oferta.html#estetyczna'),
     ('Brwi i rzęsy', 'Laminacja · henna', 'brwi-produkty', 'Kosmetyki do stylizacji brwi',
      '<p>Oprawa oka, która wygląda naturalnie.</p><ul><li>Laminacja brwi</li><li>Henna pudrowa i żelowa</li><li>Henna rzęs</li><li>Regulacja woskiem</li></ul>', 'oferta.html#brwi'),
-    ('Makijaż permanentny', 'Brwi metodą pudrową', 'twarz-serum', 'Kosmetolożka z serum podczas zabiegu',
+    ('Makijaż permanentny', 'Brwi metodą pudrową', 'pmu-brows', 'PMU Brows Manikosmetyka',
      '<p>Brwi metodą pudrową z wizytą kontrolną oraz korekty wcześniejszych pigmentacji.</p>', 'oferta.html#pmu'),
     ('Wizaż i dłonie', 'Makijaż · manicure · pedicure', 'dlonie-lakiery', 'Lakiery hybrydowe w salonie',
      '<p>Makijaż okolicznościowy i ślubny z możliwością dojazdu, manicure i pedicure.</p>', 'oferta.html#wizaz'),
@@ -230,9 +230,9 @@ def home():
 <section class="collage bg-dark">
  <div class="collage-stage">
   <div class="collage-imgs">
-    <img class="collage-img c1" src="img/twarz-masaz.jpg" alt="" loading="lazy">
-    <img class="collage-img c2" src="img/twarz-glowica.jpg" alt="" loading="lazy">
-    <img class="collage-img c3" src="img/wnetrze-fotel.jpg" alt="" loading="lazy">
+    <img class="collage-img c1" src="img/twarz-esthemax.jpg" alt="" loading="lazy">
+    <img class="collage-img c2" src="img/twarz-glowica-nowa.jpg" alt="" loading="lazy">
+    <img class="collage-img c3" src="img/dlonie-paznokcie.jpg" alt="" loading="lazy">
     <img class="collage-img c4" src="img/laser-okulary-tacka.jpg" alt="" loading="lazy">
   </div>
   <div class="wrap">
@@ -279,7 +279,7 @@ def home():
         <span class="btn btn-dark">Poznaj zabieg</span>
       </a>
       <a class="card rv" href="oferta.html#pmu">
-        <div class="card-media"><img src="img/brwi-produkty.jpg" alt="Kosmetyki do stylizacji brwi" loading="lazy"></div>
+        <div class="card-media"><img src="img/pmu-brows.jpg" alt="PMU Brows Manikosmetyka" loading="lazy"></div>
         <h3 class="caps caps-lg">Makijaż permanentny brwi</h3>
         <p>Metoda pudrowa: naturalny, delikatny efekt na 1–2 lata, z wizytą kontrolną.</p>
         <span class="btn btn-dark">Poznaj zabieg</span>
@@ -290,7 +290,7 @@ def home():
 
 <section class="section bg-stone" id="zabiegi">
   <div class="wrap acc-grid">
-    <div class="acc-media"><img src="img/laser-plecy.jpg" alt="Depilacja laserowa pleców" loading="lazy"></div>
+    <div class="acc-media"><img src="img/laser-pacha-nowe.jpg" alt="Depilacja laserowa pach laserem diodowym" loading="lazy"></div>
     <div>
       <div class="rv" style="margin-bottom: clamp(32px, 4vw, 56px)">
         <p class="label">Oferta</p>
@@ -396,7 +396,7 @@ def depilacja():
                 'Depilacja laserowa w Czerwionce-Leszczynach. Pojedyncze zabiegi i pakiety, konsultacja przy zabiegu.') + header('depilacja')
     html += page_hero('Depilacja laserowa', 'Depilacja laserowa',
                       'Gładka skóra przez cały sezon — bez golenia, bez podrażnień, bez pośpiechu.',
-                      'laser-plecy', 'Depilacja laserowa pleców', '50% 18%')
+                      'laser-okulary-tacka', 'Okulary ochronne do depilacji laserowej', '50% 45%')
     html += f'''
 <section class="section">
   <div class="wrap">
@@ -534,6 +534,15 @@ def twarz():
       </div>
       <img class="media r-45 rv" src="img/twarz-mikronakluwanie.jpg" alt="Skóra po mezoterapii mikroigłowej" loading="lazy">
     </article>
+    <article class="split">
+      <img class="media r-45 rv" src="img/twarz-geneo.jpg" alt="Kapsuła do zabiegu Geneo" loading="lazy">
+      <div class="rv">
+        <p class="label">Dotlenienie</p>
+        <h2 class="h2" style="margin-top:18px">Zabieg Geneo</h2>
+        <p class="body" style="margin-top:22px">Zabieg dotleniający i odświeżający skórę. Dobieramy go podczas konsultacji, razem z zabiegiem, tak aby pasował do potrzeb Twojej skóry.</p>
+        <a class="link" href="{BOOKSY}" {EXT} style="margin-top:32px">Zapytaj o zabieg <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -630,7 +639,7 @@ def szkolenia():
     html += f'''
 <section class="section">
   <div class="wrap split">
-    <img class="portrait rv" src="img/aneta-o-nas.jpg" alt="Aneta Huk, instruktorka NC Company" style="object-position: 50% 20%" loading="lazy">
+    <img class="portrait rv" src="img/aneta-szkolenia.jpg" alt="Aneta Huk, instruktorka NC Company" style="object-position: 50% 25%" loading="lazy">
     <div class="rv">
       <p class="label">Instruktorka</p>
       <h2 class="h2" style="margin-top:18px">Aneta Huk</h2>
@@ -711,7 +720,7 @@ def oferta():
                 'Pełna oferta salonu Manikosmetyka: depilacja laserowa, twarz, ciało, brwi, makijaż permanentny, wizaż, szkolenia ze stylizacji paznokci.') + header('oferta')
     html += page_hero('Oferta', 'Pełna oferta salonu',
                       'Ceny dobieramy indywidualnie — aktualne znajdziesz przy rezerwacji online lub zapytaj telefonicznie.',
-                      'twarz-swiece', 'Świece i profesjonalne kosmetyki w gabinecie', '50% 55%')
+                      'wnetrze-stanowisko', 'Stanowisko do stylizacji w salonie Manikosmetyka', '50% 55%')
     nav = ''.join(f'<a href="#{k}">{t}</a>' for k, t, *_ in CATS)
     html += f'<nav class="cat-nav" aria-label="Kategorie"><div class="wrap">{nav}</div></nav>\n<section><div class="wrap">'
     for k, t, d, href, items in CATS:
@@ -731,7 +740,7 @@ def onas():
     html = head('O nas — Manikosmetyka', 'Poznaj salon Manikosmetyka i nasz zespół. Czerwionka-Leszczyny, ul. Ligonia 8.') + header('onas')
     html += page_hero('O nas', 'Piękno z profesjonalizmem',
                       'Salon w Czerwionce-Leszczynach, w którym każda wizyta ma być chwilą tylko dla Ciebie.',
-                      'wnetrze-kacik', 'Wnętrze salonu Manikosmetyka', '50% 55%')
+                      'wnetrze-wazon-szklanka', 'Wazon i szklanka na stoliku w salonie', '50% 55%')
     html += f'''
 <section class="section">
   <div class="wrap">
@@ -804,7 +813,7 @@ def bony():
     html = head('Bony podarunkowe — Manikosmetyka', 'Bony podarunkowe Manikosmetyka — na kwotę lub wybrany zabieg.') + header('bony')
     html += page_hero('Bony podarunkowe', 'Podaruj chwilę dla siebie',
                       'Bon do Manikosmetyki to prezent, który zawsze trafia. Wybierz kwotę albo konkretny zabieg.',
-                      'kwiaty-lustro', 'Kwiaty i kosmetyki w salonie', '50% 45%',
+                      'bon-wizytowka', 'Wizytówka Manikosmetyki na pufie w salonie', '50% 45%',
                       btns=f'<a class="btn btn-light" href="#bon">Skomponuj bon</a>')
     am = ''.join(f'<button class="btn btn-line" type="button" data-pick="amount" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['100 zł', '200 zł', '300 zł', '500 zł', '1000 zł'])
     tr = ''.join(f'<button class="btn btn-line" type="button" data-pick="treatment" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia', 'Laminacja brwi'])
@@ -864,7 +873,7 @@ def kontakt():
     html = head('Kontakt — Manikosmetyka', 'Kontakt: ul. Ligonia 8, 44-238 Czerwionka-Leszczyny, tel. +48 511 483 630. Pon–Pt 8:00–20:00.') + header('kontakt')
     html += page_hero('Kontakt', 'Zapraszamy do salonu',
                       'Najszybciej umówisz się online. Masz pytanie? Zadzwoń lub napisz — chętnie doradzimy.',
-                      'wizytowka', 'Wizytówka Manikosmetyka na półce w salonie', '50% 50%',
+                      'wnetrze-lezanka', 'Leżanka zabiegowa w salonie Manikosmetyka', '50% 50%',
                       btns=f'<a class="btn btn-light" href="{BOOKSY}" {EXT}>Umów wizytę online</a><a class="btn btn-ghost" href="tel:{TEL}">Zadzwoń</a>')
     html += f'''
 <section class="section">
