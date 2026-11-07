@@ -58,8 +58,7 @@ Kontekst projektu dla Claude (i dla każdego, kto przejmie pracę). Czytaj przed
 - Strony do inspiracji ogląda się wbudowaną przeglądarką Patryka (emulacja 1440×900 i 390×844) albo Firecrawlem (markdown + branding).
 
 ## Do uzupełnienia przez salon (w treści oznaczone `[...]`)
-- Godziny w sobotę, pełna lista partii do depilacji laserowej.
-- Odpowiedzi w FAQ radiofrekwencji (seria, efekty, regeneracja).
+- Zdjęcia z notatki Kamili „Strona zdjęcia” (podmiana zdjęć głównych) — jeszcze nie wgrane.
 - Kwoty bonów, dłuższa opinia klientki.
 - Zdjęcia zabiegu radiofrekwencji (głowica) — na razie brak. Zdjęcia do makijażu permanentnego, stóp i przekłuwania uszu — brak.
 - Program, czas i terminy szkoleń (treść szkoleń na stronie jest wstępna).

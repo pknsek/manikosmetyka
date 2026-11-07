@@ -82,6 +82,9 @@ def footer():
           <li><a href="depilacja-laserowa.html">Depilacja laserowa</a></li>
           <li><a href="zabiegi-na-twarz.html">Zabiegi na twarz</a></li>
           <li><a href="radiofrekwencja-mikroiglowa.html">Radiofrekwencja mikroigłowa</a></li>
+          <li><a href="zabiegi-na-twarz.html">Mezoterapia</a></li>
+          <li><a href="oferta.html#pmu">Makijaż permanentny</a></li>
+          <li><a href="oferta.html#dlonie">Stylizacja paznokci</a></li>
           <li><a href="oferta.html">Pełna oferta</a></li>
         </ul>
       </div>
@@ -124,7 +127,7 @@ def footer():
 
 def page_hero(crumb, title, lead, img, alt, pos='50% 40%', pos_m=None, btns=None):
     pm = f' --pos-m: {pos_m};' if pos_m else ''
-    b = btns if btns is not None else f'<a class="btn btn-light" href="{BOOKSY}" {EXT}>Umów wizytę</a><a class="btn btn-ghost" href="{BOOKSY}" {EXT}>Bezpłatna konsultacja</a>'
+    b = btns if btns is not None else f'<a class="btn btn-light" href="{BOOKSY}" {EXT}>Umów wizytę</a><a class="btn btn-ghost" href="{BOOKSY}" {EXT}>Konsultacja przy zabiegu</a>'
     return f'''<section class="hero page-hero on-photo">
   <img class="hero-bg" src="img/{img}.jpg" alt="{alt}" style="--pos: {pos};{pm}" fetchpriority="high">
   <div class="wrap hero-in">
@@ -203,10 +206,10 @@ def home():
           <summary><span>{name}<small>{sub}</small></span><span class="ico" aria-hidden="true"></span></summary>
           <div class="acc-body">{body}<a class="link" href="{href}">Szczegóły <span class="arr" aria-hidden="true">→</span></a></div>
         </details>'''
-    marquee_items = ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia mikroigłowa', 'Bezpłatna konsultacja']
+    marquee_items = ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia mikroigłowa', 'Konsultacja przy zabiegu']
     mq = ''.join(f'<span>{t} ·</span>' for t in marquee_items) * 2
     html = head('Manikosmetyka — salon kosmetyczny w Czerwionce-Leszczynach',
-                'Salon kosmetyczny w Czerwionce-Leszczynach: depilacja laserowa, zabiegi na twarz, radiofrekwencja mikroigłowa. Bezpłatna konsultacja.').replace('<body>', '<body class="light-top">') + header('home')
+                'Salon kosmetyczny w Czerwionce-Leszczynach: depilacja laserowa, zabiegi na twarz, radiofrekwencja mikroigłowa. Konsultacja przy każdym zabiegu.').replace('<body>', '<body class="light-top">') + header('home')
     html += f'''
 <section class="hero hero-home">
   <picture>
@@ -216,9 +219,9 @@ def home():
   <div class="wrap hero-in">
     <p class="label">Salon kosmetyczny <span class="hide-m">· Czerwionka-Leszczyny</span></p>
     <h1 class="display">Naturalne piękno, bez&nbsp;pośpiechu</h1>
-    <p class="lead">Depilacja laserowa, zabiegi na twarz i radiofrekwencja mikroigłowa w Czerwionce-Leszczynach. Każdy zabieg zaczynamy od bezpłatnej konsultacji.</p>
+    <p class="lead">Depilacja laserowa, zabiegi na twarz i radiofrekwencja mikroigłowa w Czerwionce-Leszczynach. Konsultacja jest częścią każdego zabiegu.</p>
     <div class="btns"><a class="btn btn-dark" href="{BOOKSY}" {EXT}>Umów wizytę</a><a class="btn btn-line" href="#zabiegi">Poznaj zabiegi</a></div>
-    <div class="hero-meta"><span>★ 5,0 na Booksy</span><span>734 opinie</span><span>Konsultacja gratis</span></div>
+    <div class="hero-meta"><span>★ 5,0 na Booksy</span><span>734 opinie</span><span>Konsultacja przy zabiegu</span></div>
   </div>
 </section>
 
@@ -237,13 +240,13 @@ def home():
       <p class="label">Jak pracujemy</p>
       <h2 class="h2">Efekty, które wyglądają naturalnie — bo&nbsp;zaczynamy od&nbsp;rozmowy</h2>
       <p class="lead">Nie sprzedajemy zabiegów na ślepo. Najpierw poznajemy Twoją skórę i oczekiwania, potem razem układamy plan.</p>
-      <div class="btns"><a class="btn btn-light" href="{BOOKSY}" {EXT}>Bezpłatna konsultacja</a></div>
+      <div class="btns"><a class="btn btn-light" href="{BOOKSY}" {EXT}>Umów zabieg z konsultacją</a></div>
     </div>
   </div>
  </div>
   <div class="wrap">
     <div class="steps rv"><div class="grid-4">{steps([
-        ('Konsultacja', 'Bezpłatna rozmowa w gabinecie i ocena skóry.'),
+        ('Konsultacja', 'Rozmowa w gabinecie i ocena skóry w ramach wizyty z zabiegiem.'),
         ('Plan zabiegowy', 'Dobieramy zabieg, serię i przygotowanie skóry.'),
         ('Zabieg', 'Sprawdzony sprzęt, sterylne narzędzia, spokojna atmosfera.'),
         ('Pielęgnacja', 'Zalecenia do domu i kontrola efektów na kolejnych wizytach.')])}</div></div>
@@ -325,9 +328,11 @@ def home():
       <p class="notes-title">opinie<br>klientek</p>
     </div>
     <div class="quotes rv">
-      <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„Piękne brwi jak zawsze.”</blockquote><figcaption>Marta · laminacja brwi</figcaption></figure>
-      <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„Wszystko super!”</blockquote><figcaption>Natalia · manicure</figcaption></figure>
+      <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„Super miejsce. Profesjonalna załoga, rewelacyjne zabiegi. Warto na nie jechać 100 km.”</blockquote><figcaption>Alina P. · konsultacja i pielęgnacja twarzy</figcaption></figure>
+      <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„Uwielbiam! Efekty po zabiegu naprawdę mnie zaskoczyły — skóra jest bardziej jędrna, wygładzona i wygląda młodziej. Wszystko wykonane profesjonalnie, w miłej atmosferze. Czuję się zaopiekowana i na pewno będę wracać. Polecam Anetę i Kamilę.”</blockquote><figcaption>Julka S. · radiofrekwencja mikroigłowa</figcaption></figure>
       <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„Byłam na depilacji laserowej i mega polecam! Niesamowicie profesjonalne podejście, brak krępacji przy depilacji bikini, brak bólu, szybko trwał zabieg i dokładnie zostały wyjaśnione zasady pielęgnacji miejsca depilacji. Jestem bardzo zadowolona i polecam każdemu, kto się zastanawia.”</blockquote><figcaption>Agnieszka Ż. · depilacja laserowa · opinia z Google</figcaption></figure>
+      <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„Bardzo polecam zabieg endermologii oraz cały salon! Atmosfera była bardzo przyjemna i profesjonalna, a sam zabieg komfortowy. Personel przesympatyczny i pomocny, dzięki czemu czułam się naprawdę dobrze zaopiekowana. Na pewno wrócę!”</blockquote><figcaption>Mariola W. · endermologia</figcaption></figure>
+      <figure class="quote"><div class="stars" aria-label="5 na 5">★★★★★</div><blockquote>„Polecam Kamilę. Profesjonalizm, super podejście do klienta oraz dbałość o każdy szczegół. Polecam!”</blockquote><figcaption>Ewelina K. · makijaż permanentny</figcaption></figure>
       <div><a class="btn btn-ghost" href="{BOOKSY}" {EXT}>Wszystkie opinie</a></div>
     </div>
   </div>
@@ -388,7 +393,7 @@ def home():
 # =================================================================== DEPILACJA
 def depilacja():
     html = head('Depilacja laserowa — Manikosmetyka',
-                'Depilacja laserowa w Czerwionce-Leszczynach. Pojedyncze zabiegi i pakiety, bezpłatna konsultacja.') + header('depilacja')
+                'Depilacja laserowa w Czerwionce-Leszczynach. Pojedyncze zabiegi i pakiety, konsultacja przy zabiegu.') + header('depilacja')
     html += page_hero('Depilacja laserowa', 'Depilacja laserowa',
                       'Gładka skóra przez cały sezon — bez golenia, bez podrażnień, bez pośpiechu.',
                       'laser-plecy', 'Depilacja laserowa pleców', '50% 18%')
@@ -416,10 +421,9 @@ def depilacja():
       <h2 class="h2" style="margin-top:18px">Wybierz partię ciała</h2>
       <p class="body" style="margin-top:20px">Możesz zacząć od jednej partii albo połączyć kilka w pakiecie.</p>
       <h3 class="caps caps-md" style="margin:40px 0 16px">Kobiety</h3>
-      <ul class="tags"><li>Twarz</li><li>Wąsik</li><li>Pachy</li><li>Bikini płytkie</li><li>Bikini głębokie</li><li>Uda</li><li>Łydki</li><li>Całe nogi</li><li>Przedramiona</li><li>Brzuch</li></ul>
+      <ul class="tags"><li>Wąsik</li><li>Broda</li><li>Pachy</li><li>Przedramiona</li><li>Bikini płytkie</li><li>Bikini głębokie</li><li>Kresa biała (linia brzucha)</li><li>Pośladki</li><li>Łydki</li><li>Uda</li><li>Całe nogi</li></ul>
       <h3 class="caps caps-md" style="margin:36px 0 16px">Mężczyźni</h3>
-      <ul class="tags"><li>Broda</li><li>Kark</li><li>Plecy</li><li>Klatka piersiowa</li><li>Bikini męskie</li></ul>
-      <p class="note" style="margin-top:24px">[Do potwierdzenia z salonem: pełna lista partii]</p>
+      <ul class="tags"><li>Broda / szyja</li><li>Kark</li><li>Pachy</li><li>Klatka piersiowa</li><li>Brzuch</li><li>Plecy</li><li>Ramiona</li><li>Ręce</li><li>Pośladki</li><li>Pachwiny</li><li>Łydki</li><li>Uda</li><li>Całe nogi</li></ul>
     </div>
   </div>
 </section>
@@ -456,7 +460,7 @@ def depilacja():
         ('Jak przygotować się do depilacji laserowej?', 'Najpóźniej dzień przed zabiegiem należy dokładnie ogolić maszynką obszar poddawany depilacji, najlepiej na zero. Im gładsza skóra, tym większy komfort podczas zabiegu. Skóra powinna być czysta, sucha, bez balsamów i innych kosmetyków.'),
         ('Czy depilacja laserowa boli?', 'Zabieg jest odczuwalny, ale zazwyczaj nie jest bolesny. Dzięki chłodzącej głowicy i pracy na żelu dyskomfort jest znacznie mniejszy. Odczucia są indywidualne, jednak większość osób dobrze toleruje zabieg.'),
         ('Czy mogę rozłożyć płatność na raty?', 'Tak, przy pakietach możliwa jest płatność w ratach. Zapytaj o szczegóły przy rezerwacji.'),
-        ('Czy konsultacja jest płatna?', 'Nie, konsultacja w gabinecie jest bezpłatna.')])
+        ('Jak wygląda konsultacja?', 'Konsultację łączymy z zabiegiem: oceniamy skórę i włos, omawiamy plan serii i dobieramy parametry lasera.')])
     html += cta('Gotowa na lato bez maszynki?', 'Zarezerwuj konsultację i zacznij serię, zanim zrobi się ciepło.')
     html += footer()
     write('depilacja-laserowa.html', html)
@@ -544,7 +548,7 @@ def twarz():
   <div class="wrap">
     <div class="split" style="align-items:end">
       <div class="rv"><p class="label">Jak zaczynamy</p><h2 class="h2" style="margin-top:18px">Najpierw poznajemy Twoją skórę</h2></div>
-      <p class="lead rv">Konsultacja jest bezpłatna. Ocenimy stan skóry, porozmawiamy o celu i zaproponujemy plan — od jednego zabiegu po pełną serię.</p>
+      <p class="lead rv">Konsultację łączymy z zabiegiem. Ocenimy stan skóry, porozmawiamy o celu i zaproponujemy plan — od jednego zabiegu po pełną serię.</p>
     </div>
     <div class="steps rv" style="margin-top:56px"><div class="grid-4">{steps([
         ('Ocena skóry', 'Rozmowa i analiza potrzeb.'),
@@ -606,11 +610,10 @@ def rf():
 </section>
 '''
     html += faq('Zanim przyjdziesz', [
-        ('Ile zabiegów potrzebuję?', '[Do uzupełnienia przez salon: zalecana liczba zabiegów w serii i odstępy.]'),
-        ('Kiedy widać efekty?', '[Do uzupełnienia przez salon.]'),
-        ('Czy po zabiegu potrzebna jest regeneracja?', '[Do uzupełnienia przez salon: jak wygląda skóra po zabiegu i zalecenia.]'),
-        ('Czy konsultacja jest płatna?', 'Nie, konsultacja w gabinecie jest bezpłatna.')])
-    html += cta('Daj skórze nowy start', 'Zarezerwuj bezpłatną konsultację i sprawdź, czy radiofrekwencja mikroigłowa jest dla Ciebie.')
+        ('Ile zabiegów potrzebuję?', 'Zazwyczaj zaleca się serię 3 zabiegów w odstępach 4–6 tygodni.'),
+        ('Kiedy widać efekty?', 'Pierwsze efekty mogą być widoczne po kilku tygodniach, a pełne rezultaty rozwijają się przez 2–3 miesiące.'),
+        ('Czy po zabiegu potrzebna jest regeneracja?', 'Tak, zwykle 1–3 dni. W tym czasie może występować lekkie zaczerwienienie i obrzęk skóry.')])
+    html += cta('Daj skórze nowy start', 'Umów się na konsultację wraz z zabiegiem i sprawdź, czy radiofrekwencja mikroigłowa jest dla Ciebie.')
     html += footer()
     write('radiofrekwencja-mikroiglowa.html', html)
 
@@ -683,7 +686,7 @@ CATS = [
     ('depilacja', 'Depilacja laserowa', 'Laser diodowy Primelase. Pojedyncze zabiegi i pakiety.', 'depilacja-laserowa.html',
      [('Pojedyncza partia ciała', 'damska i męska'), ('Pakiet 4 partie', ''), ('Bikini płytkie / głębokie', ''), ('Bikini męskie', ''), ('Broda', ''), ('Pakiety 6 zabiegów', 'zapytaj o aktualną promocję')]),
     ('twarz', 'Pielęgnacja twarzy', 'Zabiegi dobierane po konsultacji.', 'zabiegi-na-twarz.html',
-     [('Vivace — radiofrekwencja mikroigłowa: twarz, szyja, dekolt', ''), ('Mezoterapia mikroigłowa (dermapen)', ''), ('Oczyszczanie wodorowe', 'HydroRevive, HydroGlow, HydroLux'), ('Mikrodermabrazja', ''), ('Peelingi kwasowe i złuszczające', ''), ('Zabiegi PCA Skin', ''), ('Rytuał Glass skin', ''), ('Konsultacja z zabiegiem', ''), ('Konsultacja w gabinecie', 'bezpłatna')]),
+     [('Vivace — radiofrekwencja mikroigłowa: twarz, szyja, dekolt', ''), ('Mezoterapia mikroigłowa (dermapen)', ''), ('Oczyszczanie wodorowe', 'HydroRevive, HydroGlow, HydroLux'), ('Mikrodermabrazja', ''), ('Peelingi kwasowe i złuszczające', ''), ('Zabiegi PCA Skin', ''), ('Rytuał Glass skin', ''), ('Konsultacja z zabiegiem', ''), ('Zabieg Geneo', 'dotlenienie i odświeżenie skóry')]),
     ('cialo', 'Zabiegi na ciało', '', 'radiofrekwencja-mikroiglowa.html',
      [('Vivace — radiofrekwencja mikroigłowa: ramiona, okolica nadkolanowa, uda, brzuch', ''), ('Endermologia Primelle', 'masaż próżniowy, drenaż'), ('Vivace — radiofrekwencja mikroigłowa: rozstępy i blizny', '')]),
     ('estetyczna', 'Medycyna estetyczna', '', '',
@@ -718,7 +721,7 @@ def oferta():
             side += f'<a class="link" href="{href}">Szczegóły <span class="arr" aria-hidden="true">→</span></a>'
         html += f'<div class="cat" id="{k}"><div class="rv"><h2 class="h2">{t}</h2>{side}</div><ul class="lines rv">{li}</ul></div>'
     html += '</div></section>\n'
-    html += cta('Nie wiesz, co wybrać?', 'Konsultacja w gabinecie jest bezpłatna. Doradzimy zabieg i podamy cenę dla Twojego przypadku.', light=True)
+    html += cta('Nie wiesz, co wybrać?', 'Umów się na konsultację wraz z zabiegiem. Doradzimy zabieg i podamy cenę dla Twojego przypadku.', light=True)
     html += footer()
     write('oferta.html', html)
 
@@ -737,7 +740,7 @@ def onas():
       <p class="lead rv">Nasz zespół z pasją dba o każdy etap wizyty — od konsultacji po efekt, który zostaje na długo.</p>
     </div>
     <div class="grid-4" style="margin-top:clamp(56px,7vw,96px)">
-      <div class="feat rv"><h3 class="caps caps-md">Konsultacje gratis</h3><p>Zanim cokolwiek zrobimy, rozmawiamy.</p></div>
+      <div class="feat rv"><h3 class="caps caps-md">Konsultacja przy zabiegu</h3><p>Zanim cokolwiek zrobimy, rozmawiamy.</p></div>
       <div class="feat rv"><h3 class="caps caps-md">Sterylność</h3><p>Sterylizowane narzędzia i jednorazowe akcesoria.</p></div>
       <div class="feat rv"><h3 class="caps caps-md">Sprawdzone marki</h3><p>Profesjonalne kosmetyki i nowoczesny sprzęt.</p></div>
       <div class="feat rv"><h3 class="caps caps-md">Komfort</h3><p>Bezpłatny parking przy salonie i płatność kartą.</p></div>
@@ -803,7 +806,7 @@ def bony():
                       'Bon do Manikosmetyki to prezent, który zawsze trafia. Wybierz kwotę albo konkretny zabieg.',
                       'kwiaty-lustro', 'Kwiaty i kosmetyki w salonie', '50% 45%',
                       btns=f'<a class="btn btn-light" href="#bon">Skomponuj bon</a>')
-    am = ''.join(f'<button class="btn btn-line" type="button" data-pick="amount" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['100 zł', '200 zł', '300 zł', '500 zł'])
+    am = ''.join(f'<button class="btn btn-line" type="button" data-pick="amount" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['100 zł', '200 zł', '300 zł', '500 zł', '1000 zł'])
     tr = ''.join(f'<button class="btn btn-line" type="button" data-pick="treatment" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia', 'Laminacja brwi'])
     html += f'''
 <section class="section" id="bon" style="scroll-margin-top:var(--header-h)">
@@ -817,7 +820,7 @@ def bony():
     </div>
     <div class="cfg rv" data-voucher>
       <div><p class="label" style="margin-bottom:14px">1. Rodzaj bonu</p><div class="btns"><button class="btn btn-line" type="button" data-pick="type" data-val="amount" aria-pressed="true">Kwota</button><button class="btn btn-line" type="button" data-pick="type" data-val="treatment" aria-pressed="false">Zabieg</button></div></div>
-      <div data-group="amount"><p class="label" style="margin-bottom:14px">2. Kwota</p><div class="btns">{am}</div><p class="note" style="margin-top:12px">[Kwoty przykładowe — do ustalenia z salonem]</p></div>
+      <div data-group="amount"><p class="label" style="margin-bottom:14px">2. Kwota</p><div class="btns">{am}</div><p class="note" style="margin-top:12px">Dowolna kwota od 100 zł, bez górnego limitu — także 1000 czy 2000 zł.</p></div>
       <div data-group="treatment" hidden><p class="label" style="margin-bottom:14px">2. Zabieg</p><div class="btns">{tr}</div></div>
       <div style="border-top:1px solid var(--line);padding-top:28px">
         <div class="btns"><span class="btn btn-dark" role="link" aria-disabled="true">Kup online — wkrótce</span><a class="btn btn-line" href="tel:{TEL}">Zamów telefonicznie</a></div>
@@ -843,7 +846,7 @@ def bony():
     <div class="rv"><p class="label">Jak to działa</p><h2 class="h2" style="margin-top:18px">Prezent w trzech krokach</h2></div>
     <div class="steps rv" style="margin-top:56px"><div class="grid-3">{steps([
         ('Wybierz bon', 'Kwota do wykorzystania na dowolne usługi albo konkretny zabieg.'),
-        ('Odbierz', 'Elegancki bon w salonie. [Wkrótce: wersja elektroniczna na e-mail.]'),
+        ('Odbierz', 'Elegancki bon odbierasz w salonie.'),
         ('Podaruj', 'Obdarowana umawia się na dogodny termin.')])}</div></div>
   </div>
 </section>
@@ -872,7 +875,7 @@ def kontakt():
         <div class="info-row"><span class="label">Adres</span><div><p>ul. Ligonia 8<br>44-238 Czerwionka-Leszczyny</p><a class="link" href="{MAPS}" {EXT} style="margin-top:14px;font-size:12px">Wyznacz trasę <span class="arr" aria-hidden="true">→</span></a></div></div>
         <div class="info-row"><span class="label">Telefon</span><a href="tel:{TEL}">{TEL_H}</a></div>
         <div class="info-row"><span class="label">E-mail</span><a href="mailto:hukaneta@gmail.com">hukaneta@gmail.com</a></div>
-        <div class="info-row"><span class="label">Godziny</span><div class="hours"><span>Poniedziałek – piątek</span><span>8:00 – 20:00</span><span>Sobota</span><span>[do uzupełnienia]</span><span>Niedziela</span><span>nieczynne</span></div></div>
+        <div class="info-row"><span class="label">Godziny</span><div class="hours"><span>Poniedziałek – piątek</span><span>8:00 – 20:00</span><span>Sobota i niedziela</span><span>nieczynne</span></div></div>
         <div class="info-row"><span class="label">Social media</span><p><a href="{IG}" {EXT}>Instagram</a> &nbsp;·&nbsp; <a href="{FB}" {EXT}>Facebook</a></p></div>
       </div>
     </div>
