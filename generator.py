@@ -125,11 +125,13 @@ def footer():
 '''
 
 
-def page_hero(crumb, title, lead, img, alt, pos='50% 40%', pos_m=None, btns=None):
+def page_hero(crumb, title, lead, img, alt, pos='50% 40%', pos_m=None, btns=None, img_m=None):
     pm = f' --pos-m: {pos_m};' if pos_m else ''
+    src_m = f'<source media="(max-width: 900px), (max-aspect-ratio: 1/1)" srcset="img/{img_m}.jpg">' if img_m else ''
     b = btns if btns is not None else f'<a class="btn btn-light" href="{BOOKSY}" {EXT}>Umów wizytę</a><a class="btn btn-ghost" href="{BOOKSY}" {EXT}>Konsultacja przy zabiegu</a>'
-    return f'''<section class="hero page-hero on-photo">
-  <img class="hero-bg" src="img/{img}.jpg" alt="{alt}" style="--pos: {pos};{pm}" fetchpriority="high">
+    cls = ' hero-portrait' if img_m else ''
+    return f'''<section class="hero page-hero on-photo{cls}">
+  <picture>{src_m}<img class="hero-bg" src="img/{img}.jpg" alt="{alt}" style="--pos: {pos};{pm}" fetchpriority="high"></picture>
   <div class="wrap hero-in">
     <p class="crumbs"><a href="index.html">Strona główna</a> &nbsp;/&nbsp; {crumb}</p>
     <h1 class="h1" style="margin-top:22px">{title}</h1>
@@ -628,7 +630,8 @@ def szkolenia():
                 'Szkolenia ze stylizacji paznokci w Czerwionce-Leszczynach: kurs podstawowy, doszkolenia, zdobienia. Instruktorka NC Company.') + header('szkolenia')
     html += page_hero('Szkolenia', 'Szkolenia ze stylizacji paznokci',
                       'Naucz się stylizacji od instruktorki NC Company, która paznokcie robi od ponad 20 lat.',
-                      'szkolenia-hero', 'Aneta Huk, instruktorka stylizacji paznokci', '50% 30%', '75% 30%',
+                      'szkolenia-hero', 'Aneta Huk, instruktorka stylizacji paznokci', '50% 30%', '50% 0%',
+                      img_m='szkolenia-hero-m',
                       btns=f'<a class="btn btn-light" href="tel:{TEL}">Zadzwoń i zapytaj o termin</a><a class="btn btn-ghost" href="mailto:hukaneta@gmail.com">Napisz</a>')
     html += f'''
 <section class="section">
@@ -867,7 +870,8 @@ def kontakt():
     html = head('Kontakt — Manikosmetyka', 'Kontakt: ul. Ligonia 8, 44-238 Czerwionka-Leszczyny, tel. +48 511 483 630. Pon–Pt 8:00–20:00.') + header('kontakt')
     html += page_hero('Kontakt', 'Zapraszamy do salonu',
                       'Najszybciej umówisz się online. Masz pytanie? Zadzwoń lub napisz — chętnie doradzimy.',
-                      'kontakt-zespol', 'Aneta i Kamila z salonu Manikosmetyka', '50% 30%', '60% 30%',
+                      'kontakt-zespol', 'Aneta i Kamila z salonu Manikosmetyka', '50% 30%', '50% 0%',
+                      img_m='kontakt-zespol-m',
                       btns=f'<a class="btn btn-light" href="{BOOKSY}" {EXT}>Umów wizytę online</a><a class="btn btn-ghost" href="tel:{TEL}">Zadzwoń</a>')
     html += f'''
 <section class="section">
