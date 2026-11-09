@@ -342,7 +342,7 @@ def home():
     </div>
     <div class="pair rv">
       <img class="media r-34" src="img/wnetrze-kawa.jpg" alt="Kawa z logo Manikosmetyki w strefie relaksu" loading="lazy">
-      <img class="media r-34" src="img/bon-relaks.jpg" alt="Zabieg na twarz w salonie Manikosmetyka" loading="lazy" style="object-position:50% 40%">
+      <img class="media r-34" src="img/bon-podarunkowy.jpg" alt="Bon podarunkowy Manikosmetyki w eleganckiej kopercie" loading="lazy">
     </div>
   </div>
 </section>
@@ -807,7 +807,7 @@ def bony():
     html = head('Bony podarunkowe — Manikosmetyka', 'Bony podarunkowe Manikosmetyka — na kwotę lub wybrany zabieg.') + header('bony')
     html += page_hero('Bony podarunkowe', 'Podaruj chwilę dla siebie',
                       'Bon do Manikosmetyki to prezent, który zawsze trafia. Wybierz kwotę albo konkretny zabieg.',
-                      'bon-wizytowka', 'Wizytówka Manikosmetyki na pufie w salonie', '50% 45%',
+                      'bon-hero', 'Zabieg na twarz w salonie Manikosmetyka', '50% 33%', '50% 35%',
                       btns=f'<a class="btn btn-light" href="#bon">Skomponuj bon</a>')
     _unused = ''.join(f'<button class="btn btn-line" type="button" data-pick="amount" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['100 zł', '200 zł', '300 zł', '500 zł', '1000 zł'])
     tr = ''.join(f'<button class="btn btn-line" type="button" data-pick="treatment" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia', 'Laminacja brwi'])
@@ -835,7 +835,7 @@ def bony():
 
 <section class="section bg-stone">
   <div class="wrap split">
-    <img class="media r-34 rv" src="img/bon-relaks.jpg" alt="Zabieg na twarz w salonie Manikosmetyka" loading="lazy" style="max-width:460px;object-position:50% 40%">
+    <img class="media r-34 rv" src="img/bon-podarunkowy.jpg" alt="Bon podarunkowy Manikosmetyki w eleganckiej kopercie" loading="lazy" style="max-width:460px">
     <div class="rv">
       <p class="label">Bon w salonie</p>
       <h2 class="h2" style="margin-top:18px">Elegancki bon w kopercie</h2>
