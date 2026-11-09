@@ -192,7 +192,7 @@ SERVICES = [
      '<p>Zabiegi iniekcyjne wykonywane po kwalifikacji.</p><ul><li>Lipoliza iniekcyjna</li><li>Mezoterapia skóry głowy Dr Cyj Hair Filler</li></ul>', 'oferta.html#estetyczna'),
     ('Brwi i rzęsy', 'Laminacja · henna', 'brwi-produkty', 'Kosmetyki do stylizacji brwi',
      '<p>Oprawa oka, która wygląda naturalnie.</p><ul><li>Laminacja brwi</li><li>Henna pudrowa i żelowa</li><li>Henna rzęs</li><li>Regulacja woskiem</li></ul>', 'oferta.html#brwi'),
-    ('Makijaż permanentny', 'Brwi metodą pudrową', 'pmu-brows', 'PMU Brows Manikosmetyka',
+    ('Makijaż permanentny', 'Brwi metodą pudrową', 'pmu-brows', 'Makijaż permanentny brwi w salonie Manikosmetyka',
      '<p>Brwi metodą pudrową z wizytą kontrolną oraz korekty wcześniejszych pigmentacji.</p>', 'oferta.html#pmu'),
     ('Wizaż i dłonie', 'Makijaż · manicure · pedicure', 'dlonie-lakiery', 'Lakiery hybrydowe w salonie',
      '<p>Makijaż okolicznościowy i ślubny z możliwością dojazdu, manicure i pedicure.</p>', 'oferta.html#wizaz'),
@@ -218,7 +218,7 @@ def home():
   </picture>
   <div class="wrap hero-in">
     <p class="label">Salon kosmetyczny <span class="hide-m">· Czerwionka-Leszczyny</span></p>
-    <h1 class="display">Naturalne piękno, bez&nbsp;pośpiechu</h1>
+    <h1 class="display">Sztuka subtelnego piękna</h1>
     <p class="lead">Depilacja laserowa, zabiegi na twarz i radiofrekwencja mikroigłowa w Czerwionce-Leszczynach. Konsultacja jest częścią każdego zabiegu.</p>
     <div class="btns"><a class="btn btn-dark" href="{BOOKSY}" {EXT}>Umów wizytę</a><a class="btn btn-line" href="#zabiegi">Poznaj zabiegi</a></div>
     <div class="hero-meta"><span>★ 5,0 na Booksy</span><span>734 opinie</span><span>Konsultacja przy zabiegu</span></div>
@@ -263,25 +263,21 @@ def home():
       <a class="card rv" href="depilacja-laserowa.html">
         <div class="card-media"><img src="img/laser-nogi.jpg" alt="Depilacja laserowa nóg" loading="lazy"></div>
         <h3 class="caps caps-lg">Depilacja laserowa</h3>
-        <p>Laser diodowy — bez golenia, podrażnień i pośpiechu. Pakiety i raty.</p>
         <span class="btn btn-dark">Poznaj zabieg</span>
       </a>
       <a class="card rv" href="zabiegi-na-twarz.html">
         <div class="card-media"><img src="img/twarz-glowica-2.jpg" alt="Zabieg na twarz w gabinecie Manikosmetyka" loading="lazy"></div>
         <h3 class="caps caps-lg">Zabiegi na twarz</h3>
-        <p>Oczyszczanie, peelingi, mezoterapia i pielęgnacja dobrana po konsultacji.</p>
         <span class="btn btn-dark">Poznaj zabiegi</span>
       </a>
       <a class="card rv" href="radiofrekwencja-mikroiglowa.html">
         <div class="card-media"><img src="img/twarz-maska.jpg" alt="Skóra twarzy po zabiegu mikroigłowym" loading="lazy"></div>
         <h3 class="caps caps-lg">Radiofrekwencja mikroigłowa</h3>
-        <p>Ujędrnienie, zmarszczki, blizny i rozstępy — na twarz i ciało.</p>
         <span class="btn btn-dark">Poznaj zabieg</span>
       </a>
       <a class="card rv" href="oferta.html#pmu">
-        <div class="card-media"><img src="img/pmu-brows.jpg" alt="PMU Brows Manikosmetyka" loading="lazy"></div>
+        <div class="card-media"><img src="img/pmu-brows.jpg" alt="Makijaż permanentny brwi w salonie Manikosmetyka" loading="lazy"></div>
         <h3 class="caps caps-lg">Makijaż permanentny brwi</h3>
-        <p>Metoda pudrowa: naturalny, delikatny efekt na 1–2 lata, z wizytą kontrolną.</p>
         <span class="btn btn-dark">Poznaj zabieg</span>
       </a>
     </div>
@@ -347,7 +343,7 @@ def home():
     </div>
     <div class="pair rv">
       <img class="media r-34" src="img/wnetrze-kawa.jpg" alt="Kawa z logo Manikosmetyki w strefie relaksu" loading="lazy">
-      <img class="media r-34" src="img/bon-podarunkowy.jpg" alt="Bon podarunkowy Manikosmetyki w eleganckiej kopercie" loading="lazy">
+      <img class="media r-34" src="img/bon-relaks.jpg" alt="Zabieg na twarz w salonie Manikosmetyka" loading="lazy" style="object-position:50% 40%">
     </div>
   </div>
 </section>
@@ -394,14 +390,14 @@ def depilacja():
     html = head('Depilacja laserowa — Manikosmetyka',
                 'Depilacja laserowa w Czerwionce-Leszczynach. Pojedyncze zabiegi i pakiety, konsultacja przy zabiegu.') + header('depilacja')
     html += page_hero('Depilacja laserowa', 'Depilacja laserowa',
-                      'Gładka skóra przez cały sezon — bez golenia, bez podrażnień, bez pośpiechu.',
+                      'Gładka skóra przez cały czas — bez golenia, bez podrażnień, bez pośpiechu.',
                       'laser-okulary-tacka', 'Okulary ochronne do depilacji laserowej', '50% 45%')
     html += f'''
 <section class="section">
   <div class="wrap">
     <div class="split" style="align-items:start">
       <div class="rv"><p class="label">Dlaczego laser</p><h2 class="h2" style="margin-top:18px">Koniec z maszynką i&nbsp;wrastającymi włoskami</h2></div>
-      <p class="lead rv">Laser diodowy działa na mieszek włosowy, dlatego efekt budujesz serią zabiegów — a potem po prostu cieszysz się gładką skórą. Na konsultacji dobierzemy parametry do Twojej skóry i włosa.</p>
+      <p class="lead rv">Laser diodowy działa na mieszek włosowy, dlatego efekt budujesz serią zabiegów — a potem po prostu cieszysz się gładką skórą.</p>
     </div>
     <div class="grid-4" style="margin-top: clamp(56px, 7vw, 96px)">
       <div class="feat rv"><h3 class="caps caps-md">Bez golenia</h3><p>Zapomnij o maszynce i codziennym pośpiechu.</p></div>
@@ -528,7 +524,7 @@ def twarz():
       <div class="rv keep">
         <p class="label">Odżywienie i nawilżenie</p>
         <h2 class="h2" style="margin-top:18px">Mezoterapia mikroigłowa</h2>
-        <p class="body" style="margin-top:22px">Substancje odżywcze trafiają w głąb skóry dzięki cienkim igłom urządzenia (dermapen). Skóra staje się odżywiona, nawilżona i ujędrniona. Najlepsze efekty daje seria 4–8 zabiegów co 2–3 tygodnie.</p>
+        <p class="body" style="margin-top:22px">Substancje odżywcze trafiają w głąb skóry dzięki cienkim igłom urządzenia. Skóra staje się odżywiona, nawilżona i ujędrniona. Najlepsze efekty daje seria 4–8 zabiegów co 2–3 tygodnie.</p>
         <ul class="lines" style="margin-top:28px"><li><span>Konsultacja i dobór preparatów</span></li><li><span>Oczyszczenie skóry, w razie potrzeby znieczulenie</span></li><li><span>Mikronakłucia z substancjami aktywnymi</span></li></ul>
       </div>
       <img class="media r-45 rv" src="img/twarz-mikronakluwanie.jpg" alt="Skóra po mezoterapii mikroigłowej" loading="lazy">
@@ -633,7 +629,7 @@ def szkolenia():
                 'Szkolenia ze stylizacji paznokci w Czerwionce-Leszczynach: kurs podstawowy, doszkolenia, zdobienia. Instruktorka NC Company.') + header('szkolenia')
     html += page_hero('Szkolenia', 'Szkolenia ze stylizacji paznokci',
                       'Naucz się stylizacji od instruktorki NC Company, która paznokcie robi od ponad 20 lat.',
-                      'wnetrze-fotel', 'Wnętrze salonu Manikosmetyka', '50% 50%',
+                      'szkolenia-hero', 'Aneta Huk, instruktorka stylizacji paznokci', '75% 30%', '78% 30%',
                       btns=f'<a class="btn btn-light" href="tel:{TEL}">Zadzwoń i zapytaj o termin</a><a class="btn btn-ghost" href="mailto:hukaneta@gmail.com">Napisz</a>')
     html += f'''
 <section class="section">
@@ -694,7 +690,7 @@ CATS = [
     ('depilacja', 'Depilacja laserowa', 'Laser diodowy Primelase. Pojedyncze zabiegi i pakiety.', 'depilacja-laserowa.html',
      [('Pojedyncza partia ciała', 'damska i męska'), ('Pakiet 4 partie', ''), ('Bikini płytkie / głębokie', ''), ('Bikini męskie', ''), ('Broda', ''), ('Pakiety 6 zabiegów', 'zapytaj o aktualną promocję')]),
     ('twarz', 'Pielęgnacja twarzy', 'Zabiegi dobierane po konsultacji.', 'zabiegi-na-twarz.html',
-     [('Vivace — radiofrekwencja mikroigłowa: twarz, szyja, dekolt', ''), ('Mezoterapia mikroigłowa (dermapen)', ''), ('Oczyszczanie wodorowe', 'HydroRevive, HydroGlow, HydroLux'), ('Mikrodermabrazja', ''), ('Peelingi kwasowe i złuszczające', ''), ('Zabiegi PCA Skin', ''), ('Rytuał Glass skin', ''), ('Konsultacja z zabiegiem', ''), ('Zabieg Geneo', 'dotlenienie i odświeżenie skóry')]),
+     [('Vivace — radiofrekwencja mikroigłowa: twarz, szyja, dekolt', ''), ('Mezoterapia mikroigłowa', ''), ('Oczyszczanie wodorowe', 'HydroRevive, HydroGlow, HydroLux'), ('Mikrodermabrazja', ''), ('Peelingi kwasowe i złuszczające', ''), ('Zabiegi PCA Skin', ''), ('Rytuał Glass skin', ''), ('Konsultacja z zabiegiem', ''), ('Zabieg Geneo', 'dotlenienie i odświeżenie skóry')]),
     ('cialo', 'Zabiegi na ciało', '', 'radiofrekwencja-mikroiglowa.html',
      [('Vivace — radiofrekwencja mikroigłowa: ramiona, okolica nadkolanowa, uda, brzuch', ''), ('Endermologia Primelle', 'masaż próżniowy, drenaż'), ('Vivace — radiofrekwencja mikroigłowa: rozstępy i blizny', '')]),
     ('estetyczna', 'Medycyna estetyczna', '', '',
@@ -718,8 +714,8 @@ def oferta():
     html = head('Oferta — Manikosmetyka',
                 'Pełna oferta salonu Manikosmetyka: depilacja laserowa, twarz, ciało, brwi, makijaż permanentny, wizaż, szkolenia ze stylizacji paznokci.') + header('oferta')
     html += page_hero('Oferta', 'Pełna oferta salonu',
-                      'Ceny dobieramy indywidualnie — aktualne znajdziesz przy rezerwacji online lub zapytaj telefonicznie.',
-                      'wnetrze-stanowisko', 'Stanowisko do stylizacji w salonie Manikosmetyka', '50% 55%')
+                      'Zabiegi na twarz i ciało, depilacja laserowa, brwi i makijaż permanentny — wybierz to, czego potrzebujesz.',
+                      'oferta-kacik', 'Kącik z produktami i stanowiskiem w salonie Manikosmetyka', '50% 55%')
     nav = ''.join(f'<a href="#{k}">{t}</a>' for k, t, *_ in CATS)
     html += f'<nav class="cat-nav" aria-label="Kategorie"><div class="wrap">{nav}</div></nav>\n<section><div class="wrap">'
     for k, t, d, href, items in CATS:
@@ -739,7 +735,7 @@ def onas():
     html = head('O nas — Manikosmetyka', 'Poznaj salon Manikosmetyka i nasz zespół. Czerwionka-Leszczyny, ul. Ligonia 8.') + header('onas')
     html += page_hero('O nas', 'Piękno z profesjonalizmem',
                       'Salon w Czerwionce-Leszczynach, w którym każda wizyta ma być chwilą tylko dla Ciebie.',
-                      'wnetrze-wazon-szklanka', 'Wazon i szklanka na stoliku w salonie', '50% 55%')
+                      'onas-gabinet', 'Gabinet zabiegowy z kwiatami w salonie Manikosmetyka', '50% 60%')
     html += f'''
 <section class="section">
   <div class="wrap">
@@ -872,7 +868,7 @@ def kontakt():
     html = head('Kontakt — Manikosmetyka', 'Kontakt: ul. Ligonia 8, 44-238 Czerwionka-Leszczyny, tel. +48 511 483 630. Pon–Pt 8:00–20:00.') + header('kontakt')
     html += page_hero('Kontakt', 'Zapraszamy do salonu',
                       'Najszybciej umówisz się online. Masz pytanie? Zadzwoń lub napisz — chętnie doradzimy.',
-                      'wnetrze-lezanka', 'Leżanka zabiegowa w salonie Manikosmetyka', '50% 50%',
+                      'kontakt-zespol', 'Aneta i Kamila z salonu Manikosmetyka', '50% 30%', '78% 30%',
                       btns=f'<a class="btn btn-light" href="{BOOKSY}" {EXT}>Umów wizytę online</a><a class="btn btn-ghost" href="tel:{TEL}">Zadzwoń</a>')
     html += f'''
 <section class="section">

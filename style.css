@@ -232,9 +232,9 @@ body.light-top .header:not(.is-solid) .btn-dark { background: var(--mocha); colo
 .card-media { overflow: hidden; background: var(--stone); }
 .card-media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .9s var(--ease); }
 .card:hover .card-media img { transform: scale(1.035); }
-.card .caps { margin-top: 30px; font-size: clamp(18px, 1.55vw, 23px); }
+.card .caps { margin-top: 30px; margin-bottom: 26px; font-size: clamp(18px, 1.55vw, 23px); }
 .card p { margin: 14px auto 0; color: var(--muted); max-width: 34ch; font-size: 15px; }
-.card .btn { margin: 26px auto 0; min-height: 46px; padding: 0 26px; }
+.card .btn { margin: auto auto 0; margin-top: auto; min-height: 46px; padding: 0 26px; }
 
 /* ---------- Accordion list (ROE) ---------- */
 .acc-grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(40px, 7vw, 120px); align-items: start; }
