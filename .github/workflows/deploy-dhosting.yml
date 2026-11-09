@@ -1,0 +1,60 @@
+name: Deploy na dhosting (SSH)
+
+# Po każdym pushu na main wgrywa pliki strony do public_html/ na dhosting.pl
+# przez szyfrowane połączenie SSH (rsync, z zapasowym scp).
+# Wymaga sekretów w repo (Settings -> Secrets and variables -> Actions):
+#   SSH_PRIVATE_KEY  - klucz prywatny przeznaczony tylko do wdrażania
+#   SSH_KNOWN_HOSTS  - wynik polecenia: ssh-keyscan manikos.ssh.dhosting.pl
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "v1/**"
+      - "generator.py"
+      - "h*.png"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-dhosting
+  cancel-in-progress: false
+
+env:
+  SSH_HOST: manikos.ssh.dhosting.pl
+  SSH_USER: manikos
+  REMOTE_DIR: /home/klient.dhosting.pl/manikos/manikosmetyka.pl/public_html/
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Przygotuj tylko pliki strony
+        run: |
+          mkdir dist
+          cp ./*.html style.css fonts.css main.js dist/
+          cp -r fonts img dist/
+          echo "Pliki do wgrania:"; find dist -type f | wc -l
+
+      - name: Skonfiguruj SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Wgraj na serwer
+        run: |
+          SSH_OPTS="-i $HOME/.ssh/id_deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts"
+          if rsync -rlt --chmod=D755,F644 -e "ssh $SSH_OPTS" dist/ "$SSH_USER@$SSH_HOST:$REMOTE_DIR"; then
+            echo "Wgrano przez rsync"
+          else
+            echo "rsync niedostępny - próbuję scp"
+            scp -r $SSH_OPTS dist/. "$SSH_USER@$SSH_HOST:$REMOTE_DIR"
+          fi
