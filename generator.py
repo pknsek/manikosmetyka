@@ -291,7 +291,6 @@ def home():
       <div class="rv" style="margin-bottom: clamp(32px, 4vw, 56px)">
         <p class="label">Oferta</p>
         <h2 class="h2" style="margin-top:18px">Nasze zabiegi</h2>
-        <p class="body" style="margin-top:20px">Ceny ustalamy indywidualnie — aktualne znajdziesz przy rezerwacji online.</p>
       </div>
       <div class="acc rv">{acc}</div>
     </div>
