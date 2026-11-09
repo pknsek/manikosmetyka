@@ -807,7 +807,7 @@ def bony():
     html = head('Bony podarunkowe — Manikosmetyka', 'Bony podarunkowe Manikosmetyka — na kwotę lub wybrany zabieg.') + header('bony')
     html += page_hero('Bony podarunkowe', 'Podaruj chwilę dla siebie',
                       'Bon do Manikosmetyki to prezent, który zawsze trafia. Wybierz kwotę albo konkretny zabieg.',
-                      'bon-hero', 'Zabieg na twarz w salonie Manikosmetyka', '50% 33%', '50% 35%',
+                      'bon-hero', 'Zabieg na twarz w salonie Manikosmetyka', '50% 45%', '78% 45%',
                       btns=f'<a class="btn btn-light" href="#bon">Skomponuj bon</a>')
     _unused = ''.join(f'<button class="btn btn-line" type="button" data-pick="amount" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['100 zł', '200 zł', '300 zł', '500 zł', '1000 zł'])
     tr = ''.join(f'<button class="btn btn-line" type="button" data-pick="treatment" data-val="{a}" aria-pressed="false">{a}</button>' for a in ['Depilacja laserowa', 'Radiofrekwencja mikroigłowa', 'Mezoterapia', 'Laminacja brwi'])
